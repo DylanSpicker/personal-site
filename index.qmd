@@ -21,11 +21,10 @@ I completed my PhD at the University of Waterloo in the summer of 2022.
 :::
 
 ::: {.container .grid .mb-5}
-::: {.grid .g-col-6 .g-start-4}
-::: {.g-col-lg-12}
+::: {.grid .g-col-lg-6 .g-start-lg-4 .g-col-12}
+::: {.g-col-lg-12 .g-col-12 .px-2}
 # Academic History
-- **University of Waterloo** - Doctor of Philosophy in Statistics (2018 - 2022) <small class='fw-light d-block my-2'>I completed my PhD under the joint supervision of Drs Michael Wallace and Grace Yi. My thesis research revolved around measurement error, causal inference, and the interface of those subjects. (Thesis: [Generalizations to Corrections of Measurement Error Effects for Dynamic Treatment Regimes
-](https://uwspace.uwaterloo.ca/handle/10012/18581){target="_blank"}.)</small>
+- **University of Waterloo** - Doctor of Philosophy in Statistics (2018 - 2022) <small class='fw-light d-block my-2'>I completed my PhD under the joint supervision of Drs Michael Wallace and Grace Yi. My thesis research revolved around measurement error, causal inference, and the interface of those subjects. (Thesis: [Generalizations to Corrections of Measurement Error Effects for Dynamic Treatment Regimes](https://uwspace.uwaterloo.ca/handle/10012/18581){target="_blank"}.)</small>
 - **University of Waterloo** - Masters of Mathematics in Statistics (2017 - 2018) <small class='fw-light d-block my-2'>I completed my Masters degree, under the supervision of Michael Wallace, in statistics. My Masters work was titled ‘Measurement error and personalized medicine: error-prone tailoring covariates in dynamic treatment regimes.’</small>
 - **Queen's University** - Bachelor of Commerce (2013 - 2017) <small class='fw-light d-block my-2'>I did (three years) of my undergraduate at Queen’s University, Kingston, where I studied Finance and Mathematics. My first year was at the University of Waterloo/Wilfrid Laurier University, in the BMath/BBA Double Degree Program.</small>
 :::
