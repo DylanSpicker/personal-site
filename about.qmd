@@ -8,8 +8,8 @@ title: "About Me"
 - My [Google Scholar](https://scholar.google.com/citations?user=L9AenZ0AAAAJ&hl=en){target="_blank"} has an up to date set of my publications and preprints.
 - My [YouTube Channel](https://www.youtube.com/channel/UC_xQeFdhjymQzmW4WKYtlpQ/featured){target="_blank"} contains lecture and tutorial videos from courses I have taught, illustrating my teaching style.
 - My [CV](Spicker,Dylan - CV.pdf){target="_BLANK"} is available in PDF form (last updated October, 2022).
-- My Teaching Philosophy Statement has been published as a blog post.
-- My Research Philosophy Statement has been published as a blog post.
+- My [Teaching Philosophy Statement](/thoughts/teaching-philosophy-statement/index.qmd) has been published as a blog post.
+- My [Research Philosophy Statement](/thoughts/research-philosophy-statement/index.qmd) has been published as a blog post.
 
 ## About Me
 My postdoctoral research focuses on areas of causal inference related to respondent-driven sampling (RDS). RDS is a survey sampling technique employed to study hard-to-reach population. The sample is formed by starting from identified members of the target population, and using their personal networks to recruit further members of the target population in a way that is probabalistically motivated. There exists comparatively little methodology for analyzing data from RDS, though this form of data collection is becoming increasingly common. My postdoctoral research looks to expand on this existing work, moving beyond the estimation of means and proportions, allowing for associational and causal modelling that is expected when employing other methods of sampling. Moreover, my work seeks to expand these techniques to longitudinal RDS data, a question which has to date received no research attention.
@@ -24,8 +24,8 @@ Outside of my research, I pay very close attention to sports, mostly hockey, (an
 
 ## My Teaching
 - In the Winter of 2022 I taught [STAT 437](https://ucalendar.uwaterloo.ca/2021/COURSE/course-STAT.html#STAT437){target="_blank"} at the University of Waterloo. The course was offered online, and the material is available [on my website](./teaching.qmd).
-- In the Winter of 2021 I was one of the instructors for [STAT 231](https://ucalendar.uwaterloo.ca/2021/COURSE/course-STAT.html#STAT231){target="_blank"} at the University of Waterloo. As a part of my role for this I produced a set of weekly tutorial videos. These are available to view in a [YouTube playlist](https://www.youtube.com/playlist?list=PL0Y1Z_F8RtX6uDIp-d2-Ch584l9cawVOq){target="_blank"} .
-- I have served as a teaching assistant for 18 courses between my time at the University of Waterloo and Queen’s University. A full list is available in my CV.
+- In the Winter of 2021 I was one of the instructors for [STAT 231](https://ucalendar.uwaterloo.ca/2021/COURSE/course-STAT.html#STAT231){target="_blank"} at the University of Waterloo. As a part of my role for this I produced a set of weekly tutorial videos. These are available to view in a [YouTube playlist](https://www.youtube.com/playlist?list=PL0Y1Z_F8RtX6uDIp-d2-Ch584l9cawVOq){target="_blank"}.
+- I have served as a teaching assistant for 18 courses between my time at the University of Waterloo and Queen’s University. A full list is available in my [CV](Spicker,Dylan - CV.pdf){target="_BLANK"}.
 
 ## Contacting Me
 - Email: See my departmental website.
