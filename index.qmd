@@ -1,0 +1,33 @@
+---
+section-divs: false
+format:
+  html:
+      page-layout: custom
+---
+
+::: {.container .grid .px-4 .py-5 .border-bottom}
+::: {.grid .g-col-8 .g-start-3 .my-5 .align-items-center .border-dark .border-1}
+::: {.g-col-lg-12 .g-col-xl-6 .text-center .py-5}
+<p class="display-6">Hi. I'm Dylan. <small class='fw-light'>(They/Them)</small></p>
+<p class="fw-bold fs-4">Currently, I'm a post-doctoral fellow, studying Statistics at McGill University.</p class="fw-bold fs-4">
+I completed my PhD at the University of Waterloo in the summer of 2022.
+
+[About Me](/about.qmd){.btn .btn-info} [My Teaching](/teaching.qmd){.btn .btn-outline-success} [My Thoughts](/blog.qmd){.btn .btn-outline-primary}
+:::
+::: {.g-col-lg-12 .g-col-xl-6}
+![](img/Headshot_LG.png){.img-thumbnail}
+:::
+::: 
+:::
+
+::: {.container .grid .mb-5}
+::: {.grid .g-col-6 .g-start-4}
+::: {.g-col-lg-12}
+# Academic History
+- **University of Waterloo** - Doctor of Philosophy in Statistics (2018 - 2022) <small class='fw-light d-block my-2'>I completed my PhD under the joint supervision of Drs Michael Wallace and Grace Yi. My thesis research revolved around measurement error, causal inference, and the interface of those subjects. (Thesis: [Generalizations to Corrections of Measurement Error Effects for Dynamic Treatment Regimes
+](https://uwspace.uwaterloo.ca/handle/10012/18581){target="_blank"}.)</small>
+- **University of Waterloo** - Masters of Mathematics in Statistics (2017 - 2018) <small class='fw-light d-block my-2'>I completed my Masters degree, under the supervision of Michael Wallace, in statistics. My Masters work was titled ‘Measurement error and personalized medicine: error-prone tailoring covariates in dynamic treatment regimes.’</small>
+- **Queen's University** - Bachelor of Commerce (2013 - 2017) <small class='fw-light d-block my-2'>I did (three years) of my undergraduate at Queen’s University, Kingston, where I studied Finance and Mathematics. My first year was at the University of Waterloo/Wilfrid Laurier University, in the BMath/BBA Double Degree Program.</small>
+:::
+:::
+:::

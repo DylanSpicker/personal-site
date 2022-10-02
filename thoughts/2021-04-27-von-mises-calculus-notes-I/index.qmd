@@ -1,0 +1,103 @@
+---
+title: "Notes on von Mises Calculus for Statistical Functionals: Part I"
+author: 'Dylan Spicker'
+date: '2021-04-27'
+slug: []
+categories: [statistics, teaching, research]
+tags: [statistics, teaching, research]
+description: "I am attempting to work through Luisa Fernholz's excellent 'von Mises Calculus for Statistical Functionals' -- these are my notes, pulling in the required concepts from elsewhere.."
+image: ''
+bibliography: references.bibtex
+---
+*Disclaimer:* These notes are my (attempted, possibly error-prone) summary of @VMCFSF.
+
+# Motivating Idea
+If your statistics background is similar to mine, estimators are viewed as functions of random variables (and as such, random variables themselves). The idea is to take $\widehat{\theta}$ as an estimator of some distributional parameter, $\theta$, and hopefully derive some good properties of these estimators. 
+
+If the parameter we are estimating ``makes sense'', then we can view it as some function which maps the distribution function, $F$, to (for instance) the reals. That is we can write $\theta = T(F)$ for some $T\colon\mathcal{F}\to\mathbb{R}$, where $\mathcal{F}$ denotes a space that contains the distribution function, $F$. In doing this, we are now presented with a natural way to estimate $\theta$ on the basis of a sample, namely, taking $\widehat{\theta} = T(F_n)$, where $F_n$ denotes the empirical distribution function.
+
+This frames estimators as **statistical functionals**, where the terminology *functional* refers to a function which acts on a space of functions. Why does this help us? Well, there are certainly estimators which are more naturally framed in this way (the discussed estimator uses the *plug-in principle*, which is a common way of developing nonparametric estimators). Moreover, there are powerful tools in functional analysis which may allow us to get a better handle on some of these ideas than the somewhat more cumbersome framing of functions of a random sample. 
+
+For my purpose, I would like to eventually extend this idea in my research to accomplish a task which relies on treating estimators as functionals over a space of characteristic functions, but that is a story for another day. 
+
+# von Mises Calculus
+:::{.definition}
+An arbitrary set, $\mathcal{F}$ is said to be **convex** if, for any two elements $F,G\in\mathcal{F}$, we have that $\lambda F + (1 - \lambda) G \in \mathcal{F}$ for all $\lambda \in [0,1]$.
+:::
+
+Consider a random sample, $X_1, \dots, X_n \sim F$ independently. Moreover, take $T\colon\mathcal{F}\to\mathbb{R}$, where $\mathcal{F}$ is a convex space of distribution functions such that $F$ and $F_n$ (for $n\geq1$) are elements of $\mathcal{F}$. Consider an arbitrary element $G\in\mathcal{F}$, then if $$T_F'(G-F) = \left.\frac{d}{dt} T\left(F + t(G-F)\right)\right|_{t=0}$$ is expressible as $$T_F'(G-F) = \int \phi_F(x)d(G-F)(x),$$ where $\phi_F$ is independent of $G$, then we call $T_F'(G-F)$ the **von Mises derivative** of $T$ at $F$, and we call $\phi_F$ the **influence function** (or **influence curve**) of $T$ at $F$. 
+
+The independence of $\phi_F$ on $G$ means that, when the von Mises derivative exists, we can use any $G$ for determining it. Now, $\phi_F$ is unique only to an additive constant. Consider $\phi_F(x)$ to be the computed influence function and take $\widetilde{\phi}_F(x) = \phi_F(x) + c$ for some $c \in \mathbb{R}$, then:
+\begin{align*}
+\int \widetilde{\phi}_F(x)d(G-F)(x) &= \int \phi_F(x)d(G-F)(x) + c\int d(G-F)(x) \\
+&= T_F'(G-F) + 0,
+\end{align*} where the $0$ follows since $d(G-F)$ has total measure zero. As a result, we can select $\phi_F(x)$ to be the influence curve such that $\int \phi_F(x)dF(x) = 0$, which is a convention we will take. Why do we do this?
+
+Well, this allows us to consider $G = \delta_x$, where $\delta_x$ is the Dirac measure at a point $x$ (that is, $\delta_x$ assigns measure $1$ to any set containing $x$ and $0$ otherwise). Doing so, we can readily show that, when it exists, $$\phi_F(x) = \left.\frac{d}{dt}T\left(F + t(\delta_x - F)\right)\right|_{t=0}.$$ This follows since $\int \phi_F(y)d\delta_x(y) = \phi_F(x)$.
+
+## Why might we care?
+The primary reason that we have taken the time to derive the von Mises derivative, influence curve, and so forth is that we can use it for a Taylor-esque expansion of functionals. We write the von Mises expansion of $T$ as $$T(G) = T(F) + T_F'(G-F) + \text{Rem}(G-F),$$ where $\text{Rem}(G-F)$ captures a remainder term. 
+
+If we take $G = F_n$, then we get \begin{align*}
+  T(F_n) &= T(F) + T_F'(F_n - F) + \text{Rem}(F_n - F) \\
+  &= T(F) + \int\phi_{F}(x)d(F_n - F)(x) + \text{Rem}(F_n - F) \\
+  &= T(F) + \int\phi_F(x)dF_n(x) - 0 + \text{Rem}(F_n - F) \\
+  &= T(F) + \frac{1}{n}\sum_{i = 1}^n \phi_F(X_i) + \text{Rem}(F_n - F).
+\end{align*}
+
+Now, asymptotic inference tends to center on the quantity $\widehat{\theta} - \theta$, or in our functional notation, $T(F_n) - T(F)$. Assuming that we have a well behaved influence curve we could apply central limit theorems to $\sqrt{n}(T(F_n) - T(F))$ to get nice convergence results, so long as $\sqrt{n}\text{Rem}(F_n - F)$ converges in probability to $0$. The idea is then to use these expansions to investigate the asymptotic properties. 
+
+The von Mises derivative, unfortunately, is not sufficient for continuation of this study. It is too weak of a concept to be able to generally conclude that, when it exists, $\sqrt{n}\text{Rem}(F_n - F) \stackrel{p}{\to} 0$. To overcome this, it is possible to assume that the functional is twice differentiable (with respect to the von Mises derivative), which would enable such conclusions. This is an overly restrictive assumption, and so instead we turn to alternative formulations of the functional derivative.
+
+:::{.example}
+This example demonstrates the *shortcoming* of the von Mises derivative. Consider the functional $T(F)$ that measures the size of the discontinuity points of $F$ on the interval $[0,1]$. Take $\alpha > 1$, then we can write $$T(F) = \sum_{x\in[0,1]} \left(F(x) - F(x^{-})\right)^{\alpha},$$ where $F(x^{-}) = \lim\limits_{x^*\to x} F(x^*)$. On the interval $[0,1]$ any distribution function has at most a countable number of discontinuities, so this sum only takes values at a countable number of values, and is as such well-defined (if it helps, define $\mathcal{D}(F)$ to be the set of discontinuities of $F$ on $[0,1]$, and then define the summation for $x \in \mathcal{D}(F)$, or similar).
+
+Now, if we continue $F = U$ to be the distribution function of a $\text{Uniform}(0,1)$ distribution, then it is clear that $T(U) = 0$. Moreover, the empirical distribution function, computed based on a $\text{Uniform}(0,1)$ distribution, will almost surely have $n$ discontinuities, each of size $\frac{1}{n}$. As a result, we will find that $T(F_n) = n\times\frac{1}{n^\alpha} = n^{1-\alpha}$.
+
+Resultingly, we have that $\sqrt{n}(T(F_n) - T(U)) \stackrel{a.s}{=} n^{3/2 - \alpha}$. However, we can also see that the von Mises derivative exists (and is exactly $0$, so long as $\alpha > 1$), which means that for any $\alpha \in (1, 3/2)$ we must not have $\text{Rem}(F_n - F) = o_p(n^{-1/2})$.
+:::
+
+# Fréchet (and $\mathcal{S}$-) derivatives
+Instead of working with the von Mises derivative (hereafter V-derivative), we can work with the (more restrictive) **Fréchet (F-) derivative**. For this, we consider $V$ to be a normed vector space (a vector space which has some norm, $||\cdot||$ on it), and a map $T\colon V\to\mathbb{R}$. Assume that, for the distribution function $F$ of interest, we have $F\in V$. Then, if there exists some map $T_{F}'\colon V\to\mathbb{R}$ such that, for every $G \in V$, $$\lim\limits_{G\to F} \frac{|T(G) - T(F) - T_F'(G-F)|}{||G - F||} = 0,$$ then we say that $T_F'(G-F)$ is the **F-derivative** of $T$ at $F$. Now the F-derivative, when it exists, suggests an expansion of the form $$T(G) = T(F) + T_F'(G-F) + \text{Rem}(G-F)$$ where $\text{Rem}(G-F)$ is a remainder term that (when the **F-derivative exists**) will be $o(||G-F||)$.
+
+This is useful for our purposes since it is well known that $||F_n - F|| = O_p(n^{-1/2})$, and so when the F-derivative exists, applied to the plug-in estimator, we have a linear approximation that has nice convergence properties. In particular, we would get that $\sqrt{n}\text{Rem}(F_n - F) \stackrel{p}{\to} 0$ (so long as $||F_n - F|| = O_p(n^{-1/2})$), and so our central limit theorem argument from before holds.
+
+@VMCFSF points out at least two problems with this approach. First, we do not typically want to use this vector space for the analysis of statistical functionals. Second, many statistical functionals that we wish to analyze are **not** F-differentiable. 
+
+When defining the F-derivative, I passed over some important details. In particular, the F-derivative is as stated for a general normed vector space $V$. We can take the vector space of bounded, real-valued, functions and consider distribution functions on $\mathbb{R}$ to be elements of this vector space. Equipped with the uniform (infinity) norm, that is $||G||_{\infty} = \sup\limits_{v\in \mathbb{R}}||G(v)||$, we have a real Banach space. On this space, the argument about the sufficiency of the existence of the F-derivative holds. It is also this space which is, according to @VMCFSF, somewhat unnatural for consideration of statistical functionals.
+
+In @Huber87, a more natural space for consideration is built based on the idea of *robustness*. The idea of robustness in statistics is that statistical procedures should be more or less resistent to small changes in the underlying distribution. When we consider statistics that can be written as functions of $F_n$, then ``small change'' may refer either to a small change in some (or all) of the observations, or a large change in only a few of the observations. If we consider our linear functional as being expressed as $n^{-1}\sum_{i=1}^n \psi(x_i)$, then in order for this quantity to remain more or unimpacted by these small changes, we would require that $\psi$ is continuous and bounded. The continuity requirement ensures that small changes in all of the observed $x_i$ do not alter the result by too much; the bounded requirement ensures that large changes in only a few observations do not alter the result by too much.
+
+## A Topological Digression
+:::{.definition}
+A **topological vector space**, given by $(V(\mathbb{K}), \mathcal{T})$, is a vector space $V(\mathbb{K})$ on a field $\mathbb{K}$ (either $\mathbb{R}$ or $\mathbb{C}$), along with a topology $\mathcal{T}$, such that addition and scalar multiplication is jointly continuous in both variables. Note, the somewhat unusual notation of $V(\mathbb{K})$ is just used to stress the field that the vector space is defined on: this will be dropped shortly since I really only care about $\mathbb{K} = \mathbb{R}$.
+:::
+
+We introduce the concept of a topological vector space so to build to the concept of the weak and weak$*$ topologies. The idea is to extend the idea of a normed vector space (e.g. $(V, ||\cdot||_V)$) which can evidently generate its own topology (the *norm topology*, by taking open balls based on $||\cdot||_V$) to allow for weaker (smaller in the set containment sense) topologies. The rationale is that convergence concepts are tied directly (for many convergence notions) to topologies. I will leave this here for now and revist topological notions of convergence (which seems to involve [nets](https://en.wikipedia.org/wiki/Net_(mathematics)) -- gross).
+
+:::{.definition}
+The **dual space**, $V^*$ of a toplogical vector space, $(V(\mathbb{K}), \mathcal{T})$ is the space of continuous linear functionals from $V(\mathbb{K})\to\mathbb{K}$.
+:::
+
+The dual is continuously brought up in the considerations of functional analysis. There are (apparently) good reasons as to why this is the case. From my perspective, this definition is here mainly as a reminder: for a space $V$ the dual is the space of continuous linear functions from $V$ to the field on which $V$ is defined (the more I say/type it, hopefully the sooner it sticks!). 
+
+:::{.definition}
+We take $V$ to be a topological vector space and $V^*$ to be its dual. Then, the **weak topology** on $V$ is the topology generated by the seminorms, $|\lambda(x)|$ for all $\lambda \in V^*$. The **weak$*$ topology** is the topology generated by the seminorms $|\lambda(x)|$ for all $x \in V$.
+:::
+
+## **References**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

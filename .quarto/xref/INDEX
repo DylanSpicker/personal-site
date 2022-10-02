@@ -1,0 +1,53 @@
+{
+  "about.qmd": {
+    "about.html": "ba7c6b9a"
+  },
+  "index.qmd": {
+    "index.html": "64a751b3"
+  },
+  "sex.qmd": {
+    "sex.html": "a88e5992"
+  },
+  "teaching.qmd": {
+    "teaching.html": "61db2ecf"
+  },
+  "research.qmd": {
+    "research.html": "5020dc9d"
+  },
+  "courses/STAT231/course_index.qmd": {
+    "course_index.html": "add5172f"
+  },
+  "courses/STAT437/course_index.qmd": {
+    "course_index.html": "7758fd7a"
+  },
+  "blog.qmd": {
+    "blog.html": "1ca93c32"
+  },
+  "thoughts/2021-04-20-the-mean-median-and-skewness/index.qmd": {
+    "index.html": "e684ab52"
+  },
+  "thoughts/2021-04-27-von-mises-calculus-notes-I/index.ipynb": {
+    "index.html": "e086b1b5"
+  },
+  "thoughts/2021-04-27-von-mises-calculus-notes-I/index.qmd": {
+    "index.html": "9ee3f0fe"
+  },
+  "thoughts/controlling-for-factors/index.qmd": {
+    "index.html": "f7e2cfca"
+  },
+  "thoughts/linearity-of-q-functions/index.qmd": {
+    "index.html": "796dc8d7"
+  },
+  "thoughts/null-preservation/index.qmd": {
+    "index.html": "53f3652b"
+  },
+  "thoughts/PSA-causation-without-correlation/index.qmd": {
+    "index.html": "41225a2a"
+  },
+  "thoughts/research-philosophy-statement/index.qmd": {
+    "index.html": "d6bd8b47"
+  },
+  "thoughts/teaching-philosophy-statement/index.qmd": {
+    "index.html": "ee19a86a"
+  }
+}

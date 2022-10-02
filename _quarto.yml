@@ -1,0 +1,25 @@
+project:
+  type: website
+
+website:
+  title: "Dylan Spicker"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: "About Me"
+    right:
+      - href: teaching.qmd
+        text: "My Teaching"
+      - href: blog.qmd
+        text: "My Thoughts"
+format:
+  html:
+      theme: simplex
+      css: styles.css
+      toc: false
+      page-layout: full
+
+
+
