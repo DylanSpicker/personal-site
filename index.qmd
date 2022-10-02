@@ -6,15 +6,15 @@ format:
 ---
 
 ::: {.container .grid .px-4 .py-5 .border-bottom}
-::: {.grid .g-col-8 .g-start-3 .my-5 .align-items-center .border-dark .border-1}
-::: {.g-col-lg-12 .g-col-xl-6 .text-center .py-5}
+::: {.grid .g-col-8 .g-start-3 .my-5 .g-col-sm-12 .align-items-center .border-dark .border-1}
+::: {.g-col-12 .g-col-lg-6 .text-center .py-5}
 <p class="display-6">Hi. I'm Dylan. <small class='fw-light'>(They/Them)</small></p>
 <p class="fw-bold fs-4">Currently, I'm a post-doctoral fellow, studying Statistics at McGill University.</p class="fw-bold fs-4">
 I completed my PhD at the University of Waterloo in the summer of 2022.
 
-[About Me](/about.qmd){.btn .btn-info} [My Teaching](/teaching.qmd){.btn .btn-outline-success} [My Thoughts](/blog.qmd){.btn .btn-outline-primary}
+[About Me](/about.qmd){.btn .btn-info .my-2} [My Teaching](/teaching.qmd){.btn .btn-outline-success .my-2} [My Thoughts](/blog.qmd){.btn .btn-outline-primary .my-2}
 :::
-::: {.g-col-lg-12 .g-col-xl-6}
+::: {.g-col-12 .g-col-lg-6}
 ![](img/Headshot_LG.png){.img-thumbnail}
 :::
 ::: 
