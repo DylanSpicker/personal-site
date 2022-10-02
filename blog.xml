@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Dylan Spicker</title>
+<link>https://github.com/DylanSpicker/personal-site/blog.html</link>
+<atom:link href="https://github.com/DylanSpicker/personal-site/blog.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.1.251</generator>
+<lastBuildDate>Sun, 14 Nov 2021 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>My Research Philosophy Statement (WIP)</title>
+  <dc:creator>Dylan Spicker</dc:creator>
+  <link>https://github.com/DylanSpicker/personal-site/thoughts/research-philosophy-statement/index.html</link>
+  <description><![CDATA[ 
+<a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
+
+
+<p><strong>Note:</strong> This is a work-in-progress, but I figured: “Why not work in the open?”. If you have any thoughts, or feedback, I would of course appreciate that!</p>
+<p>Throughout my PhD, I have been primarily concerned with methodological developments related to measurement error, as it pertains to causal inference generally, and dynamic treatment regimes more specifically. While my work has been predominantly focused on expanding methodology, I have a keen interest in providing a theoretical basis for (comparatively) straightforward methods, which are easy to use for non-statisticians, while exhibiting provably good theoretical properties.&nbsp;</p>
+<section id="dissertation-work" class="level2">
+<h2 class="anchored" data-anchor-id="dissertation-work">Dissertation Work</h2>
+<p>Broadly, my research has focused on the fields of causal inference (in particular, precision medicine) and measurement error, where we are conducting the (to our knowledge) first investigation of how the latter impacts the former. Briefly, precision medicine seeks to use &nbsp;an individuals observed covariates to determine the optimal treatment strategies. These are referred to as adaptive treatment strategies or dynamic treatment regimes (DTRs). That is, precision medicine answers the question “what is the optimal treatment for a patient, when treatment can be”tailored” based on patient-specific information?“. Measurement error refers to any situation where variables of interest are not accurately observed.&nbsp;</p>
+<p>My dissertation work focused primarily on two, related questions:&nbsp;</p>
+<ol type="1">
+<li>How does the presence of measurement error impact the estimation of optimal adaptive treatment strategies, and can these impacts be remedied?</li>
+<li>How can existing, commonly used measurement error correction techniques be expanded, to have broader utility for applied researchers?</li>
+</ol>
+<p>The core question of my dissertation came out of the work I completed during my Masters (at the University of Waterloo, under the supervision of Michael Wallace) where we showed that measurement error in tailoring covariates has a substantial impact on the efficacy of estimation of optimal treatment regimes, and correspondingly called into question the use of DTRs estimated with error-prone data for the purpose of future treatment prescription. My PhD work (at the University of Waterloo, supervised by Michael Wallace and Grace Yi) continued on this thread, working on methods to remedy the effects of error in DTRs. We showed that a comparatively simple procedure, regression calibration, can be used to largely overcome the issues introduced with simple covariate measurement error, under fairly mild assumptions (Spicker and Wallace, 2020).&nbsp;</p>
+<p>Doing this required an expansion of the regression calibration technique, in order for it to be applicable to the data on hand. This prompted the secondary question of concern for my dissertation: how can we adapat techniques which are in common use, maintaining their appeal while broadening the scenarios in which they are theoretically defensible? Our first investigation of this line of questioning took as inspiration the generalizations needed for regression calibration in DTRs. In particular, we looked at a class of measurement error correction techniques which rely on “replicate measurements” (that is, independent and identically distributed remeasurements of the quantity of interest) to correct for the effects of measurement error (regression calibration is one such technique).&nbsp;</p>
+<p>We demonstrated how, with a slight modification to the estimation procedure, these techniques could be applied with any set of independent measurements, whether or not they are identically distributed (Spicker, Wallace, and Yi, 2021). Relaxing this assumption serves as an important contribution as observed data often dramatically contradict the assumption of identically distributed replicates, and these techniques are among the most applied error correction procedures.&nbsp;</p>
+<p>We continued to expand extant methodologies, through an extension to simulation extrapolation, another frequently used procedure in measurement error correction. Simulation extrapolation relies on a bootstrap-esque, “remeasurement” procedure, and assumes normality of errors for its theoretical results. We demonstrated how this technique can be made nonparametric, removing the need for any assumptions on the error distribution, by “remeasuring” from an empirical distribution instead (Spicker, Wallace, and Yi, 2021). This contribution is particularly valuable, since the assumption of normality is pervasive in the measurement error literature, but there is strong evidence that it is frequently violated in observed data.</p>
+<p>The final project specifically associated with my dissertation involves questions regarding adherence to treatment regimes. While my work has predominantly looked at errors in continuous variates, it is also an important question to consider what happens when the assigned treatment (typically a binary indicator) may not be accurately observed: that is, some patients do not adhere to the treatment they were assigned. This misclassification problem is of particular importance in the causal inference literature as ignoring it leads to parameter estimates with no substantive, causal interpretation. Presently, my ongoing work is considering ways to recover valid, causal estimators, by modifying DTR estimation techniques rooted in the estimating equation literature.&nbsp;</p>
+</section>
+<section id="non-dissertation-research-work" class="level2">
+<h2 class="anchored" data-anchor-id="non-dissertation-research-work">Non-Dissertation Research Work</h2>
+<p>Outside of the work completed for my dissertation, I have also been involved in several intradisciplinary research teams. At the University of Waterloo, I am involved in a group with members from the School of Public Health, and Systems Design Engineering investigating the use of novel machine learning techniques applied to the study of dietary patterns and their implications for health. Dietary data is notoriously error-prone, and machine learning techniques are typically opaque in terms of interpretability. As a result, the simple application of these techniques to these data is unjustified, without a thorough investigation of the ways in which error can be handled, and without substantial improvements to the interpretability and explainability of the machine learning. While the core aim of the group is to work on the applied questions related to health outcomes and health equity, this investigation has branched into several interesting methodological questions which are of interest to pursue.&nbsp;</p>
+<p>Prior to my masters degree, I was involved in another intradiscplinary research team at The Smith School of Business (Queen’s University). The research team involved researchers from Queen’s, in addition to members from the United States, Poland, and Italy. In this team, I provided guidance on the application of machine learning principles to questions of management science. In particular, the group was interested in determining how executives made decisions, whether based predominantly on intuition or analsis. This work was published in a book and has since been expanded into articles (Liebowitz, et al., 2018). While the work itself predates my involvement with statsistics research entirely, the formative experience of intradisciplinary research, with a diverse team, has instilled in me the importance of working diversely to approach interesting and important questions. Moreover, seeing the inner workings of an applied team, demonstrated the utility in ensuring that methodological developments are both theoretically sound, as well as accessible to practitioners, a lesson that I have continued throughout my research to date.&nbsp;</p>
+</section>
+<section id="present-and-future-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="present-and-future-considerations">Present and Future Considerations</h2>
+<p>In the future, I hope to expand the specific areas of research consideration, while maintaining the core underlying principles: developing methodology which is useful for practitioners, theoretically grounded, and tied to interesting questions. Moreover, I hope to continue to expand my multidisciplinary involvement, both as a means of motivating methodological questions and also to ensure that sound statistical theory is applied in the literature.</p>
+<p>While there are several avenues to continue investigating measurement error in the context of DTRs (including a more thorough investigation of optimal estimation in the presence of error, for instance), precision medicine presents many interesting and understudied areas of investigation which are of direct interest to me. Some possible lines of inquiry include:</p>
+<ul>
+<li>Considering other forms of noisy data (for instance, missing or censored data), and their impact on optimal DTR estimation;</li>
+<li>Considering relaxations to assumptions that lay at the heart of causal inference (for instance, how can we accommodate unmeasured confounding);</li>
+<li>Considering utility-based outcomes, that take into account patient-preferences and alternative outcomes, in place optimizing a single, numerical variable;</li>
+<li>Considering problems related to the so-called “non-traditional inference”, that arises due to non-differentiability in the estimation procedures;</li>
+<li>Considering the application of these methods to problems outside of the domain of medicine (for instance, for the purposes of personalized education or in the domain of marketing).</li>
+</ul>
+<p>These problems range from very applied to very theoretical, and could serve as the basis for a research program focused around precision medicine. I fully expect that as the adaptive treatment literature continues to move forward, additional theoretical challenges will arise, providing further ground for investigation.&nbsp;</p>
+<p>Outside of a focus on precision medicine, I also have a particular interest in the statistical development of machine learning techniques, for the purposes of inference rather than prediction. My intradisciplinary work has suggested that, outside of statistics, there is a strong interest in applying state-of-the-art deeplearning techniques in a wide variety of domains. From my perspective, a key limitation in the ability to do this successfully stems from the lack of interpretability, explainability, and statistical basis for these models. To this end, I am also interested in fairly simple questions regarding the statistical basis for these methods (for instance, variable selection techniques, significance testing, model comparisons and tests, and parameter interpretation), with the goal of providing insight into how the methods truly function. The long-term goal with this type of investigation would be to not only ground these novel computational techniques in statistical theory, but to do so to provide a mechanism for using these methods in areas (such as causal inference) which require deeper insight.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>statistics</category>
+  <category>teaching</category>
+  <category>research</category>
+  <category>job search</category>
+  <guid>https://github.com/DylanSpicker/personal-site/thoughts/research-philosophy-statement/index.html</guid>
+  <pubDate>Sun, 14 Nov 2021 00:00:00 GMT</pubDate>
+  <media:content url="https://github.com/DylanSpicker/personal-site/thoughts/research-philosophy-statement/research.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>My Teaching Philosophy Statement (WIP)</title>
+  <dc:creator>Dylan Spicker</dc:creator>
+  <link>https://github.com/DylanSpicker/personal-site/thoughts/teaching-philosophy-statement/index.html</link>
+  <description><![CDATA[ 
+<a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
+
+
+<p><strong>Note:</strong> This is a work-in-progress, but I figured: “Why not work in the open?”. If you have any thoughts, or feedback, I would of course appreciate that!</p>
+<p>It is my belief that learning occurs not through the actions of a teacher, but through the actions of students. My role as an instructor is not to impart facts to students. Rather, my job is to facilitate and guide the students through a process of active learning. Practically, this requires capturing and directing students’ attention, aligning their personal objectives with the corresponding course objectives, and creating an environment which is supportive for all learners. In addition to these pillars, I believe in personalizing education for each student, and that feedback and iteration are essential to effective instruction. Although I have had a fair amount of teaching experience in traditional and non-traditional settings, I recognize that I am still in the nascence of my teaching career. Accordingly, I have tried to ground my philosophy not only in what my teaching experience has taught me, but also in the experiences that I have had watching teachers that I admire, and in a voracious consumption of pedagogical research. While this philosophy has served me well so far, this statement also serves as an aspirational standard, and is subject to change as I continue to learn as an instructor.</p>
+<p>My initial experience in teaching to a diverse group of students began in a non-traditional setting: YouTube videos teaching programming. While the online medium is certainly distinct from a classroom setting, the experience provided me with several important lessons. First, in the online video format, attention and entertainment is key. You have to attract and keep students, which requires selecting interesting topics, framing them in interesting and applicable ways, and doing so with an effective presentation style. For my online teaching, this meant selecting useful and employable topics with insufficient existing coverage online, and then grounding these lessons in real-world, full-scale projects. The idea was to teach the important concepts by building functional applications, keeping the students interested and engaged, and allowing them to build useful portfolio items for themselves. Many individuals showed me projects that had started as a lesson in a video, which they expanded beyond the presented scope, using what they learned for their own purposes. This project-grounded content only became truly successful when I began to polish my presentation skills. Early commenters noted that, while my explanations were clear, I lacked enthusiasm. I worked on the “soft” skills, which shifted the feedback to commending both my presentation and my clarity.</p>
+<p>While in a traditional classroom we do not need to attract attention in the same way, I believe that entertaining content encourages students to partake in active learning. If we tell compelling narratives through the course content, students will enthusiastically engage which fosters learning. In statistics there are plenty of ways to catch and hold the attention of our students. During lessons, I try to use topical, relevant examples. For instance, I used COVID-19 vaccine trials to teach statistical research frameworks in the Winter of 2021, to great success. During office hours I deeply connected with some students who had an interest in sports by showcasing methods on data from the National Hockey League (NHL).</p>
+<p>I have applied the same philosophy to creating assessments. At Queen’s University, I worked with two professors to design and implement a cross-discipline course. In the course, groups of business and computing majors worked to build an app-based business. The students demoed and pitched their completed apps to real-world entrepreneurs. This unified all the course concepts in a fun and applicable project. In an upcoming, fourth-year, statistics course I am giving freedom on the “standard”, problem-set assignments. For the advanced material, students can opt to take a theoretical or applied view, depending on their ultimate goals. These techniques have generated considerable, excited feedback from students, who are eager to engage with the topics.</p>
+<p>After attracting a student’s attention with the goal of directing it, the natural question is “at what”? I believe that it is important to have clear learning objectives, both at a macro (course) level, and at a micro (lesson or assignment) level. These objectives should be comprehensibly presented to students, and consistently aligned with all aspects of the course. For instance, when introducing marginal linear models, my lesson begins by looking at the structure of the data that we wish to analyze. This states a clear objective: analyze these data. Then, I ask the students to consider why we need new methods to analyze these data. I ask them to think about why the knowledge that they currently have (linear regression) is insufficient for this task. This leads to them considering the ways that they need to expand their knowledge to achieve the outlined goal. Here, discovery and the synthesis of new concepts with existing knowledge form the center of the lesson. I try to use this approach wherever possible. Based on student feedback, this framing has been effective at getting ideas to stick. However, course objectives are not the only relevant objectives for my teaching.</p>
+<p>For better or worse, each student enters the classroom with objectives of their own. For most students, learning the course material is a means to an end. Their true interest is in, for instance, obtaining a specific job or getting into graduate school. These goals are not the primary consideration for us as instructors, but we must recognize that they are the primary consideration for our students. Doing so allows us to leverage an important resource: intrinsic motivation. Students are more likely to put in the deliberate effort required for learning, if it is in service of their goals. For instance, many of the students in my cross-discipline course expressed interest in start-up work. The project served as an important portfolio item for those students, providing direct experience in the field. Further, it introduced the students to industry contacts, building their network. This led the students to invest significant time and effort into their projects, and benefit from the learning that took place alongside it. Additionally, the students expressed satisfaction with the course and with our assessment format. I intend to take a similar approach with the final project in my upcoming longitudinal data analysis course. The cumulative project will give students a chance to apply the course concepts, producing work that can range from a data science portfolio piece through to an academic research poster. My hope is that the students will use the work they are doing in the course to advance their aspirations in a way which is more useful than a simple, numeric grade. In doing so, their intrinsic motivation should help carry their efforts, and promote deeper understanding.</p>
+<p>This strategy of marrying course objectives and student objectives comes with two additional benefits. First, it provides the opportunity for personalization. I have tried to do this through personal surveys, soliciting interests of students, to use in tutorial lessons or lectures. The choice afforded to students in their projects and assignments also serves to tailor the experience. Enhanced personalization remains a focus of mine moving forward. Second, there is ample evidence that extrinsic motivators (such as grades) are not conducive to learning. Providing assessments that have value beyond their contribution to a final mark minimizes the importance of grades. This has benefits in the ability to keep a student interested and motivated. Additionally, it assists in creating a healthy learning environment, the third pillar of my teaching philosophy.</p>
+<p>The environment created in a course sets the tone for a student’s willingness to engage, which in my view, is a key factor in their ability to learn. To me, the learning environment needs to be welcoming and safe for all individuals, with specific attention paid to mental well-being. The environment should also be relaxed and feel low-stakes, and encourage mistakes. Some of this can be achieved, passively and by example. For instance, I include my pronouns of “they/them” on the course syllabus, and in my signature when emailing students. This is a simple practice which garners grateful messages, particularly from students in marginalized groups. In my YouTube teaching, I keep mistakes (with a discussion of the correction) in the final videos. This teaches the skill of debugging, but also lessens the sting a student feels when making a mistake. Doing this has led to substantially more discussion of the students’ mistakes than was present before I started including mine. Other techniques for creating a positive environment require more deliberate action. For instance, in an introductory statistics course we provided the students with a flexible grading scheme, dropping their worst marks from their final grade. This helped alleviate the stress of any individual assessment. Additionally, we provided a mock exam, alongside a video lesson of me solving the exam, and discussing my thought process throughout. Students indicated that this reduced their exam anxiety. This has positive benefits for learning, despite the fact that the mock exam had little bearing on the true final exam. In my fourth year longitudinal data course, I allow students to re-submit corrected assignments alongside explanations of what their mistakes were, for partial credit. This policy reinforces the idea that mistakes are an integral part of learning, and will not be punished. Participation is an effective technique to have students actively learning. However, “random call” and “forced participation” both create high-stress settings for many students. Anonymous participation methods allow for a similar level of direct engagement, without the high-stress drawbacks. I have had success using “iClickers” and “TopHat” when teaching in person, and “Kahoot!” when teaching online. Students have been almost universally thankful for the accommodations I provide them and for the environment I create. While these principles have served me well in my teaching thus far there is room for growth in my abilities as a teacher. My non-traditional start to teaching provided one additional lesson: feedback is key. Hundreds of thousands of individuals have seen my videos, and thousands have left feedback on them. This feedback has ranged from comments regarding my presentation, to suggestions about ways of clarifying particular topics. It has included positive feedback about the framing devices used, the narratives I create, and the projects I present. This feedback improved my videos over the course of my online teaching, and it has made clear to me how important feedback is to effective teaching. Going forward, I intend to make generous use of feedback from students, both through anonymous surveys during the term and official teaching assessments, as well as from my colleagues.</p>
+<p>I have enjoyed success as an instructor. I have made meaningful connections with my students, received plenty of praise, and have been recognized for this with several opportunities to continue teaching. However, the core component of my teaching philosophy is that I can always improve. And I look forward to continuing to learn, grow, and practice my skills as an instructor.</p>
+
+
+
+ ]]></description>
+  <category>statistics</category>
+  <category>teaching</category>
+  <category>research</category>
+  <category>job search</category>
+  <guid>https://github.com/DylanSpicker/personal-site/thoughts/teaching-philosophy-statement/index.html</guid>
+  <pubDate>Sun, 14 Nov 2021 00:00:00 GMT</pubDate>
+  <media:content url="https://github.com/DylanSpicker/personal-site/thoughts/teaching-philosophy-statement/teaching.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Notes on von Mises Calculus for Statistical Functionals: Part I</title>
+  <dc:creator>Dylan Spicker</dc:creator>
+  <link>https://github.com/DylanSpicker/personal-site/thoughts/2021-04-27-von-mises-calculus-notes-I/index.html</link>
+  <description><![CDATA[ 
+<a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
+
+
+<p><em>Disclaimer:</em> These notes are my (attempted, possibly error-prone) summary of <span class="citation" data-cites="VMCFSF">Fernholz (1983)</span>.</p>
+<section id="motivating-idea" class="level1">
+<h1>Motivating Idea</h1>
+<p>If your statistics background is similar to mine, estimators are viewed as functions of random variables (and as such, random variables themselves). The idea is to take <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7B%5Ctheta%7D"> as an estimator of some distributional parameter, <img src="https://latex.codecogs.com/png.latex?%5Ctheta">, and hopefully derive some good properties of these estimators.</p>
+<p>If the parameter we are estimating ``makes sense’’, then we can view it as some function which maps the distribution function, <img src="https://latex.codecogs.com/png.latex?F">, to (for instance) the reals. That is we can write <img src="https://latex.codecogs.com/png.latex?%5Ctheta%20=%20T(F)"> for some <img src="https://latex.codecogs.com/png.latex?T%5Ccolon%5Cmathcal%7BF%7D%5Cto%5Cmathbb%7BR%7D">, where <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BF%7D"> denotes a space that contains the distribution function, <img src="https://latex.codecogs.com/png.latex?F">. In doing this, we are now presented with a natural way to estimate <img src="https://latex.codecogs.com/png.latex?%5Ctheta"> on the basis of a sample, namely, taking <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7B%5Ctheta%7D%20=%20T(F_n)">, where <img src="https://latex.codecogs.com/png.latex?F_n"> denotes the empirical distribution function.</p>
+<p>This frames estimators as <strong>statistical functionals</strong>, where the terminology <em>functional</em> refers to a function which acts on a space of functions. Why does this help us? Well, there are certainly estimators which are more naturally framed in this way (the discussed estimator uses the <em>plug-in principle</em>, which is a common way of developing nonparametric estimators). Moreover, there are powerful tools in functional analysis which may allow us to get a better handle on some of these ideas than the somewhat more cumbersome framing of functions of a random sample.</p>
+<p>For my purpose, I would like to eventually extend this idea in my research to accomplish a task which relies on treating estimators as functionals over a space of characteristic functions, but that is a story for another day.</p>
+</section>
+<section id="von-mises-calculus" class="level1">
+<h1>von Mises Calculus</h1>
+<div class="definition">
+<p>An arbitrary set, <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BF%7D"> is said to be <strong>convex</strong> if, for any two elements <img src="https://latex.codecogs.com/png.latex?F,G%5Cin%5Cmathcal%7BF%7D">, we have that <img src="https://latex.codecogs.com/png.latex?%5Clambda%20F%20+%20(1%20-%20%5Clambda)%20G%20%5Cin%20%5Cmathcal%7BF%7D"> for all <img src="https://latex.codecogs.com/png.latex?%5Clambda%20%5Cin%20%5B0,1%5D">.</p>
+</div>
+<p>Consider a random sample, <img src="https://latex.codecogs.com/png.latex?X_1,%20%5Cdots,%20X_n%20%5Csim%20F"> independently. Moreover, take <img src="https://latex.codecogs.com/png.latex?T%5Ccolon%5Cmathcal%7BF%7D%5Cto%5Cmathbb%7BR%7D">, where <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BF%7D"> is a convex space of distribution functions such that <img src="https://latex.codecogs.com/png.latex?F"> and <img src="https://latex.codecogs.com/png.latex?F_n"> (for <img src="https://latex.codecogs.com/png.latex?n%5Cgeq1">) are elements of <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BF%7D">. Consider an arbitrary element <img src="https://latex.codecogs.com/png.latex?G%5Cin%5Cmathcal%7BF%7D">, then if <img src="https://latex.codecogs.com/png.latex?T_F'(G-F)%20=%20%5Cleft.%5Cfrac%7Bd%7D%7Bdt%7D%20T%5Cleft(F%20+%20t(G-F)%5Cright)%5Cright%7C_%7Bt=0%7D"> is expressible as <img src="https://latex.codecogs.com/png.latex?T_F'(G-F)%20=%20%5Cint%20%5Cphi_F(x)d(G-F)(x),"> where <img src="https://latex.codecogs.com/png.latex?%5Cphi_F"> is independent of <img src="https://latex.codecogs.com/png.latex?G">, then we call <img src="https://latex.codecogs.com/png.latex?T_F'(G-F)"> the <strong>von Mises derivative</strong> of <img src="https://latex.codecogs.com/png.latex?T"> at <img src="https://latex.codecogs.com/png.latex?F">, and we call <img src="https://latex.codecogs.com/png.latex?%5Cphi_F"> the <strong>influence function</strong> (or <strong>influence curve</strong>) of <img src="https://latex.codecogs.com/png.latex?T"> at <img src="https://latex.codecogs.com/png.latex?F">.</p>
+<p>The independence of <img src="https://latex.codecogs.com/png.latex?%5Cphi_F"> on <img src="https://latex.codecogs.com/png.latex?G"> means that, when the von Mises derivative exists, we can use any <img src="https://latex.codecogs.com/png.latex?G"> for determining it. Now, <img src="https://latex.codecogs.com/png.latex?%5Cphi_F"> is unique only to an additive constant. Consider <img src="https://latex.codecogs.com/png.latex?%5Cphi_F(x)"> to be the computed influence function and take <img src="https://latex.codecogs.com/png.latex?%5Cwidetilde%7B%5Cphi%7D_F(x)%20=%20%5Cphi_F(x)%20+%20c"> for some <img src="https://latex.codecogs.com/png.latex?c%20%5Cin%20%5Cmathbb%7BR%7D">, then: <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%5Cint%20%5Cwidetilde%7B%5Cphi%7D_F(x)d(G-F)(x)%20&amp;=%20%5Cint%20%5Cphi_F(x)d(G-F)(x)%20+%20c%5Cint%20d(G-F)(x)%20%5C%5C%0A&amp;=%20T_F'(G-F)%20+%200,%0A%5Cend%7Balign*%7D"> where the <img src="https://latex.codecogs.com/png.latex?0"> follows since <img src="https://latex.codecogs.com/png.latex?d(G-F)"> has total measure zero. As a result, we can select <img src="https://latex.codecogs.com/png.latex?%5Cphi_F(x)"> to be the influence curve such that <img src="https://latex.codecogs.com/png.latex?%5Cint%20%5Cphi_F(x)dF(x)%20=%200">, which is a convention we will take. Why do we do this?</p>
+<p>Well, this allows us to consider <img src="https://latex.codecogs.com/png.latex?G%20=%20%5Cdelta_x">, where <img src="https://latex.codecogs.com/png.latex?%5Cdelta_x"> is the Dirac measure at a point <img src="https://latex.codecogs.com/png.latex?x"> (that is, <img src="https://latex.codecogs.com/png.latex?%5Cdelta_x"> assigns measure <img src="https://latex.codecogs.com/png.latex?1"> to any set containing <img src="https://latex.codecogs.com/png.latex?x"> and <img src="https://latex.codecogs.com/png.latex?0"> otherwise). Doing so, we can readily show that, when it exists, <img src="https://latex.codecogs.com/png.latex?%5Cphi_F(x)%20=%20%5Cleft.%5Cfrac%7Bd%7D%7Bdt%7DT%5Cleft(F%20+%20t(%5Cdelta_x%20-%20F)%5Cright)%5Cright%7C_%7Bt=0%7D."> This follows since <img src="https://latex.codecogs.com/png.latex?%5Cint%20%5Cphi_F(y)d%5Cdelta_x(y)%20=%20%5Cphi_F(x)">.</p>
+<section id="why-might-we-care" class="level2">
+<h2 class="anchored" data-anchor-id="why-might-we-care">Why might we care?</h2>
+<p>The primary reason that we have taken the time to derive the von Mises derivative, influence curve, and so forth is that we can use it for a Taylor-esque expansion of functionals. We write the von Mises expansion of <img src="https://latex.codecogs.com/png.latex?T"> as <img src="https://latex.codecogs.com/png.latex?T(G)%20=%20T(F)%20+%20T_F'(G-F)%20+%20%5Ctext%7BRem%7D(G-F),"> where <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BRem%7D(G-F)"> captures a remainder term.</p>
+<p>If we take <img src="https://latex.codecogs.com/png.latex?G%20=%20F_n">, then we get <img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Balign*%7D%0A%20%20T(F_n)%20&amp;=%20T(F)%20+%20T_F'(F_n%20-%20F)%20+%20%5Ctext%7BRem%7D(F_n%20-%20F)%20%5C%5C%0A%20%20&amp;=%20T(F)%20+%20%5Cint%5Cphi_%7BF%7D(x)d(F_n%20-%20F)(x)%20+%20%5Ctext%7BRem%7D(F_n%20-%20F)%20%5C%5C%0A%20%20&amp;=%20T(F)%20+%20%5Cint%5Cphi_F(x)dF_n(x)%20-%200%20+%20%5Ctext%7BRem%7D(F_n%20-%20F)%20%5C%5C%0A%20%20&amp;=%20T(F)%20+%20%5Cfrac%7B1%7D%7Bn%7D%5Csum_%7Bi%20=%201%7D%5En%20%5Cphi_F(X_i)%20+%20%5Ctext%7BRem%7D(F_n%20-%20F).%0A%5Cend%7Balign*%7D"></p>
+<p>Now, asymptotic inference tends to center on the quantity <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7B%5Ctheta%7D%20-%20%5Ctheta">, or in our functional notation, <img src="https://latex.codecogs.com/png.latex?T(F_n)%20-%20T(F)">. Assuming that we have a well behaved influence curve we could apply central limit theorems to <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7Bn%7D(T(F_n)%20-%20T(F))"> to get nice convergence results, so long as <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7Bn%7D%5Ctext%7BRem%7D(F_n%20-%20F)"> converges in probability to <img src="https://latex.codecogs.com/png.latex?0">. The idea is then to use these expansions to investigate the asymptotic properties.</p>
+<p>The von Mises derivative, unfortunately, is not sufficient for continuation of this study. It is too weak of a concept to be able to generally conclude that, when it exists, <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7Bn%7D%5Ctext%7BRem%7D(F_n%20-%20F)%20%5Cstackrel%7Bp%7D%7B%5Cto%7D%200">. To overcome this, it is possible to assume that the functional is twice differentiable (with respect to the von Mises derivative), which would enable such conclusions. This is an overly restrictive assumption, and so instead we turn to alternative formulations of the functional derivative.</p>
+<div class="example">
+<p>This example demonstrates the <em>shortcoming</em> of the von Mises derivative. Consider the functional <img src="https://latex.codecogs.com/png.latex?T(F)"> that measures the size of the discontinuity points of <img src="https://latex.codecogs.com/png.latex?F"> on the interval <img src="https://latex.codecogs.com/png.latex?%5B0,1%5D">. Take <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%3E%201">, then we can write <img src="https://latex.codecogs.com/png.latex?T(F)%20=%20%5Csum_%7Bx%5Cin%5B0,1%5D%7D%20%5Cleft(F(x)%20-%20F(x%5E%7B-%7D)%5Cright)%5E%7B%5Calpha%7D,"> where <img src="https://latex.codecogs.com/png.latex?F(x%5E%7B-%7D)%20=%20%5Clim%5Climits_%7Bx%5E*%5Cto%20x%7D%20F(x%5E*)">. On the interval <img src="https://latex.codecogs.com/png.latex?%5B0,1%5D"> any distribution function has at most a countable number of discontinuities, so this sum only takes values at a countable number of values, and is as such well-defined (if it helps, define <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BD%7D(F)"> to be the set of discontinuities of <img src="https://latex.codecogs.com/png.latex?F"> on <img src="https://latex.codecogs.com/png.latex?%5B0,1%5D">, and then define the summation for <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20%5Cmathcal%7BD%7D(F)">, or similar).</p>
+<p>Now, if we continue <img src="https://latex.codecogs.com/png.latex?F%20=%20U"> to be the distribution function of a <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BUniform%7D(0,1)"> distribution, then it is clear that <img src="https://latex.codecogs.com/png.latex?T(U)%20=%200">. Moreover, the empirical distribution function, computed based on a <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BUniform%7D(0,1)"> distribution, will almost surely have <img src="https://latex.codecogs.com/png.latex?n"> discontinuities, each of size <img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7Bn%7D">. As a result, we will find that <img src="https://latex.codecogs.com/png.latex?T(F_n)%20=%20n%5Ctimes%5Cfrac%7B1%7D%7Bn%5E%5Calpha%7D%20=%20n%5E%7B1-%5Calpha%7D">.</p>
+<p>Resultingly, we have that <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7Bn%7D(T(F_n)%20-%20T(U))%20%5Cstackrel%7Ba.s%7D%7B=%7D%20n%5E%7B3/2%20-%20%5Calpha%7D">. However, we can also see that the von Mises derivative exists (and is exactly <img src="https://latex.codecogs.com/png.latex?0">, so long as <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%3E%201">), which means that for any <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%5Cin%20(1,%203/2)"> we must not have <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BRem%7D(F_n%20-%20F)%20=%20o_p(n%5E%7B-1/2%7D)">.</p>
+</div>
+</section>
+</section>
+<section id="fréchet-and-mathcals--derivatives" class="level1">
+<h1>Fréchet (and <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BS%7D">-) derivatives</h1>
+<p>Instead of working with the von Mises derivative (hereafter V-derivative), we can work with the (more restrictive) <strong>Fréchet (F-) derivative</strong>. For this, we consider <img src="https://latex.codecogs.com/png.latex?V"> to be a normed vector space (a vector space which has some norm, <img src="https://latex.codecogs.com/png.latex?%7C%7C%5Ccdot%7C%7C"> on it), and a map <img src="https://latex.codecogs.com/png.latex?T%5Ccolon%20V%5Cto%5Cmathbb%7BR%7D">. Assume that, for the distribution function <img src="https://latex.codecogs.com/png.latex?F"> of interest, we have <img src="https://latex.codecogs.com/png.latex?F%5Cin%20V">. Then, if there exists some map <img src="https://latex.codecogs.com/png.latex?T_%7BF%7D'%5Ccolon%20V%5Cto%5Cmathbb%7BR%7D"> such that, for every <img src="https://latex.codecogs.com/png.latex?G%20%5Cin%20V">, <img src="https://latex.codecogs.com/png.latex?%5Clim%5Climits_%7BG%5Cto%20F%7D%20%5Cfrac%7B%7CT(G)%20-%20T(F)%20-%20T_F'(G-F)%7C%7D%7B%7C%7CG%20-%20F%7C%7C%7D%20=%200,"> then we say that <img src="https://latex.codecogs.com/png.latex?T_F'(G-F)"> is the <strong>F-derivative</strong> of <img src="https://latex.codecogs.com/png.latex?T"> at <img src="https://latex.codecogs.com/png.latex?F">. Now the F-derivative, when it exists, suggests an expansion of the form <img src="https://latex.codecogs.com/png.latex?T(G)%20=%20T(F)%20+%20T_F'(G-F)%20+%20%5Ctext%7BRem%7D(G-F)"> where <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BRem%7D(G-F)"> is a remainder term that (when the <strong>F-derivative exists</strong>) will be <img src="https://latex.codecogs.com/png.latex?o(%7C%7CG-F%7C%7C)">.</p>
+<p>This is useful for our purposes since it is well known that <img src="https://latex.codecogs.com/png.latex?%7C%7CF_n%20-%20F%7C%7C%20=%20O_p(n%5E%7B-1/2%7D)">, and so when the F-derivative exists, applied to the plug-in estimator, we have a linear approximation that has nice convergence properties. In particular, we would get that <img src="https://latex.codecogs.com/png.latex?%5Csqrt%7Bn%7D%5Ctext%7BRem%7D(F_n%20-%20F)%20%5Cstackrel%7Bp%7D%7B%5Cto%7D%200"> (so long as <img src="https://latex.codecogs.com/png.latex?%7C%7CF_n%20-%20F%7C%7C%20=%20O_p(n%5E%7B-1/2%7D)">), and so our central limit theorem argument from before holds.</p>
+<p><span class="citation" data-cites="VMCFSF">Fernholz (1983)</span> points out at least two problems with this approach. First, we do not typically want to use this vector space for the analysis of statistical functionals. Second, many statistical functionals that we wish to analyze are <strong>not</strong> F-differentiable.</p>
+<p>When defining the F-derivative, I passed over some important details. In particular, the F-derivative is as stated for a general normed vector space <img src="https://latex.codecogs.com/png.latex?V">. We can take the vector space of bounded, real-valued, functions and consider distribution functions on <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D"> to be elements of this vector space. Equipped with the uniform (infinity) norm, that is <img src="https://latex.codecogs.com/png.latex?%7C%7CG%7C%7C_%7B%5Cinfty%7D%20=%20%5Csup%5Climits_%7Bv%5Cin%20%5Cmathbb%7BR%7D%7D%7C%7CG(v)%7C%7C">, we have a real Banach space. On this space, the argument about the sufficiency of the existence of the F-derivative holds. It is also this space which is, according to <span class="citation" data-cites="VMCFSF">Fernholz (1983)</span>, somewhat unnatural for consideration of statistical functionals.</p>
+<p>In <span class="citation" data-cites="Huber87">Huber (1987)</span>, a more natural space for consideration is built based on the idea of <em>robustness</em>. The idea of robustness in statistics is that statistical procedures should be more or less resistent to small changes in the underlying distribution. When we consider statistics that can be written as functions of <img src="https://latex.codecogs.com/png.latex?F_n">, then ``small change’’ may refer either to a small change in some (or all) of the observations, or a large change in only a few of the observations. If we consider our linear functional as being expressed as <img src="https://latex.codecogs.com/png.latex?n%5E%7B-1%7D%5Csum_%7Bi=1%7D%5En%20%5Cpsi(x_i)">, then in order for this quantity to remain more or unimpacted by these small changes, we would require that <img src="https://latex.codecogs.com/png.latex?%5Cpsi"> is continuous and bounded. The continuity requirement ensures that small changes in all of the observed <img src="https://latex.codecogs.com/png.latex?x_i"> do not alter the result by too much; the bounded requirement ensures that large changes in only a few observations do not alter the result by too much.</p>
+<section id="a-topological-digression" class="level2">
+<h2 class="anchored" data-anchor-id="a-topological-digression">A Topological Digression</h2>
+<div class="definition">
+<p>A <strong>topological vector space</strong>, given by <img src="https://latex.codecogs.com/png.latex?(V(%5Cmathbb%7BK%7D),%20%5Cmathcal%7BT%7D)">, is a vector space <img src="https://latex.codecogs.com/png.latex?V(%5Cmathbb%7BK%7D)"> on a field <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BK%7D"> (either <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BR%7D"> or <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BC%7D">), along with a topology <img src="https://latex.codecogs.com/png.latex?%5Cmathcal%7BT%7D">, such that addition and scalar multiplication is jointly continuous in both variables. Note, the somewhat unusual notation of <img src="https://latex.codecogs.com/png.latex?V(%5Cmathbb%7BK%7D)"> is just used to stress the field that the vector space is defined on: this will be dropped shortly since I really only care about <img src="https://latex.codecogs.com/png.latex?%5Cmathbb%7BK%7D%20=%20%5Cmathbb%7BR%7D">.</p>
+</div>
+<p>We introduce the concept of a topological vector space so to build to the concept of the weak and weak<img src="https://latex.codecogs.com/png.latex?*"> topologies. The idea is to extend the idea of a normed vector space (e.g.&nbsp;<img src="https://latex.codecogs.com/png.latex?(V,%20%7C%7C%5Ccdot%7C%7C_V)">) which can evidently generate its own topology (the <em>norm topology</em>, by taking open balls based on <img src="https://latex.codecogs.com/png.latex?%7C%7C%5Ccdot%7C%7C_V">) to allow for weaker (smaller in the set containment sense) topologies. The rationale is that convergence concepts are tied directly (for many convergence notions) to topologies. I will leave this here for now and revist topological notions of convergence (which seems to involve <a href="https://en.wikipedia.org/wiki/Net_(mathematics)">nets</a> – gross).</p>
+<div class="definition">
+<p>The <strong>dual space</strong>, <img src="https://latex.codecogs.com/png.latex?V%5E*"> of a toplogical vector space, <img src="https://latex.codecogs.com/png.latex?(V(%5Cmathbb%7BK%7D),%20%5Cmathcal%7BT%7D)"> is the space of continuous linear functionals from <img src="https://latex.codecogs.com/png.latex?V(%5Cmathbb%7BK%7D)%5Cto%5Cmathbb%7BK%7D">.</p>
+</div>
+<p>The dual is continuously brought up in the considerations of functional analysis. There are (apparently) good reasons as to why this is the case. From my perspective, this definition is here mainly as a reminder: for a space <img src="https://latex.codecogs.com/png.latex?V"> the dual is the space of continuous linear functions from <img src="https://latex.codecogs.com/png.latex?V"> to the field on which <img src="https://latex.codecogs.com/png.latex?V"> is defined (the more I say/type it, hopefully the sooner it sticks!).</p>
+<div class="definition">
+<p>We take <img src="https://latex.codecogs.com/png.latex?V"> to be a topological vector space and <img src="https://latex.codecogs.com/png.latex?V%5E*"> to be its dual. Then, the <strong>weak topology</strong> on <img src="https://latex.codecogs.com/png.latex?V"> is the topology generated by the seminorms, <img src="https://latex.codecogs.com/png.latex?%7C%5Clambda(x)%7C"> for all <img src="https://latex.codecogs.com/png.latex?%5Clambda%20%5Cin%20V%5E*">. The <strong>weak<img src="https://latex.codecogs.com/png.latex?*"> topology</strong> is the topology generated by the seminorms <img src="https://latex.codecogs.com/png.latex?%7C%5Clambda(x)%7C"> for all <img src="https://latex.codecogs.com/png.latex?x%20%5Cin%20V">.</p>
+</div>
+</section>
+<section id="references" class="level2">
+
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-VMCFSF" class="csl-entry">
+Fernholz, Luisa Turrin. 1983. <em>Von Mises Calculus for Statistical Functionals</em>. Springer New York. <a href="https://doi.org/10.1007/978-1-4612-5604-5">https://doi.org/10.1007/978-1-4612-5604-5</a>.
+</div>
+<div id="ref-Huber87" class="csl-entry">
+Huber, Peter J. 1987. <em>Robust Statistical Procedures (CBMS-NSF Regional Conference Series in Applied Mathematics, Series Number 27)</em>. Paperback. Society for Industrial and Applied Mathematics. <a href="https://lead.to/amazon/com/?op=bt&amp;la=en&amp;cu=usd&amp;key=089871379X">https://lead.to/amazon/com/?op=bt&amp;la=en&amp;cu=usd&amp;key=089871379X</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>statistics</category>
+  <category>teaching</category>
+  <category>research</category>
+  <guid>https://github.com/DylanSpicker/personal-site/thoughts/2021-04-27-von-mises-calculus-notes-I/index.html</guid>
+  <pubDate>Tue, 27 Apr 2021 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>The (lack of a) Relationship between Mean, Median, and Skewness</title>
+  <dc:creator>Dylan Spicker</dc:creator>
+  <link>https://github.com/DylanSpicker/personal-site/thoughts/2021-04-20-the-mean-median-and-skewness/index.html</link>
+  <description><![CDATA[ 
+<a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
+
+
+<p>This term I had the pleasure of teaching an introductory statistics course at the University of Waterloo. In preparing to run the course I came to realize (and this is by no means a unique realization) that there is <strong>a lot</strong> of incorrect (or misleading) information aimed at people learning statistics. One particularly stand-out example is the idea that we can use the mean and median of a sample to infer skewness.</p>
+<blockquote class="blockquote">
+If the mean is less than the median the data exhibit a left (negative) skew. If the mean is greater than the median the data exhibit a right (positive) skew.
+<footer>
+— Introductory Textbooks, sometimes
+</footer>
+</blockquote>
+<p>Now, all told this is not the worst offense of this kind, but I think it exemplifies a concerning trend. There is an understandable desire for easy to follow rules in statistics. It is my opinion that, generally speaking, such rules do not exist. This same tendency leads to an uncritical acceptance of arbitrary significance levels and inappropriate applications of approximation theorems. So, in the interest of the bigger picture, let’s correct this misconception!</p>
+<p>This point has previously been made <span class="citation" data-cites="article1">(von Hippel 2005)</span>, but we can compile some explicit examples here.</p>
+<section id="positive-skew-mean-median" class="level2">
+<h2 class="anchored" data-anchor-id="positive-skew-mean-median">Positive Skew; Mean &lt; Median</h2>
+<p>Consider responses to the question ``How many adults (18+) live in this house?’’ for residents across Canada. We can imagine asking 1000 households for this response and it seems plausible that we would have data which look something like:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://github.com/DylanSpicker/personal-site/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Based on these data, we can see fairly clearly that the median is going to be 2 and that the data exhibit a positive skewness. The mean, however, is given by 1.79 which evidently violates the supposed rule of thumb.</p>
+</section>
+<section id="negative-skew-median-mean" class="level2">
+<h2 class="anchored" data-anchor-id="negative-skew-median-mean">Negative Skew; Median &lt; Mean</h2>
+<p>Consider a quiz that is given to students in an introductory statistics class that is marked out of 5. If we assume that 500 students are enrolled in the course, and they all write the quiz, then the following grade distribution seems plausible:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://github.com/DylanSpicker/personal-site/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Based on these data, we can see fairly clearly that the median is going to be 4 and that the data exhibit a negative skewness. The mean, however, is given by 4.1 which evidently violates the supposed rule of thumb.</p>
+</section>
+<section id="positive-skew-mean-median-1" class="level2">
+<h2 class="anchored" data-anchor-id="positive-skew-mean-median-1">Positive Skew; Mean = Median</h2>
+<div class="cell">
+
+</div>
+<p>Dropping the pretense of real data we can, as may be obvious now, begin to generate arbitrary examples that violate the remaining configuartions of the rules. The following data are selected so that the skew is positive (0.6491939), while the mean (0) and the median (0) are exactly equal.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://github.com/DylanSpicker/personal-site/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Perhaps the interested reader could come up with an example situation for these data.</p>
+</section>
+<section id="negative-skew-mean-median" class="level2">
+<h2 class="anchored" data-anchor-id="negative-skew-mean-median">Negative Skew; Mean = Median</h2>
+<div class="cell">
+
+</div>
+<p>The previous example can of course be mirrored exactly so as to produce a negative sample skewness (-0.6491939), while the mean (1) and the median (1) are exactly equal.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://github.com/DylanSpicker/personal-site/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Perhaps the interested reader could come up with an (alternative) example situation for these data.</p>
+</section>
+<section id="no-skew-mean-median-mode" class="level2">
+<h2 class="anchored" data-anchor-id="no-skew-mean-median-mode">No Skew; Mean &lt; Median (&lt; Mode)</h2>
+<div class="cell">
+
+</div>
+<p>The remaining scenarios to deconstruct involve distributions which have no skew, but which have a mean and median which are not equal. These are fairly straightforward to construct as well. In this example we can see that the skewness (0) is 0, while the mean (4.5) and the median (5) differ.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://github.com/DylanSpicker/personal-site/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="no-skew-mode-median-mean" class="level2">
+<h2 class="anchored" data-anchor-id="no-skew-mode-median-mean">No Skew; (Mode &lt;) Median &lt; Mean</h2>
+<div class="cell">
+
+</div>
+<p>Once again, other alternatives are possible, by why reinvent the wheel when we can simply mirror our previous situation? In this example we can see that the skewness (0) is 0, while the mean (5.5) and the median (5) still differ, but differently than last time.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="https://github.com/DylanSpicker/personal-site/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="general-lessons-and-takeaways" class="level1">
+<h1>General Lessons and Takeaways</h1>
+<p>These examples tended to exploit the fact that discrete distributions behave strangely. We could have also used multimodal distributions to a similar effect. While these distributions often feel contrived when compared to our nice, named distributions, I would wager that histograms like those presented are, in fact, more common in an <em>actual</em> data analysis than the nice, smooth, well-behaved densities we like to work with.</p>
+<p>The keen reader may wish to pushback and claim that adding in the relationship with the mode will remedy these supposed counter examples – unfortunately, no. For one, especially when working with continuous densities, it becomes trivial to add a unique mode anywhere relative to the mean and median, without substantively changing these values. Second, while the first few examples had their mode coinciding with the median, the last two demonstrate that we can have a strict ordering (Mean &lt; Median &lt; Mode or Mode &lt; Median &lt; Mean) and end up without any skew in our data.</p>
+<p>So, are there any rules we can follow? If the distribution is Pearson family, the standard rule does apply <span class="citation" data-cites="article2">(MacGillivray 1981)</span>. Beyond that, I think that the common refrain is more helpful as an intuition than it is as a rule, and I think that this is true of many statistical absolutes that are commonly taught.</p>
+<section id="references" class="level2">
+
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-article1" class="csl-entry">
+Hippel, Paul T von. 2005. <span>“Mean, Median, and Skew: Correcting a Textbook Rule.”</span> <em>Journal of Statistics Education</em> 13 (2). <a href="https://doi.org/10.1080/10691898.2005.11910556">https://doi.org/10.1080/10691898.2005.11910556</a>.
+</div>
+<div id="ref-article2" class="csl-entry">
+MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewness for a Class of Densities.”</span> <em>Australian Journal of Statistics</em> 23 (2): 247–50. <a href="https://doi.org/10.1080/10691898.2005.11910556">https://doi.org/10.1080/10691898.2005.11910556</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>statistics</category>
+  <category>teaching</category>
+  <category>misconceptions</category>
+  <guid>https://github.com/DylanSpicker/personal-site/thoughts/2021-04-20-the-mean-median-and-skewness/index.html</guid>
+  <pubDate>Tue, 20 Apr 2021 00:00:00 GMT</pubDate>
+  <media:content url="https://github.com/DylanSpicker/personal-site/thoughts/2021-04-20-the-mean-median-and-skewness/Relationship_between_mean_and_median_under_different_skewness.png" medium="image" type="image/png" height="54" width="144"/>
+</item>
+<item>
+  <title>On the Linearity of Q-Functions</title>
+  <dc:creator>Dylan Spicker</dc:creator>
+  <link>https://github.com/DylanSpicker/personal-site/thoughts/linearity-of-q-functions/index.html</link>
+  <description><![CDATA[ 
+<a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
+
+
+<p>A problem of particular focus for the past few days for me has been on attempting to establish when we can make the claim of <em>linearity</em> in the set of Q-functions, based on an outcome model and the relevant distributions of covariates which go into it.</p>
+<p>Briefly, if we define a DTR over <img src="https://latex.codecogs.com/png.latex?K"> stages, which we wish to fit using Q-learning, we know that the parameter estimates for the Q-functions will be consistent, so long as all of the models are correctly specified. Since each Q-function takes the form <img src="https://latex.codecogs.com/png.latex?Q_k%20=%20E%5BV_%7Bk+1%7D%7CH_k%5D">, then it is natural to wish to use linear regression models for these functions as they each take the form of a conditional expectation.</p>
+<p>However, the quantities <img src="https://latex.codecogs.com/png.latex?V_%7Bk%7D"> are given based on the maximization of the previous Q-function (where here, previous actually refers to the <img src="https://latex.codecogs.com/png.latex?k+1">-st function), over the treatment parameter, which is binary. As such, these value functions will contain an indicator function times by some linear functional, which of course has the potential to induce severe non-linearity into the Q-functions (particularly as they propagate over time).</p>
+<p>This problem is more formally discussed in (P. J. Schulte, A. A. Tsiatis, E. B. Laber, and M. Davidian, “Q-and a-learning methods for estimating optimal dynamic treatment regimes,” Statistical Science, vol.&nbsp;29, no. 4, pp.&nbsp;640–661,2014.), where they demonstrate that even in a simple scenario, this non-linearity is a problem.</p>
+<p><strong>So… what?</strong> There are two obvious questions that arise from the revelation that Q-functions may, in fact, be non-linear. (1) Are there more flexible models that we can use in place of linear regression? (2) Can we characterize precisely when Q-functions will be linear?</p>
+<p>For (1) the answer is “yes” and it is done somewhat frequently. This is, of course, a more fruitful avenue of research moving forward, and will certainly be where I turn my attention next. The second question, however, is quite interesting to me.</p>
+<p>It is certainly possible (in fact, upon some moderate thought, not all that difficult) to define DTRs which do indeed have linear Q-functions; I am interested in seeing whether sufficient (and, perhaps more aspirationally, necessary) conditions are possible.</p>
+
+
+
+ ]]></description>
+  <category>statistics</category>
+  <category>research</category>
+  <guid>https://github.com/DylanSpicker/personal-site/thoughts/linearity-of-q-functions/index.html</guid>
+  <pubDate>Fri, 15 Nov 2019 00:00:00 GMT</pubDate>
+  <media:content url="https://github.com/DylanSpicker/personal-site/thoughts/linearity-of-q-functions/Q.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Null Preservation</title>
+  <dc:creator>Dylan Spicker</dc:creator>
+  <link>https://github.com/DylanSpicker/personal-site/thoughts/null-preservation/index.html</link>
+  <description><![CDATA[ 
+<a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
+
+
+<p>I am in the process of reading <a href="https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/">Causal Inference</a> by Hernan and Robins, and one idea has come up a handful of times which strikes me as important - and underdiscussed in a standard statistical curriculum (read: my statistical curriculum).</p>
+<p>The basic premise is that, under null preservation, the model that we are working with is never misspecified. So instance, if one is considering the null of no causal influece of treatment (<img src="https://latex.codecogs.com/png.latex?a">) on an outcome (<img src="https://latex.codecogs.com/png.latex?Y">), then the standard quadratic regression <img src="https://latex.codecogs.com/png.latex?E%5BY%7CA=a%5D%20=%20%5Cbeta_0%20+%20%5Cbeta_1a%20+%20%5Cbeta_2a%5E2"> is correctly specified when there is no causal effect [e.g.&nbsp;it is some constant] even if the mean structure between Y and A is incorrect (supposing it exists).</p>
+<p>This is a neat concept in part because it means that a conclusion in which we reject the null is valid evidence against the null, regardless of whether or model is correctly specified. If we take a conservative statisticians point-of-view, and never claim evidence in favour of the alternative, then null preservation permits us to draw valid conclusions, even when model mis-specification is all but certain.</p>
+
+
+
+ ]]></description>
+  <category>statistics</category>
+  <category>teaching</category>
+  <category>research</category>
+  <guid>https://github.com/DylanSpicker/personal-site/thoughts/null-preservation/index.html</guid>
+  <pubDate>Tue, 16 Jul 2019 00:00:00 GMT</pubDate>
+  <media:content url="https://github.com/DylanSpicker/personal-site/thoughts/null-preservation/preserve.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>When Should We Control For Factors?</title>
+  <dc:creator>Dylan Spicker</dc:creator>
+  <link>https://github.com/DylanSpicker/personal-site/thoughts/controlling-for-factors/index.html</link>
+  <description><![CDATA[ 
+<a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
+
+
+<section id="conditioning-for-causality" class="level1">
+<h1>Conditioning for Causality</h1>
+<section id="simpsons-paradox" class="level2">
+<h2 class="anchored" data-anchor-id="simpsons-paradox">Simpson’s Paradox</h2>
+<p>There is a well known statistical <em>“paradox”</em> <a href="https://en.wikipedia.org/wiki/Simpson%27s_paradox">Simpson’s Paradox</a>, which discusses the ability for a trend observed in your data to reverse when groups of interest are aggregated. The basic idea is often illustrated with the <strong>UC Berkeley Gender Bias</strong> example. If you took a look at the admissions data for 1973, you would note that 44% of men who applied, and only 35% of women, were accepted into their respective programs. However, four of the six departments at the school, women were accepted at higher rates than men. The issue is that, on the whole, women were applying to more competitive departments (such as English), where mentended to apply to less competitive disciplines (Engineering and Chemistry). This creates a scenario where there is no explicit discrimination at any department level, but it appears as though there is when aggregated.</p>
+<p>The lesson from the above, statistically, tends to be <strong>condition on relevant quantities</strong>. That is, when we are conducting statistical analysis, we ought to “control for” the effects of possibly influential variables; if the above analysis had initially looked at acceptance rates <strong>controlling for department of application</strong>, a <strong>more correct</strong> conclusion would have been reached. Seems easy enough - so what is the issue?</p>
+</section>
+<section id="berksons-paradox" class="level2">
+<h2 class="anchored" data-anchor-id="berksons-paradox">Berkson’s Paradox</h2>
+<p>(Prepare for Deja Vu) There is a well known statistical <em>“paradox”</em> <a href="https://en.wikipedia.org/wiki/Berkson%27s_paradox">Berkson’s Paradox</a>, which discusses the ability for a correlation observed in your data to reverse based on the set of individuals observed. The basic idea is often illustrated with <a href="https://slate.com/human-interest/2014/06/berksons-fallacy-why-are-handsome-men-such-jerks.html"><strong>Why Are Handsome Men Such Jerks?</strong></a> example. If you imagine scoring the handsomeness, and the niceness, of men numerically, then perhaps Jim will only date a guy who has some niceness plus handsomeness score that exceeds a threshold. We may say that, in the general population, nicer men also tend to be more handsome (who knows?) so that these two traits are positively correlated. However, among the men that Jim dates, he will observe that nicer men are on average less handsome (and vice-versa). Why? Well, if there is an exceedingly nice man, in order to cross the dating threshold for Jim, this guy does not need to be very handsome at all - and as such, there will be more observations that are extreme than would be expected in the general public.</p>
+<p>The lesson from the above, statistically, tends to be <strong>do not condition on irrelevant quantities</strong>. That is, when we are conducting statistical analysis, we ought not “control for” the effects of irrelevant variables; if the above analysis had inititally looked at the pool of men that Jim dates, then we would erroneously conclude that handsomeness and niceness are negatively correlated.</p>
+</section>
+<section id="well-now-what" class="level2">
+<h2 class="anchored" data-anchor-id="well-now-what">Well, now what?</h2>
+<p>Without having a subject-matter understanding of the causal structure at play, it is not obvious as to whether a factor is a <strong>confounder</strong> (e.g.&nbsp;in the first example) or a <strong>collider</strong> (e.g.&nbsp;in the second example). Confounders should <strong>always</strong> be conditioned on in a causal analysis, where colliders should <strong>never</strong> be conditiond on. Doing this incorrectly will lead to incorrect conclusions regarding the presence of a causal effect. This ultimately means that we should <strong>not</strong> “control for” absolutely every, possible factor; it also ultimately means that we ought to “control for” every relevant factor. Because this cannot be empirically informed, causal inference necessitates importing assumptions from a subject matter expert.</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>statistics</category>
+  <category>teaching</category>
+  <category>research</category>
+  <guid>https://github.com/DylanSpicker/personal-site/thoughts/controlling-for-factors/index.html</guid>
+  <pubDate>Mon, 01 Jul 2019 00:00:00 GMT</pubDate>
+  <media:content url="https://github.com/DylanSpicker/personal-site/thoughts/controlling-for-factors/control.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>PSA: Causation without Correlation</title>
+  <dc:creator>Dylan Spicker</dc:creator>
+  <link>https://github.com/DylanSpicker/personal-site/thoughts/PSA-causation-without-correlation/index.html</link>
+  <description><![CDATA[ 
+<a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
+
+
+<section id="correlation-causation-and-useless-platitudes" class="level1">
+<h1>Correlation, Causation, and Useless Platitudes</h1>
+<p>Any student who has taken <em>Statistics 101</em> can tell you (and will tell you) that “Correlation does not imply causation.” This student is correct - correlation does not imply causation. You need only look at the wonderful <a href="https://www.tylervigen.com/spurious-correlations">Spurious Correlations</a> to see the truth of such a statement. Unfortunately, this platitude is incorrectly interpretted as “a correlation means that there is no causation” far too often. Relevant XKCD: <img src="https://github.com/DylanSpicker/personal-site/thoughts/PSA-causation-without-correlation/https:/www.explainxkcd.com/wiki/images/9/9c/correlation.png" class="img-fluid" alt="XKCD 552: Correlation"></p>
+<p>“Correlation doesn’t imply causation, but it does waggle its eyebrows suggestively and gesture furtively while mouthing ‘look over there’.”</p>
+<section id="correlation-can-imply-causation" class="level2">
+<h2 class="anchored" data-anchor-id="correlation-can-imply-causation">Correlation <em>can</em> Imply Causation</h2>
+<p>There are situations where merely observing correlation between two quantities does in fact mean that those two quantities are causally linked. There is an entire field of Statistics dedicated to this distinction. The most common method for detecting causation from correlation is in randomized studies. In a properly conducted, well-powered randomized trial, we can guarantee (with some set degree of confidence) that correlations observed are causal in nature. Of course, as with all findings in Statistics, we can never be <em>certain</em> of the causal nature, but with enough well-collected data, we can be as certain as we need to be.</p>
+<p>Even without randomization, we are able to detect causal relations from observed correlations. These so-called <em>observational studies</em> tend to be more difficult to use for this purpose (e.g.&nbsp;they require stronger assumptions, more data, a sound theoretical backing, or all of the above), they are still frequently and reliably used for this purpose. Consider the case of smoking and lung cancer. It would be entirely unethical to randomly assign groups of individuals (at birth) to be either smokers or non-smokers, and then follow them and collect information regarding the rates of lung-cancer. Instead, we rely on observational data to detect this causal relationship. We have seen enough times (in enough settings) to know that this is a causal relationship. There is a strong scientific backing explaining this phenomenon, and it has reliably held-up over time.</p>
+<p>So while correlation does not imply causation, it <em>can</em> imply causation, given we take into account enough relevant factors. A <em>Statistics 102</em> student recognizes this fact, and will often then tell you “correlation does not imply causation, but causation does imply correlation”. Unfortunately, unlike the <em>Statistics 101</em> student from before, this student is actually simply incorrect. <strong>Causation does not imply correlation</strong>!</p>
+</section>
+<section id="causation-does-not-imply-correlation" class="level2">
+<h2 class="anchored" data-anchor-id="causation-does-not-imply-correlation">Causation does <em>NOT</em> Imply Correlation</h2>
+<p>This is counter-intuitive (but true). The reason here has to do with the definition of correlation. When people say <em>correlation</em>, they almost certainly mean <em>Pearson’s Correlation</em>, as this is the most commonly used measure of correlation. Pearson’s Correlation is a measure of the <strong>linear relationship</strong> between two quantities. This is very useful in many settings, but it only takes a moment thought to recognize that non-linear relationships exist. In fact, the following plot would exhibit a correlation of 0.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://github.com/DylanSpicker/personal-site/thoughts/PSA-causation-without-correlation/https:/3.bp.blogspot.com/-wg7eovEn0GA/VEXW-DPhGuI/AAAAAAAAD4Y/hDWD4TZKRWU/s1600/quadratic_data.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Lucid Mesh: Non-linear Data</figcaption><p></p>
+</figure>
+</div>
+<p>Now the two quantities pictured have a very clear relationship, it just happens to be non-linear. As such the correlation is 0. Is the relationship between these two quantities causal? Who knows! But the point is that the observation that correlation equals 0 is a point which gives literally no information as to whether or not a causal relationship exists [I mean, technically it does tell you that it is not possible for it to be a strictly, unmediated linear relationship, but that’s so little information as to basically be no information].</p>
+</section>
+<section id="a-set-of-concrete-examples" class="level2">
+<h2 class="anchored" data-anchor-id="a-set-of-concrete-examples">A Set of Concrete Examples</h2>
+<p>To illustrate the above, we are going to use a set of examples with some <em>real math</em> (don’t worry - it’s not too difficult). These will give you an anchoring point to recognize the difficulty in trying to have a succint statement to capture the interplay between correlation and causation.</p>
+<ul>
+<li>Take <img src="https://latex.codecogs.com/png.latex?Y"> to be some outcome - we will simply call it “utility” so that it is hard to argue against my proposed models.</li>
+<li>Take <img src="https://latex.codecogs.com/png.latex?X"> to be some measurement about a person - we will simply call it “success” because, again, these are my models! We will assume that <img src="https://latex.codecogs.com/png.latex?X"> comes before <img src="https://latex.codecogs.com/png.latex?Y"> in time, so that it <em>could</em> be a cause of <img src="https://latex.codecogs.com/png.latex?Y">.</li>
+<li>Take <img src="https://latex.codecogs.com/png.latex?S"> to be a variable representing the sex of an individual, which will take the value of <img src="https://latex.codecogs.com/png.latex?1"> to represent females and -1 otherwise.</li>
+</ul>
+<section id="correlation-implying-causation" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-implying-causation">Correlation Implying Causation</h3>
+<p>If we propose that <img src="https://latex.codecogs.com/png.latex?Y%20=%202X"> then <img src="https://latex.codecogs.com/png.latex?X"> and <img src="https://latex.codecogs.com/png.latex?Y"> have a correlation of <img src="https://latex.codecogs.com/png.latex?1">. Now, we assume that we have measured <em>everything</em> about these individuals, and this is the only relationship that exists. In this setting, <img src="https://latex.codecogs.com/png.latex?X"> also directly causes <img src="https://latex.codecogs.com/png.latex?Y">. That is, an individuals utility is exactly equal to twice their success. Since success comes before utility, success can be said to <em>cause</em> utility.</p>
+</section>
+<section id="correlation-without-causation" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-without-causation">Correlation without Causation</h3>
+<p>Now, let’s say that we observe the exact same model <img src="https://latex.codecogs.com/png.latex?Y%20=%202X">, where the correlation is <em>still</em> <img src="https://latex.codecogs.com/png.latex?1">. Now, we also make the following observations:</p>
+<ul>
+<li>First, males have a utility of <img src="https://latex.codecogs.com/png.latex?-50"> and everyone else has a utility of <img src="https://latex.codecogs.com/png.latex?50"></li>
+<li>Second, males have a success of <img src="https://latex.codecogs.com/png.latex?-25"> and everyone else has a success of <img src="https://latex.codecogs.com/png.latex?25"></li>
+</ul>
+<p>In this setting, the exact causal mechanism may not be as clear. However, given the above two observations it seems reasonable to propose that <img src="https://latex.codecogs.com/png.latex?X"> is caused by <img src="https://latex.codecogs.com/png.latex?S">, through the model <img src="https://latex.codecogs.com/png.latex?X%20=%2025S">. Similary, it seems reasonable to propose the model that <img src="https://latex.codecogs.com/png.latex?Y%20=%2050S">. These two models combine to suggest <img src="https://latex.codecogs.com/png.latex?Y%20=%202X">. However, in this setting we have a <em>confounding</em> relationship.</p>
+<p>To clearly state what is happening: Sex causes utility, and sex causes success. There is no causal relationship between utility and sucess, however, because of the confounder sex it appears as though there is one.</p>
+</section>
+<section id="causation-without-correlation" class="level3">
+<h3 class="anchored" data-anchor-id="causation-without-correlation">Causation without Correlation</h3>
+<p>Finally, we propose the model <img src="https://latex.codecogs.com/png.latex?Y%20=%202AX">. That is, the utility observed is two times the success of a female, and it is negative two times the success of a male - more successful females have higher utility, more successful males have lower utility.</p>
+<p>If we assume that there is no relationship between sex and outcome, and we assume that there is an equal probability of being male or female, then we will find that the correlation between utility and success is exactly 0. However, success still causes the utility, it just acts differently on males or females. If you tell me an individuals sex and their success, I can tell you their utility.</p>
+</section>
+</section>
+<section id="conclusions" class="level2">
+<h2 class="anchored" data-anchor-id="conclusions">Conclusions</h2>
+<p>So, what can we say? Well, correlation does not imply causation, except sometimes it does. Further, causation does not imply correlation, unless the relationship is strictly linear. It is certainly less catchy, but also far more accurate, than the standard, so I will understand if it doesn’t catch on!</p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>statistics</category>
+  <category>teaching</category>
+  <category>research</category>
+  <guid>https://github.com/DylanSpicker/personal-site/thoughts/PSA-causation-without-correlation/index.html</guid>
+  <pubDate>Sun, 26 May 2019 00:00:00 GMT</pubDate>
+  <media:content url="https://github.com/DylanSpicker/personal-site/thoughts/PSA-causation-without-correlation/cause.jpg" medium="image" type="image/jpeg"/>
+</item>
+</channel>
+</rss>

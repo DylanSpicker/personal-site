@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Dylan Spicker - My Thoughts</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-date','listing-categories','listing-description','listing-image','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="alternate" type="application/rss+xml" title="Dylan Spicker" href="blog.xml"></head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Dylan Spicker</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">About Me</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./teaching.html">My Teaching</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./blog.html" aria-current="page">My Thoughts</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="job search">job search <span class="quarto-category-count">(2)</span></div><div class="category" data-category="misconceptions">misconceptions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="research">research <span class="quarto-category-count">(7)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(8)</span></div><div class="category" data-category="teaching">teaching <span class="quarto-category-count">(7)</span></div></div></div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">My Thoughts</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-author" data-direction="asc">
+          Author
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="statistics,teaching,research,job search" data-listing-date-sort="1636848000000" data-listing-file-modified-sort="1664745190649" data-listing-reading-time-sort="7.59">
+<div class="thumbnail">
+<p><a href="./thoughts/research-philosophy-statement/index.html"> <img src="./thoughts/research-philosophy-statement/research.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./thoughts/research-philosophy-statement/index.html">
+<h3 class="no-anchor listing-title">
+My Research Philosophy Statement (WIP)
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
+statistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
+teaching
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('research'); return false;">
+research
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('job search'); return false;">
+job search
+</div>
+</div>
+<a href="./thoughts/research-philosophy-statement/index.html">
+<div class="listing-description">
+<p>This document outlines my research experience, approach, and goals for the future.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./thoughts/research-philosophy-statement/index.html">
+<div class="listing-date">
+Nov 14, 2021
+</div>
+<div class="listing-author">
+Dylan Spicker
+</div>
+<div class="listing-reading-time">
+7 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="statistics,teaching,research,job search" data-listing-date-sort="1636848000000" data-listing-file-modified-sort="1664745190657" data-listing-reading-time-sort="9.095">
+<div class="thumbnail">
+<p><a href="./thoughts/teaching-philosophy-statement/index.html"> <img src="./thoughts/teaching-philosophy-statement/teaching.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./thoughts/teaching-philosophy-statement/index.html">
+<h3 class="no-anchor listing-title">
+My Teaching Philosophy Statement (WIP)
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
+statistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
+teaching
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('research'); return false;">
+research
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('job search'); return false;">
+job search
+</div>
+</div>
+<a href="./thoughts/teaching-philosophy-statement/index.html">
+<div class="listing-description">
+<p>This document outlines my teaching experience, approach, and goals for the future.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./thoughts/teaching-philosophy-statement/index.html">
+<div class="listing-date">
+Nov 14, 2021
+</div>
+<div class="listing-author">
+Dylan Spicker
+</div>
+<div class="listing-reading-time">
+9 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="statistics,teaching,research" data-listing-date-sort="1619481600000" data-listing-file-modified-sort="1664745190609" data-listing-reading-time-sort="9.06">
+<div class="thumbnail">
+<a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html">
+<div class="thumbnail-image">
+
+</div>
+</a><p><a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html"></a></p>
+</div>
+<div class="body">
+<a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html">
+<h3 class="no-anchor listing-title">
+Notes on von Mises Calculus for Statistical Functionals: Part I
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
+statistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
+teaching
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('research'); return false;">
+research
+</div>
+</div>
+<a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html">
+<div class="listing-description">
+<p>I am attempting to work through Luisa Fernholz’s excellent ‘von Mises Calculus for Statistical Functionals’ – these are my notes, pulling in the required concepts from elsewhere..</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html">
+<div class="listing-date">
+Apr 27, 2021
+</div>
+<div class="listing-author">
+Dylan Spicker
+</div>
+<div class="listing-reading-time">
+9 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="statistics,teaching,research" data-listing-date-sort="1563235200000" data-listing-file-modified-sort="1664745190645" data-listing-reading-time-sort="0.91">
+<div class="thumbnail">
+<p><a href="./thoughts/null-preservation/index.html"> <img src="./thoughts/null-preservation/preserve.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./thoughts/null-preservation/index.html">
+<h3 class="no-anchor listing-title">
+Null Preservation
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
+statistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
+teaching
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('research'); return false;">
+research
+</div>
+</div>
+<a href="./thoughts/null-preservation/index.html">
+<div class="listing-description">
+<p>The idea of null preservation is an interesting, and under-discussed, concept.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./thoughts/null-preservation/index.html">
+<div class="listing-date">
+Jul 16, 2019
+</div>
+<div class="listing-author">
+Dylan Spicker
+</div>
+<div class="listing-reading-time">
+0 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="4" data-categories="statistics,research" data-listing-date-sort="1573776000000" data-listing-file-modified-sort="1664745190645" data-listing-reading-time-sort="1.76">
+<div class="thumbnail">
+<p><a href="./thoughts/linearity-of-q-functions/index.html"> <img src="./thoughts/linearity-of-q-functions/Q.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./thoughts/linearity-of-q-functions/index.html">
+<h3 class="no-anchor listing-title">
+On the Linearity of Q-Functions
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
+statistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('research'); return false;">
+research
+</div>
+</div>
+<a href="./thoughts/linearity-of-q-functions/index.html">
+<div class="listing-description">
+<p>This blog post explores when, if ever, the Q-functions (from DTRs) can be linear.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./thoughts/linearity-of-q-functions/index.html">
+<div class="listing-date">
+Nov 15, 2019
+</div>
+<div class="listing-author">
+Dylan Spicker
+</div>
+<div class="listing-reading-time">
+1 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="statistics,teaching,research" data-listing-date-sort="1558828800000" data-listing-file-modified-sort="1664745190617" data-listing-reading-time-sort="5.515">
+<div class="thumbnail">
+<p><a href="./thoughts/PSA-causation-without-correlation/index.html"> <img src="./thoughts/PSA-causation-without-correlation/cause.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./thoughts/PSA-causation-without-correlation/index.html">
+<h3 class="no-anchor listing-title">
+PSA: Causation without Correlation
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
+statistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
+teaching
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('research'); return false;">
+research
+</div>
+</div>
+<a href="./thoughts/PSA-causation-without-correlation/index.html">
+<div class="listing-description">
+<p>This document investigates the all-too-familiar claim: ‘Correlation is not causation’.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./thoughts/PSA-causation-without-correlation/index.html">
+<div class="listing-date">
+May 26, 2019
+</div>
+<div class="listing-author">
+Dylan Spicker
+</div>
+<div class="listing-reading-time">
+5 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="statistics,teaching,misconceptions" data-listing-date-sort="1618876800000" data-listing-file-modified-sort="1664745190609" data-listing-reading-time-sort="8.095">
+<div class="thumbnail">
+<p><a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html"> <img src="./thoughts/2021-04-20-the-mean-median-and-skewness/Relationship_between_mean_and_median_under_different_skewness.png" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html">
+<h3 class="no-anchor listing-title">
+The (lack of a) Relationship between Mean, Median, and Skewness
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
+statistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
+teaching
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('misconceptions'); return false;">
+misconceptions
+</div>
+</div>
+<a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html">
+<div class="listing-description">
+<p>There is a commonly taught ‘rule-of-thumb’ that states that we can determine the skewness of a distribution based on the relative location of the mean and the median. This is not true.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html">
+<div class="listing-date">
+Apr 20, 2021
+</div>
+<div class="listing-author">
+Dylan Spicker
+</div>
+<div class="listing-reading-time">
+8 min
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="statistics,teaching,research" data-listing-date-sort="1561939200000" data-listing-file-modified-sort="1664745190621" data-listing-reading-time-sort="2.755">
+<div class="thumbnail">
+<p><a href="./thoughts/controlling-for-factors/index.html"> <img src="./thoughts/controlling-for-factors/control.jpg" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./thoughts/controlling-for-factors/index.html">
+<h3 class="no-anchor listing-title">
+When Should We Control For Factors?
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
+statistics
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('teaching'); return false;">
+teaching
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('research'); return false;">
+research
+</div>
+</div>
+<a href="./thoughts/controlling-for-factors/index.html">
+<div class="listing-description">
+<p>We are often told to control for confounding factors, but when should we?</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./thoughts/controlling-for-factors/index.html">
+<div class="listing-date">
+Jul 1, 2019
+</div>
+<div class="listing-author">
+Dylan Spicker
+</div>
+<div class="listing-reading-time">
+2 min
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

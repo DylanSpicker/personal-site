@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Dylan Spicker">
+<meta name="dcterms.date" content="2021-04-20">
+<meta name="description" content="There is a commonly taught ‘rule-of-thumb’ that states that we can determine the skewness of a distribution based on the relative location of the mean and the median. This is not true.">
+
+<title>Dylan Spicker - The (lack of a) Relationship between Mean, Median, and Skewness</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Dylan Spicker</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About Me</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../teaching.html">My Teaching</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html">My Thoughts</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#positive-skew-mean-median" id="toc-positive-skew-mean-median" class="nav-link active" data-scroll-target="#positive-skew-mean-median">Positive Skew; Mean &lt; Median</a></li>
+  <li><a href="#negative-skew-median-mean" id="toc-negative-skew-median-mean" class="nav-link" data-scroll-target="#negative-skew-median-mean">Negative Skew; Median &lt; Mean</a></li>
+  <li><a href="#positive-skew-mean-median-1" id="toc-positive-skew-mean-median-1" class="nav-link" data-scroll-target="#positive-skew-mean-median-1">Positive Skew; Mean = Median</a></li>
+  <li><a href="#negative-skew-mean-median" id="toc-negative-skew-mean-median" class="nav-link" data-scroll-target="#negative-skew-mean-median">Negative Skew; Mean = Median</a></li>
+  <li><a href="#no-skew-mean-median-mode" id="toc-no-skew-mean-median-mode" class="nav-link" data-scroll-target="#no-skew-mean-median-mode">No Skew; Mean &lt; Median (&lt; Mode)</a></li>
+  <li><a href="#no-skew-mode-median-mean" id="toc-no-skew-mode-median-mean" class="nav-link" data-scroll-target="#no-skew-mode-median-mean">No Skew; (Mode &lt;) Median &lt; Mean</a></li>
+  <li><a href="#general-lessons-and-takeaways" id="toc-general-lessons-and-takeaways" class="nav-link" data-scroll-target="#general-lessons-and-takeaways">General Lessons and Takeaways</a>
+  <ul class="collapse">
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><strong>References</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The (lack of a) Relationship between Mean, Median, and Skewness</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">statistics</div>
+    <div class="quarto-category">teaching</div>
+    <div class="quarto-category">misconceptions</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    There is a commonly taught ‘rule-of-thumb’ that states that we can determine the skewness of a distribution based on the relative location of the mean and the median. This is not true.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Dylan Spicker </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 20, 2021</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<p>This term I had the pleasure of teaching an introductory statistics course at the University of Waterloo. In preparing to run the course I came to realize (and this is by no means a unique realization) that there is <strong>a lot</strong> of incorrect (or misleading) information aimed at people learning statistics. One particularly stand-out example is the idea that we can use the mean and median of a sample to infer skewness.</p>
+<blockquote class="blockquote">
+If the mean is less than the median the data exhibit a left (negative) skew. If the mean is greater than the median the data exhibit a right (positive) skew.
+<footer>
+— Introductory Textbooks, sometimes
+</footer>
+</blockquote>
+<p>Now, all told this is not the worst offense of this kind, but I think it exemplifies a concerning trend. There is an understandable desire for easy to follow rules in statistics. It is my opinion that, generally speaking, such rules do not exist. This same tendency leads to an uncritical acceptance of arbitrary significance levels and inappropriate applications of approximation theorems. So, in the interest of the bigger picture, let’s correct this misconception!</p>
+<p>This point has previously been made <span class="citation" data-cites="article1">(<a href="#ref-article1" role="doc-biblioref">von Hippel 2005</a>)</span>, but we can compile some explicit examples here.</p>
+<section id="positive-skew-mean-median" class="level2">
+<h2 class="anchored" data-anchor-id="positive-skew-mean-median">Positive Skew; Mean &lt; Median</h2>
+<p>Consider responses to the question ``How many adults (18+) live in this house?’’ for residents across Canada. We can imagine asking 1000 households for this response and it seems plausible that we would have data which look something like:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Based on these data, we can see fairly clearly that the median is going to be 2 and that the data exhibit a positive skewness. The mean, however, is given by 1.79 which evidently violates the supposed rule of thumb.</p>
+</section>
+<section id="negative-skew-median-mean" class="level2">
+<h2 class="anchored" data-anchor-id="negative-skew-median-mean">Negative Skew; Median &lt; Mean</h2>
+<p>Consider a quiz that is given to students in an introductory statistics class that is marked out of 5. If we assume that 500 students are enrolled in the course, and they all write the quiz, then the following grade distribution seems plausible:</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Based on these data, we can see fairly clearly that the median is going to be 4 and that the data exhibit a negative skewness. The mean, however, is given by 4.1 which evidently violates the supposed rule of thumb.</p>
+</section>
+<section id="positive-skew-mean-median-1" class="level2">
+<h2 class="anchored" data-anchor-id="positive-skew-mean-median-1">Positive Skew; Mean = Median</h2>
+<div class="cell">
+
+</div>
+<p>Dropping the pretense of real data we can, as may be obvious now, begin to generate arbitrary examples that violate the remaining configuartions of the rules. The following data are selected so that the skew is positive (0.6491939), while the mean (0) and the median (0) are exactly equal.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Perhaps the interested reader could come up with an example situation for these data.</p>
+</section>
+<section id="negative-skew-mean-median" class="level2">
+<h2 class="anchored" data-anchor-id="negative-skew-mean-median">Negative Skew; Mean = Median</h2>
+<div class="cell">
+
+</div>
+<p>The previous example can of course be mirrored exactly so as to produce a negative sample skewness (-0.6491939), while the mean (1) and the median (1) are exactly equal.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Perhaps the interested reader could come up with an (alternative) example situation for these data.</p>
+</section>
+<section id="no-skew-mean-median-mode" class="level2">
+<h2 class="anchored" data-anchor-id="no-skew-mean-median-mode">No Skew; Mean &lt; Median (&lt; Mode)</h2>
+<div class="cell">
+
+</div>
+<p>The remaining scenarios to deconstruct involve distributions which have no skew, but which have a mean and median which are not equal. These are fairly straightforward to construct as well. In this example we can see that the skewness (0) is 0, while the mean (4.5) and the median (5) differ.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="no-skew-mode-median-mean" class="level2">
+<h2 class="anchored" data-anchor-id="no-skew-mode-median-mean">No Skew; (Mode &lt;) Median &lt; Mean</h2>
+<div class="cell">
+
+</div>
+<p>Once again, other alternatives are possible, by why reinvent the wheel when we can simply mirror our previous situation? In this example we can see that the skewness (0) is 0, while the mean (5.5) and the median (5) still differ, but differently than last time.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="general-lessons-and-takeaways" class="level1">
+<h1>General Lessons and Takeaways</h1>
+<p>These examples tended to exploit the fact that discrete distributions behave strangely. We could have also used multimodal distributions to a similar effect. While these distributions often feel contrived when compared to our nice, named distributions, I would wager that histograms like those presented are, in fact, more common in an <em>actual</em> data analysis than the nice, smooth, well-behaved densities we like to work with.</p>
+<p>The keen reader may wish to pushback and claim that adding in the relationship with the mode will remedy these supposed counter examples – unfortunately, no. For one, especially when working with continuous densities, it becomes trivial to add a unique mode anywhere relative to the mean and median, without substantively changing these values. Second, while the first few examples had their mode coinciding with the median, the last two demonstrate that we can have a strict ordering (Mean &lt; Median &lt; Mode or Mode &lt; Median &lt; Mean) and end up without any skew in our data.</p>
+<p>So, are there any rules we can follow? If the distribution is Pearson family, the standard rule does apply <span class="citation" data-cites="article2">(<a href="#ref-article2" role="doc-biblioref">MacGillivray 1981</a>)</span>. Beyond that, I think that the common refrain is more helpful as an intuition than it is as a rule, and I think that this is true of many statistical absolutes that are commonly taught.</p>
+<section id="references" class="level2">
+
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-article1" class="csl-entry" role="doc-biblioentry">
+Hippel, Paul T von. 2005. <span>“Mean, Median, and Skew: Correcting a Textbook Rule.”</span> <em>Journal of Statistics Education</em> 13 (2). <a href="https://doi.org/10.1080/10691898.2005.11910556">https://doi.org/10.1080/10691898.2005.11910556</a>.
+</div>
+<div id="ref-article2" class="csl-entry" role="doc-biblioentry">
+MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewness for a Class of Densities.”</span> <em>Australian Journal of Statistics</em> 23 (2): 247–50. <a href="https://doi.org/10.1080/10691898.2005.11910556">https://doi.org/10.1080/10691898.2005.11910556</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
