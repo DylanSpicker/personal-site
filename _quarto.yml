@@ -1,8 +1,12 @@
 project:
   type: website
+  preview:
+    port: 4200
+    browser: false
 
 website:
   title: "Dylan Spicker"
+  site-url: "https://dylanspicker.com/"
   navbar:
     left:
       - href: index.qmd
@@ -10,6 +14,8 @@ website:
       - href: about.qmd
         text: "About Me"
     right:
+      - href: work.qmd
+        text: "My Work"
       - href: teaching.qmd
         text: "My Teaching"
       - href: blog.qmd

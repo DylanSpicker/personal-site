@@ -1,0 +1,14 @@
+---
+title: "Research Work, Presentations, and Grants"
+listing:
+  contents: "work_items/*.qmd"
+  fields: ['title', 'author', 'image', 'description', 'date']
+  sort: "date desc"
+  id: "work_items_holder"
+  image-height: "100px"
+  date-format: "long"
+  categories: true
+---
+
+:::{#work_items_holder}
+:::

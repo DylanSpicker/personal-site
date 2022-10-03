@@ -49,5 +49,47 @@
   },
   "thoughts/teaching-philosophy-statement/index.qmd": {
     "index.html": "ee19a86a"
+  },
+  "work.qmd": {
+    "work.html": "da594282"
+  },
+  "work_items/npsimex.qmd": {
+    "npsimex.html": "fd3c7bb6"
+  },
+  "work_items/canssi.qmd": {
+    "canssi.html": "97c653f8"
+  },
+  "work_items/generalized_rc.qmd": {
+    "generalized_rc.html": "611c942b"
+  },
+  "work_items/historical_hyperbole.qmd": {
+    "historical_hyperbole.html": "fe529a62"
+  },
+  "work_items/nserc_pgs_d.qmd": {
+    "nserc_pgs_d.html": "36855831"
+  },
+  "work_items/ogs_i.qmd": {
+    "ogs_i.html": "b0392661"
+  },
+  "work_items/ogs_ii.qmd": {
+    "ogs_ii.html": "a93cb6a6"
+  },
+  "work_items/sargc_video.qmd": {
+    "sargc_video.html": "24ad40bf"
+  },
+  "work_items/sim_errors_in_dtrs.qmd": {
+    "sim_errors_in_dtrs.html": "2ebd0c56"
+  },
+  "work_items/ssc_2019.qmd": {
+    "ssc_2019.html": "9296caca"
+  },
+  "work_items/ssc_2021.qmd": {
+    "ssc_2021.html": "7adcbdef"
+  },
+  "work_items/ssc_case_study.qmd": {
+    "ssc_case_study.html": "711d7ffe"
+  },
+  "work_items/undergrad_math.qmd": {
+    "undergrad_math.html": "598a53a7"
   }
 }

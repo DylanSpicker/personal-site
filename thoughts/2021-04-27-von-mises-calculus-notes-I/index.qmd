@@ -1,12 +1,12 @@
 ---
-title: "Notes on von Mises Calculus for Statistical Functionals: Part I"
+title: "Notes on 'von Mises Calculus for Statistical Functionals'"
 author: 'Dylan Spicker'
 date: '2021-04-27'
 slug: []
 categories: [statistics, teaching, research]
 tags: [statistics, teaching, research]
 description: "I am attempting to work through Luisa Fernholz's excellent 'von Mises Calculus for Statistical Functionals' -- these are my notes, pulling in the required concepts from elsewhere.."
-image: ''
+image: 'cover.jpg'
 bibliography: references.bibtex
 ---
 *Disclaimer:* These notes are my (attempted, possibly error-prone) summary of @VMCFSF.

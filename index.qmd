@@ -6,7 +6,7 @@ format:
 ---
 
 ::: {.container .grid .px-4 .py-5 .border-bottom}
-::: {.grid .g-col-8 .g-start-3 .my-5 .g-col-sm-12 .align-items-center .border-dark .border-1}
+::: {.grid .g-col-med-8 .g-start-med-3 .my-5 .g-col-12 .align-items-center .border-dark .border-1}
 ::: {.g-col-12 .g-col-lg-6 .text-center .py-5}
 <p class="display-6">Hi. I'm Dylan. <small class='fw-light'>(They/Them)</small></p>
 <p class="fw-bold fs-4">Currently, I'm a post-doctoral fellow, studying Statistics at McGill University.</p class="fw-bold fs-4">

@@ -1,0 +1,8 @@
+---
+  title: "Nonparametric Simulation Extrapolation for Measurement Error Models (Preprint)"
+  author: "**Dylan Spicker**, Michael P. Wallace, and Grace Y. Yi"
+  image: "/img/icons/paper.svg"
+  categories: ["paper", "under review"]
+  description: "Submitted for consideration (November 2021). ([Arxiv Preprint](https://arxiv.org/abs/2111.02863))"
+  date: "2021-11-03"
+---

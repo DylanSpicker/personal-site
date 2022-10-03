@@ -1,0 +1,8 @@
+---
+  title: "Statistical Society of Canada SARGC Video Competition 2021."
+  author: "**Dylan Spicker** and Melissa Van Bussel"
+  image: "/img/icons/award.svg"
+  categories: ["award"]
+  description: "**Winning Team**; Video competition, explaining the importance of statistics to a lay audience. Our video is available: '[Using Statistics to break down COVID-19 misconceptions](https://www.youtube.com/watch?v=U7mMYxGzSUk).'"
+  date: "2021-03-02"
+---

@@ -8,6 +8,9 @@
     ],
     "teaching.qmd": [
       "courses/*/course_index.qmd"
+    ],
+    "work.qmd": [
+      "work_items/*.qmd"
     ]
   }
 }

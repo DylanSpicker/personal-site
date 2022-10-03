@@ -1,0 +1,8 @@
+---
+  title: "Dynamic Treatment Regimes and Measurement Error: A non-technical overview (where we mostly talk about video games!)."
+  author: "**Dylan Spicker**"
+  image: "/img/icons/talk.svg"
+  categories: ["talk"]
+  description: "Talk given at the University of Waterloo Undergraduate Mathematics Research Conference. ([PDF of Slides](/pdf/Dylan&#32;Spicker&#32;-&#32;DTR&#32;and&#32;ME&#32;-&#32;Video&#32;Games.pdf))"
+  date: "2019-09-28"
+---

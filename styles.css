@@ -1,1 +1,4 @@
 /* css styles */
+#listing-work_items_holder img.thumnail-image {
+    max-width: 100px;
+}

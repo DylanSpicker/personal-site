@@ -1,0 +1,8 @@
+---
+  title: "CANSSI National Case Study Competition 2019."
+  author: "**Dylan Spicker** and Melissa Van Bussel"
+  image: "/img/icons/award.svg"
+  categories: ["award"]
+  description: "**Regional Winning Team; National Finalist**; Case study competition for CANSSI's annual case study competition. Our project was titled: *'SuperLearn'ed Delays: Partial Domain Adaptation in Binary Classification with Complex and Noisy Data.*"
+  date: "2019-09-01"
+---  
