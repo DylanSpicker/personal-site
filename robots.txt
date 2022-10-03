@@ -1,1 +1,1 @@
-Sitemap: https://github.com/DylanSpicker/personal-site/sitemap.xml
+Sitemap: https://dylanspicker.com/sitemap.xml

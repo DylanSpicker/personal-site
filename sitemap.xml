@@ -1,63 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/teaching.html</loc>
-    <lastmod>2022-10-02T22:26:02.650Z</lastmod>
+    <loc>https://dylanspicker.com/teaching.html</loc>
+    <lastmod>2022-10-03T12:03:49.622Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/research.html</loc>
-    <lastmod>2022-10-02T22:26:03.290Z</lastmod>
+    <loc>https://dylanspicker.com/research.html</loc>
+    <lastmod>2022-10-03T12:03:50.434Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/courses/STAT437/course_index.html</loc>
-    <lastmod>2022-10-02T22:26:03.870Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/sim_errors_in_dtrs.html</loc>
+    <lastmod>2022-10-03T12:03:50.862Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/courses/STAT231/course_index.html</loc>
-    <lastmod>2022-10-02T22:26:04.234Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/undergrad_math.html</loc>
+    <lastmod>2022-10-03T12:03:51.306Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/index.html</loc>
-    <lastmod>2022-10-02T22:26:04.554Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/historical_hyperbole.html</loc>
+    <lastmod>2022-10-03T12:03:51.718Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/about.html</loc>
-    <lastmod>2022-10-02T22:26:04.874Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/ssc_case_study.html</loc>
+    <lastmod>2022-10-03T12:03:52.070Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/blog.html</loc>
-    <lastmod>2022-10-02T22:26:05.366Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/canssi.html</loc>
+    <lastmod>2022-10-03T12:03:52.446Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/thoughts/teaching-philosophy-statement/index.html</loc>
-    <lastmod>2022-10-02T22:26:05.734Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/ogs_ii.html</loc>
+    <lastmod>2022-10-03T12:03:52.798Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/thoughts/controlling-for-factors/index.html</loc>
-    <lastmod>2022-10-02T22:26:06.046Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/ogs_i.html</loc>
+    <lastmod>2022-10-03T12:03:53.166Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/thoughts/null-preservation/index.html</loc>
-    <lastmod>2022-10-02T22:26:06.354Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/nserc_pgs_d.html</loc>
+    <lastmod>2022-10-03T12:03:53.514Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/thoughts/research-philosophy-statement/index.html</loc>
-    <lastmod>2022-10-02T22:26:06.718Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/generalized_rc.html</loc>
+    <lastmod>2022-10-03T12:03:53.870Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/thoughts/2021-04-20-the-mean-median-and-skewness/index.html</loc>
-    <lastmod>2022-10-02T22:26:07.222Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/npsimex.html</loc>
+    <lastmod>2022-10-03T12:03:54.226Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/thoughts/linearity-of-q-functions/index.html</loc>
-    <lastmod>2022-10-02T22:26:07.570Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/sargc_video.html</loc>
+    <lastmod>2022-10-03T12:03:54.590Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/thoughts/PSA-causation-without-correlation/index.html</loc>
-    <lastmod>2022-10-02T22:26:07.922Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/ssc_2019.html</loc>
+    <lastmod>2022-10-03T12:03:54.942Z</lastmod>
   </url>
   <url>
-    <loc>https://github.com/DylanSpicker/personal-site/thoughts/2021-04-27-von-mises-calculus-notes-I/index.html</loc>
-    <lastmod>2022-10-02T22:26:08.386Z</lastmod>
+    <loc>https://dylanspicker.com/work_items/ssc_2021.html</loc>
+    <lastmod>2022-10-03T12:03:55.302Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/courses/STAT437/course_index.html</loc>
+    <lastmod>2022-10-03T12:03:55.974Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/courses/STAT231/course_index.html</loc>
+    <lastmod>2022-10-03T12:03:56.378Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/index.html</loc>
+    <lastmod>2022-10-03T12:03:56.718Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/about.html</loc>
+    <lastmod>2022-10-03T12:03:57.154Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/blog.html</loc>
+    <lastmod>2022-10-03T12:03:57.778Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/thoughts/teaching-philosophy-statement/index.html</loc>
+    <lastmod>2022-10-03T12:03:58.278Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/thoughts/controlling-for-factors/index.html</loc>
+    <lastmod>2022-10-03T12:03:58.682Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/thoughts/null-preservation/index.html</loc>
+    <lastmod>2022-10-03T12:03:59.034Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/thoughts/research-philosophy-statement/index.html</loc>
+    <lastmod>2022-10-03T12:03:59.534Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index.html</loc>
+    <lastmod>2022-10-03T12:04:00.119Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/thoughts/linearity-of-q-functions/index.html</loc>
+    <lastmod>2022-10-03T12:04:00.487Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/thoughts/PSA-causation-without-correlation/index.html</loc>
+    <lastmod>2022-10-03T12:04:00.939Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/thoughts/2021-04-27-von-mises-calculus-notes-I/index.html</loc>
+    <lastmod>2022-10-03T12:04:01.563Z</lastmod>
+  </url>
+  <url>
+    <loc>https://dylanspicker.com/work.html</loc>
+    <lastmod>2022-10-03T12:04:02.107Z</lastmod>
   </url>
 </urlset>

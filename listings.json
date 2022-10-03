@@ -22,5 +22,23 @@
       "/thoughts/2021-04-20-the-mean-median-and-skewness/index.html",
       "/thoughts/controlling-for-factors/index.html"
     ]
+  },
+  {
+    "listing": "/work.html",
+    "items": [
+      "/work_items/npsimex.html",
+      "/work_items/historical_hyperbole.html",
+      "/work_items/ssc_2021.html",
+      "/work_items/generalized_rc.html",
+      "/work_items/sargc_video.html",
+      "/work_items/sim_errors_in_dtrs.html",
+      "/work_items/nserc_pgs_d.html",
+      "/work_items/ogs_ii.html",
+      "/work_items/ssc_case_study.html",
+      "/work_items/undergrad_math.html",
+      "/work_items/canssi.html",
+      "/work_items/ssc_2019.html",
+      "/work_items/ogs_i.html"
+    ]
   }
 ]
