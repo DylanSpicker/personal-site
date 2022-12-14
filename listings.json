@@ -1,14 +1,14 @@
 [
   {
+    "listing": "/courses/STAT437/course_index.html",
+    "items": []
+  },
+  {
     "listing": "/teaching.html",
     "items": [
       "/courses/STAT437/course_index.html",
       "/courses/STAT231/course_index.html"
     ]
-  },
-  {
-    "listing": "/courses/STAT437/course_index.html",
-    "items": []
   },
   {
     "listing": "/blog.html",
