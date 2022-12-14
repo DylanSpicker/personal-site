@@ -1,7 +1,7 @@
 ---
 title: My Research Philosophy Statement
 author: 'Dylan Spicker'
-date: '2021-11-14'
+date: '2022-12-14'
 slug: []
 categories: [statistics, teaching, research, job search]
 tags: [statistics, teaching, research, job search]
@@ -34,8 +34,13 @@ Moving forward, I intend to continue initiating and participating in relevant in
 
 ## References
 [1] **Spicker, Dylan**, and Wallace, Michael P. Measurement error and precision medicine: Error-prone tailoring covariates in dynamic treatment regimes. Statistics in Medicine. 2020; 39: 3732– 3755. https://doi.org/10.1002/sim.8690
+
 [2] **Spicker , Dylan**. Generalizations to Corrections of Measurement Error Effects for Dynamic Treatment Regimes. UWSpace. 2022. http://hdl.handle.net/10012/18581.
+
 [3] Wallace, Michael. P. Measurement error and precision medicine. In T. Cai, B. Chakraborty, E. Laber, E. Moodie, and M. van der Laan, editors, Handbook of Statistical Methods for Precision Medicine [Accepted], Handbooks of Modern Statistical Methods. Chapman and Hall/CRC, Boca Raton Florida. 2022
+
 [4] Liu, Dan. Regression-based Methods for Dynamic Treatment Regimes with Mismeasured Covariates or Misclassified Response. 2022.
+
 [5] **Spicker, Dylan**, Wallace, Michael P., and Yi, Grace Y. Nonparametric Simulation Extrapolation for Measurement Error Models. arXiv preprint arXiv:2111.02863. 2021.
+
 [6] **Spicker, Dylan**, Wallace, Michael P., and Yi, Grace Y. Generalizations to Corrections for the Effects of Measurement Error in Approximately Consistent Methodologies. arXiv preprint arXiv:2106.07401. 2021.
