@@ -1,4 +1,4 @@
 /* css styles */
-#listing-work_items_holder img.thumnail-image {
+div#listing-work_items_holder img.thumbnail-image {
     max-width: 100px;
 }
