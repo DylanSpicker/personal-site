@@ -6,6 +6,7 @@ listing:
   sort: "date desc"
   id: "work_items_holder"
   image-height: "100px"
+  image-width: "100px"
   date-format: "long"
   categories: true
 ---
