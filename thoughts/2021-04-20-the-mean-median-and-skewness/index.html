@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -20,14 +20,15 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -41,8 +42,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -77,7 +77,8 @@ div.csl-indent {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -96,35 +97,37 @@ div.csl-indent {
     <span class="navbar-title">Dylan Spicker</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html">
+    <a class="nav-link" href="../../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../work.html">
+    <a class="nav-link" href="../../work.html" rel="" target="">
  <span class="menu-text">My Work</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../teaching.html">
+    <a class="nav-link" href="../../teaching.html" rel="" target="">
  <span class="menu-text">My Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog.html">
+    <a class="nav-link" href="../../blog.html" rel="" target="">
  <span class="menu-text">My Thoughts</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -225,9 +228,6 @@ If the mean is less than the median the data exhibit a left (negative) skew. If 
 </section>
 <section id="positive-skew-mean-median-1" class="level2">
 <h2 class="anchored" data-anchor-id="positive-skew-mean-median-1">Positive Skew; Mean = Median</h2>
-<div class="cell">
-
-</div>
 <p>Dropping the pretense of real data we can, as may be obvious now, begin to generate arbitrary examples that violate the remaining configuartions of the rules. The following data are selected so that the skew is positive (0.6491939), while the mean (0) and the median (0) are exactly equal.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -238,9 +238,6 @@ If the mean is less than the median the data exhibit a left (negative) skew. If 
 </section>
 <section id="negative-skew-mean-median" class="level2">
 <h2 class="anchored" data-anchor-id="negative-skew-mean-median">Negative Skew; Mean = Median</h2>
-<div class="cell">
-
-</div>
 <p>The previous example can of course be mirrored exactly so as to produce a negative sample skewness (-0.6491939), while the mean (1) and the median (1) are exactly equal.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -251,9 +248,6 @@ If the mean is less than the median the data exhibit a left (negative) skew. If 
 </section>
 <section id="no-skew-mean-median-mode" class="level2">
 <h2 class="anchored" data-anchor-id="no-skew-mean-median-mode">No Skew; Mean &lt; Median (&lt; Mode)</h2>
-<div class="cell">
-
-</div>
 <p>The remaining scenarios to deconstruct involve distributions which have no skew, but which have a mean and median which are not equal. These are fairly straightforward to construct as well. In this example we can see that the skewness (0) is 0, while the mean (4.5) and the median (5) differ.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -263,9 +257,6 @@ If the mean is less than the median the data exhibit a left (negative) skew. If 
 </section>
 <section id="no-skew-mode-median-mean" class="level2">
 <h2 class="anchored" data-anchor-id="no-skew-mode-median-mean">No Skew; (Mode &lt;) Median &lt; Mean</h2>
-<div class="cell">
-
-</div>
 <p>Once again, other alternatives are possible, by why reinvent the wheel when we can simply mirror our previous situation? In this example we can see that the skewness (0) is 0, while the mean (5.5) and the median (5) still differ, but differently than last time.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -286,11 +277,11 @@ If the mean is less than the median the data exhibit a left (negative) skew. If 
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
-<div id="ref-article1" class="csl-entry" role="doc-biblioentry">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-article1" class="csl-entry" role="listitem">
 Hippel, Paul T von. 2005. <span>“Mean, Median, and Skew: Correcting a Textbook Rule.”</span> <em>Journal of Statistics Education</em> 13 (2). <a href="https://doi.org/10.1080/10691898.2005.11910556">https://doi.org/10.1080/10691898.2005.11910556</a>.
 </div>
-<div id="ref-article2" class="csl-entry" role="doc-biblioentry">
+<div id="ref-article2" class="csl-entry" role="listitem">
 MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewness for a Class of Densities.”</span> <em>Australian Journal of Statistics</em> 23 (2): 247–50. <a href="https://doi.org/10.1080/10691898.2005.11910556">https://doi.org/10.1080/10691898.2005.11910556</a>.
 </div>
 </div></section></div></main> <!-- /main -->
@@ -321,9 +312,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -388,6 +393,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

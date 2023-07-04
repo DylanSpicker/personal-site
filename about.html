@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.433">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -55,7 +55,8 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -74,35 +75,37 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Dylan Spicker</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page">
+    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
  <span class="menu-text">About Me</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./work.html">
+    <a class="nav-link" href="./work.html" rel="" target="">
  <span class="menu-text">My Work</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html">
+    <a class="nav-link" href="./teaching.html" rel="" target="">
  <span class="menu-text">My Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html">
+    <a class="nav-link" href="./blog.html" rel="" target="">
  <span class="menu-text">My Thoughts</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
@@ -132,7 +135,6 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><img src="img/cover_new.jpg" class="img-fluid"></p>
 <section id="relevant-links" class="level2">
 <h2 class="anchored" data-anchor-id="relevant-links">Relevant Links</h2>
 <ul>
@@ -145,8 +147,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="about-me" class="level2">
 <h2 class="anchored" data-anchor-id="about-me">About Me</h2>
-<p>My postdoctoral research focuses on areas of causal inference related to respondent-driven sampling (RDS). RDS is a survey sampling technique employed to study hard-to-reach population. The sample is formed by starting from identified members of the target population, and using their personal networks to recruit further members of the target population in a way that is probabalistically motivated. There exists comparatively little methodology for analyzing data from RDS, though this form of data collection is becoming increasingly common. My postdoctoral research looks to expand on this existing work, moving beyond the estimation of means and proportions, allowing for associational and causal modelling that is expected when employing other methods of sampling. Moreover, my work seeks to expand these techniques to longitudinal RDS data, a question which has to date received no research attention.</p>
-<p>Alongside these questions, I will continue to pursue methodologies related to dynamic treatment regimes, the core topic studied during my graduate schooling. During my graduate studies, my research focused on measurement error and causal inference. Briefly, measurement error occurs whenever we are interested in measuring something and we do a bad job of it. This happens in almost every study that is run, and unfortunately means that the conclusions that we draw may not be accurate: statistical work on measurement error tries to correct this. Causal inference asks questions of the form “Does X cause Y?” [For instance “Does smoking cause lung cancer?” (yes, it does).] I have a keen interest in providing a theoretical basis for (comparatively) straightforward methods, which are easy to use for non-statisticians, while exhibiting provably good theoretical properties.</p>
+<p>My research focuses on areas of causal inference, and specifically methodologies related to dynamic treatment regimes. During my graduate studies, my research focused on measurement error and causal inference. Briefly, measurement error occurs whenever we are interested in measuring something and we do a bad job of it. This happens in almost every study that is run, and unfortunately means that the conclusions that we draw may not be accurate: statistical work on measurement error tries to correct this. Causal inference asks questions of the form “Does X cause Y?” [For instance “Does smoking cause lung cancer?” (yes, it does).] I have a keen interest in providing a theoretical basis for (comparatively) straightforward methods, which are easy to use for non-statisticians, while exhibiting provably good theoretical properties. During my postdoc, I explored problems related to privacy and dynamic treatment regimes, where I sought to determine ways that individual’s personal health data can be protected, while gleaning the useful insights that we seek.</p>
 <p>Outside of causal inference and measurement error, I am interested in machine learning, and in particular in trying to establish a statistical basis for novel machine learning techniques (including questions related to inference, interpretability, and model selection).</p>
 <p>I previously did an undergraduate degree in Finance and Mathematics at Queen’s University (I transferred there after completing my first year at Waterloo/Laurier in the ‘Double Degree’ program), and a Master’s of Statistics at Waterloo.</p>
 <p>Outside of my research, I pay very close attention to sports, mostly hockey, (and how statistics is, or should be, applied there), play music (without any connection to statistics), and enjoy board/video games (with varying degrees of statistical relevance). I have a cat (Charles) who is wonderful.</p>
@@ -163,7 +164,6 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="contacting-me">Contacting Me</h2>
 <ul>
 <li>Email: See my departmental website.</li>
-<li>Twitter: <a href="https://twitter.com/DylanSpicker/with_replies" target="_blank"><span class="citation" data-cites="DylanSpicker">@DylanSpicker</span></a>. (As of November 2021, I am incredibly inactive).</li>
 <li><a href="https://www.linkedin.com/in/dylanspicker/" target="_blank">LinkedIn</a>: In case anyone is still using this.</li>
 </ul>
 
@@ -198,9 +198,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -265,6 +279,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {

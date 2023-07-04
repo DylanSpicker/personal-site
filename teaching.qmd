@@ -1,7 +1,0 @@
----
-title: "Teaching (and Course Notes)"
-listing:
-  contents: "courses/*/course_index.qmd"
-  fields: [image, title, subtitle, school, semester]
-  sort: "semester desc"
----
