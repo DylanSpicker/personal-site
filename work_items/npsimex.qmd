@@ -1,8 +1,8 @@
 ---
-  title: "Nonparametric Simulation Extrapolation for Measurement Error Models (Preprint)"
+  title: "Nonparametric Simulation Extrapolation for Measurement Error Models"
   author: "**Dylan Spicker**, Michael P. Wallace, and Grace Y. Yi"
   image: "/img/icons/paper.svg"
-  categories: ["paper", "under review"]
-  description: "Submitted for consideration (November 2021). ([Arxiv Preprint](https://arxiv.org/abs/2111.02863))"
-  date: "2021-11-03"
+  categories: ["paper", "published", "open access"]
+  description: "Published in the Canadian Journal of Statistics. ([Open Access](https://onlinelibrary.wiley.com/doi/10.1002/cjs.11777))"
+  date: "2023-06-27"
 ---

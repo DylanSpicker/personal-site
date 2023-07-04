@@ -1,0 +1,8 @@
+---
+  title: "Out-to-Innovate Research Fellowship"
+  author: "**Dylan Spicker**"
+  image: "/img/icons/money.svg"
+  categories: ["grant"]
+  description: "Out-to-innovate merit based research scholarship; $5000 USD value. [Details](https://www.outtoinnovate.org/assets/docs/bulletin/2023-Winter.pdf)."
+  date: "2022-09-01"
+---  

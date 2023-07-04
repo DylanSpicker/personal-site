@@ -9,10 +9,10 @@ format:
 ::: {.grid .g-col-med-8 .g-start-med-3 .my-5 .g-col-12 .align-items-center .border-dark .border-1}
 ::: {.g-col-12 .g-col-lg-6 .text-center .py-5}
 <p class="display-6">Hi. I'm Dylan. <small class='fw-light'>(They/Them)</small></p>
-<p class="fw-bold fs-4">Currently, I'm a post-doctoral fellow, studying Statistics at McGill University.</p class="fw-bold fs-4">
-I completed my PhD at the University of Waterloo in the summer of 2022.
+<p class="fw-bold fs-4">I am an Assistant Professor at the University of New Brunswick (Saint John).</p class="fw-bold fs-4">
+I completed my PhD at the University of Waterloo in the summer of 2022 and my postdoc at McGill University in 2023.
 
-[About Me](/about.qmd){.btn .btn-info .my-2} [My Teaching](/teaching.qmd){.btn .btn-outline-success .my-2} [My Thoughts](/blog.qmd){.btn .btn-outline-primary .my-2}
+[About Me](/about.qmd){.btn .btn-info .my-2} [My Teaching](/teaching.qmd){.btn .btn-outline-success .my-2} [My Work](/work.qmd){.btn .btn-outline-primary .my-2}
 :::
 ::: {.g-col-12 .g-col-lg-6}
 ![](img/Headshot_LG.png){.img-thumbnail}
@@ -24,7 +24,7 @@ I completed my PhD at the University of Waterloo in the summer of 2022.
 ::: {.grid .g-col-lg-6 .g-start-lg-4 .g-col-12}
 ::: {.g-col-lg-12 .g-col-12 .px-2}
 # Academic History
-- **University of Waterloo** - Doctor of Philosophy in Statistics (2018 - 2022) <small class='fw-light d-block my-2'>I completed my PhD under the joint supervision of Drs Michael Wallace and Grace Yi. My thesis research revolved around measurement error, causal inference, and the interface of those subjects. (Thesis: [Generalizations to Corrections of Measurement Error Effects for Dynamic Treatment Regimes](https://uwspace.uwaterloo.ca/handle/10012/18581){target="_blank"}.)</small>
+- **McGill University** - Postdoctoral Fellowship (2022 - 2023) <small class='fw-light d-block my-2'>I completed my postdoc under the supervision of Dr Erica Moodie. My research focused on privacy in precision medicine.</small>
 - **University of Waterloo** - Masters of Mathematics in Statistics (2017 - 2018) <small class='fw-light d-block my-2'>I completed my Masters degree, under the supervision of Michael Wallace, in statistics. My Masters work was titled ‘Measurement error and personalized medicine: error-prone tailoring covariates in dynamic treatment regimes.’</small>
 - **Queen's University** - Bachelor of Commerce (2013 - 2017) <small class='fw-light d-block my-2'>I did (three years) of my undergraduate at Queen’s University, Kingston, where I studied Finance and Mathematics. My first year was at the University of Waterloo/Wilfrid Laurier University, in the BMath/BBA Double Degree Program.</small>
 :::

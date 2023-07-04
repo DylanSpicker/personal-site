@@ -1,0 +1,8 @@
+---
+  title: "Nonadherence in Dynamic Treatment Regimes – Moving Beyond Intention-to-Treat Analyses."
+  author: "**Dylan Spicker**"
+  image: "/img/icons/talk.svg"
+  categories: ["talk", "invited talk"]
+  description: "Invited talk given for the McGill University Biostatistics Seminars (2022, Montreal).  ([PDF of Slides](/pdf/Dylan&#32;Spicker&#32;-&#32;McGill&#32;2022.pdf))"
+  date: "2022-10-19"
+---  

@@ -1,0 +1,8 @@
+---
+  title: "Preserving Patient Privacy in Dynamic Treatment Regimes."
+  author: "**Dylan Spicker**"
+  image: "/img/icons/talk.svg"
+  categories: ["talk", "invited talk"]
+  description: "Invited talk given at the Statistical Society of Canada general meeting (2023, Ottawa).  ([PDF of Slides](/pdf/Dylan&#32;Spicker&#32;-&#32;SSC&#32;2023.pdf))"
+  date: "2023-05-30"
+---  
