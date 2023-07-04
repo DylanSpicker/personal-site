@@ -5,7 +5,7 @@ listing:
   fields: ['title', 'author', 'image', 'description', 'date']
   sort: "date desc"
   id: "work_items_holder"
-  image-width: "100px"
+  image-height: "100px"
   date-format: "long"
   categories: true
 ---
