@@ -25,6 +25,7 @@ I completed my PhD at the University of Waterloo in the summer of 2022 and my po
 ::: {.g-col-lg-12 .g-col-12 .px-2}
 # Academic History
 - **McGill University** - Postdoctoral Fellowship (2022 - 2023) <small class='fw-light d-block my-2'>I completed my postdoc under the supervision of Dr Erica Moodie. My research focused on privacy in precision medicine.</small>
+- **University of Waterloo** - PhD in Statistics (2018 - 2022) <small class='fw-light d-block my-2'>I completed my PhD, under the supervision of Michael Wallace and Grace Yi, in statistics. My Doctoral work was titled ‘[Generalizations to Corrections of Measurement Error Effects for Dynamic Treatment Regimes.](https://uwspace.uwaterloo.ca/handle/10012/18581)’</small>
 - **University of Waterloo** - Masters of Mathematics in Statistics (2017 - 2018) <small class='fw-light d-block my-2'>I completed my Masters degree, under the supervision of Michael Wallace, in statistics. My Masters work was titled ‘Measurement error and personalized medicine: error-prone tailoring covariates in dynamic treatment regimes.’</small>
 - **Queen's University** - Bachelor of Commerce (2013 - 2017) <small class='fw-light d-block my-2'>I did (three years) of my undergraduate at Queen’s University, Kingston, where I studied Finance and Mathematics. My first year was at the University of Waterloo/Wilfrid Laurier University, in the BMath/BBA Double Degree Program.</small>
 :::
