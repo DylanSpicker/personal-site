@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/courses/STAT437/course_index.html",
+    "items": []
+  },
+  {
     "listing": "/work.html",
     "items": [
       "/work_items/npsimex.html",
@@ -24,17 +28,6 @@
     ]
   },
   {
-    "listing": "/courses/STAT437/course_index.html",
-    "items": []
-  },
-  {
-    "listing": "/teaching.html",
-    "items": [
-      "/courses/STAT437/course_index.html",
-      "/courses/STAT231/course_index.html"
-    ]
-  },
-  {
     "listing": "/blog.html",
     "items": [
       "/thoughts/research-philosophy-statement/index.html",
@@ -45,6 +38,13 @@
       "/thoughts/PSA-causation-without-correlation/index.html",
       "/thoughts/2021-04-20-the-mean-median-and-skewness/index.html",
       "/thoughts/controlling-for-factors/index.html"
+    ]
+  },
+  {
+    "listing": "/teaching.html",
+    "items": [
+      "/courses/STAT437/course_index.html",
+      "/courses/STAT231/course_index.html"
     ]
   }
 ]
