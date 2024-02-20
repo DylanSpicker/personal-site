@@ -9,8 +9,8 @@
 <link>https://dylanspicker.com/blog.html</link>
 <atom:link href="https://dylanspicker.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.4.550</generator>
-<lastBuildDate>Wed, 14 Dec 2022 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.549</generator>
+<lastBuildDate>Wed, 14 Dec 2022 04:00:00 GMT</lastBuildDate>
 <item>
   <title>My Research Philosophy Statement</title>
   <dc:creator>Dylan Spicker</dc:creator>
@@ -74,7 +74,7 @@
   <category>research</category>
   <category>job search</category>
   <guid>https://dylanspicker.com/thoughts/research-philosophy-statement/</guid>
-  <pubDate>Wed, 14 Dec 2022 00:00:00 GMT</pubDate>
+  <pubDate>Wed, 14 Dec 2022 04:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/research-philosophy-statement/research.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -123,7 +123,7 @@
   <category>research</category>
   <category>job search</category>
   <guid>https://dylanspicker.com/thoughts/teaching-philosophy-statement/</guid>
-  <pubDate>Wed, 14 Dec 2022 00:00:00 GMT</pubDate>
+  <pubDate>Wed, 14 Dec 2022 04:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/teaching-philosophy-statement/teaching.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -224,7 +224,7 @@ Huber, Peter J. 1987. <em>Robust Statistical Procedures (CBMS-NSF Regional Confe
   <category>teaching</category>
   <category>research</category>
   <guid>https://dylanspicker.com/thoughts/2021-04-27-von-mises-calculus-notes-I/</guid>
-  <pubDate>Tue, 27 Apr 2021 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 27 Apr 2021 03:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/2021-04-27-von-mises-calculus-notes-I/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -371,7 +371,7 @@ MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewnes
   <category>teaching</category>
   <category>misconceptions</category>
   <guid>https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/</guid>
-  <pubDate>Tue, 20 Apr 2021 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 20 Apr 2021 03:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/Relationship_between_mean_and_median_under_different_skewness.png" medium="image" type="image/png" height="54" width="144"/>
 </item>
 <item>
@@ -416,7 +416,7 @@ MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewnes
   <category>statistics</category>
   <category>research</category>
   <guid>https://dylanspicker.com/thoughts/linearity-of-q-functions/</guid>
-  <pubDate>Fri, 15 Nov 2019 00:00:00 GMT</pubDate>
+  <pubDate>Fri, 15 Nov 2019 04:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/linearity-of-q-functions/Q.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -458,7 +458,7 @@ MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewnes
   <category>teaching</category>
   <category>research</category>
   <guid>https://dylanspicker.com/thoughts/null-preservation/</guid>
-  <pubDate>Tue, 16 Jul 2019 00:00:00 GMT</pubDate>
+  <pubDate>Tue, 16 Jul 2019 03:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/null-preservation/preserve.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -514,7 +514,7 @@ MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewnes
   <category>teaching</category>
   <category>research</category>
   <guid>https://dylanspicker.com/thoughts/controlling-for-factors/</guid>
-  <pubDate>Mon, 01 Jul 2019 00:00:00 GMT</pubDate>
+  <pubDate>Mon, 01 Jul 2019 03:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/controlling-for-factors/control.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -607,7 +607,7 @@ MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewnes
   <category>teaching</category>
   <category>research</category>
   <guid>https://dylanspicker.com/thoughts/PSA-causation-without-correlation/</guid>
-  <pubDate>Sun, 26 May 2019 00:00:00 GMT</pubDate>
+  <pubDate>Sun, 26 May 2019 03:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/PSA-causation-without-correlation/cause.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>

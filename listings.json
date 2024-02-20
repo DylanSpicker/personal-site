@@ -1,22 +1,5 @@
 [
   {
-    "listing": "/blog.html",
-    "items": [
-      "/thoughts/research-philosophy-statement/index.html",
-      "/thoughts/teaching-philosophy-statement/index.html",
-      "/thoughts/2021-04-27-von-mises-calculus-notes-I/index.html",
-      "/thoughts/null-preservation/index.html",
-      "/thoughts/linearity-of-q-functions/index.html",
-      "/thoughts/PSA-causation-without-correlation/index.html",
-      "/thoughts/2021-04-20-the-mean-median-and-skewness/index.html",
-      "/thoughts/controlling-for-factors/index.html"
-    ]
-  },
-  {
-    "listing": "/courses/STAT437/course_index.html",
-    "items": []
-  },
-  {
     "listing": "/work.html",
     "items": [
       "/work_items/prowl.html",
@@ -45,6 +28,23 @@
       "/work_items/canssi.html",
       "/work_items/ssc_2019.html",
       "/work_items/ogs_i.html"
+    ]
+  },
+  {
+    "listing": "/courses/STAT437/course_index.html",
+    "items": []
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/thoughts/research-philosophy-statement/index.html",
+      "/thoughts/teaching-philosophy-statement/index.html",
+      "/thoughts/2021-04-27-von-mises-calculus-notes-I/index.html",
+      "/thoughts/null-preservation/index.html",
+      "/thoughts/linearity-of-q-functions/index.html",
+      "/thoughts/PSA-causation-without-correlation/index.html",
+      "/thoughts/2021-04-20-the-mean-median-and-skewness/index.html",
+      "/thoughts/controlling-for-factors/index.html"
     ]
   },
   {
