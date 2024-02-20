@@ -1,0 +1,7 @@
+---
+  title: "Differentially private outcome‐weighted learning for optimal dynamic treatment regime estimation"
+  author: "**Dylan Spicker**, Erica EM Moodie, Susan M Shortreed"
+  categories: ["paper", "published", "open access"]
+  description: "Published in Stat. ([Open Access](https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/sta4.641))"
+  date: "2024-01-17"
+---

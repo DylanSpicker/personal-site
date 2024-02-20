@@ -1,0 +1,7 @@
+---
+  title: "Le secret statistique"
+  author: "**Dylan Spicker**, Erica Moodie, Christian Genest"
+  categories: ["paper", "published", "open access", "general audience"]
+  description: "Published in Accromath. ([Open Access](https://accromath.uqam.ca/2023/10/le-secret-statistique/))"
+  date: "2023-10-01"
+---

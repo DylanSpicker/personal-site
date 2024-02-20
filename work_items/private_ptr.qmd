@@ -1,0 +1,7 @@
+---
+  title: "Differentially private projection-depth-based medians (Preprint)"
+  author: "Kelly Ramsay and **Dylan Spicker**"
+  categories: ["paper", "under review"]
+  description: "Submitted for consideration (December 2023). ([Arxiv Preprint](https://arxiv.org/abs/2312.07792))"
+  date: "2021-05-25"
+---  

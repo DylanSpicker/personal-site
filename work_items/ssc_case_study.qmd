@@ -1,7 +1,6 @@
 ---
   title: "Statistical Society of Canada Case Studies in Data Analysis Competition 2020."
   author: "Dylan Spicker and Melissa Van Bussel"
-  image: "/img/icons/award.svg"
   categories: ["award"]
   description: "**Winning Team**; Case study competition for the SSC's annual case study competition. Our project was titled: *Forecasting iTunes popularity out-of-sample: in-sample validation for longitudinal and matching methods.*"
   date: "2020-05-01"

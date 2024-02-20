@@ -1,7 +1,6 @@
 ---
   title: "NSERC Postgraduate Scholarship - Doctoral (PGS-D)"
   author: "**Dylan Spicker**"
-  image: "/img/icons/money.svg"
   categories: ["grant"]
   description: "$21,000 / year; 3 years. Receive a competitive, 3 year award from NSERC, with added funds matched by department. Fully funded my PhD studies."
   date: "2020-05-01"

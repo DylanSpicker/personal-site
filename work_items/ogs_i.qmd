@@ -1,7 +1,6 @@
 ---
   title: "OGS Queen Elizabeth II Graduate Scholarship in Science and Technology (QEII-GSST)."
   author: "**Dylan Spicker**"
-  image: "/img/icons/money.svg"
   categories: ["grant"]
   description: "$15,000/year; 1 year. Received a competitive, 1 year award through OGS."
   date: "2019-05-01"

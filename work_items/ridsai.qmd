@@ -1,0 +1,7 @@
+---
+  title: "Addressing Modern Challenges to Truly Personalized Medicine."
+  author: "**Dylan Spicker**"
+  categories: ["talk", "invited talk"]
+  description: "Talk presented at the Research Institute in Data Science and Artificial Intelligence Seminar, (2023, Fredericton).  ([PDF of Slides](/pdf/ridsai2023.pdf))"
+  date: "2023-10-03"
+---  

@@ -1,0 +1,7 @@
+---
+  title: "Preserving patient privacy in dynamic treatment regimes: private outcome-weighted learning (PrOWL)."
+  author: "**Dylan Spicker**"
+  categories: ["talk", "invited talk"]
+  description: "16th International Conference of the ERCIM WG on Computational and Methodological Statistics (CMStatistics), (2023, Berlin).  ([PDF of Slides](/pdf/cmstat2023.pdf))"
+  date: "2023-12-17"
+---  

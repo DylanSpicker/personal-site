@@ -1,7 +1,6 @@
 ---
   title: "Measurement error and precision medicine: Error‐prone tailoring covariates in dynamic treatment regimes."
   author: "**Dylan Spicker** and Michael Wallace"
-  image: "/img/icons/paper.svg"
   categories: ["paper", "published"]
   description: "Published in Statistics in Medicine (August 2020). https://doi.org/10.1002/sim.8690 ([Arxiv Preprint](https://arxiv.org/abs/1907.11659))"
   date: "2020-08-04"

@@ -1,7 +1,6 @@
 ---
   title: "StatLab-CANSSI-CRM Postdoctoral Fellowship"
   author: "**Dylan Spicker**"
-  image: "/img/icons/money.svg"
   categories: ["grant"]
   description: "Postdoctoral financing funded through CANSSI and StaLab CRM. 1 year of postdoctoral funding."
   date: "2022-09-01"

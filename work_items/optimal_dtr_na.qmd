@@ -1,0 +1,7 @@
+---
+  title: "Optimal Dynamic Treatment Regime Estimation in the Presence of Nonadherence (Preprint)"
+  author: "**Dylan Spicker**, Michael P. Wallace, and Grace Y. Yi"
+  categories: ["paper", "under review"]
+  description: "Submitted for consideration (January 2024). ([Arxiv Preprint])"
+  date: "2024-01-12"
+--- 

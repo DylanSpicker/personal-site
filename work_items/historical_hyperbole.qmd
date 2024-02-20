@@ -1,8 +1,7 @@
 ---
   title: "The Harms of Historical Hyperbole."
   author: "**Dylan Spicker**"
-  image: "/img/icons/talk.svg"
-  categories: ["talk"]
-  description: "Talk given at the [Statistics and Actuarial Sciences Student Seminar Series (SASSSS)](https://web.archive.org/web/20210629212849/https://uwaterloo.ca/statistics-and-actuarial-science/events/department-seminar-dylan-spicker). (2021, Waterloo). ([PDF of Slides](/pdf/Dylan%20Spicker%20-%20SASSSS%20-%202021.pdf). Note, these slides were originally presented as an interactive presentation, rather than PDF, so some is lost in translation. I am working on figuring out how to display the presentation here better! Apologies.)"
+  categories: ["talk", "general audience"]
+  description: "Talk given at the [Statistics and Actuarial Sciences Student Seminar Series (SASSSS)](https://web.archive.org/web/20210629212849/https://uwaterloo.ca/statistics-and-actuarial-science/events/department-seminar-dylan-spicker). (2021, Waterloo). ([PDF of Slides](/pdf/Dylan%20Spicker%20-%20SASSSS%20-%202021.pdf). Note, these slides were originally presented as an interactive presentation, rather than PDF, so some is lost in translation. You can view the HTML presentation [here](/george_dantzig/index.html){target='_BLANK'}.)"
   date: "2021-06-29"
 ---

@@ -1,0 +1,152 @@
+---
+title: "STAT 2593"
+subtitle: "Probability and Statistics for Engineers"
+semester: "2023 Fall"
+school: "University of New Brunswick"
+---
+
+## Administrative Information
+1. [Course Outline - PDF Version](content/STAT2593 - Syllabus - Updated.pdf){target="_BLANK"}
+1. [STAT2593 - Lectures Overview + Schedule](content/Lesson Content Schedule.html){target="_BLANK"}
+1. [Formula Sheet](content/STAT2593%20-%20Formula%20Sheet.pdf){target="_BLANK"}
+
+## Assignments
+1. [Problem Set 1](content/STAT2593 - Problem Set 1.pdf){target="_BLANK"} 
+1. [Problem Set 2](content/STAT2593 - Problem Set 2.pdf){target="_BLANK"} 
+1. [Practice Midterm Test](content/STAT2593 - Practice Midterm.pdf){target="_BLANK"} 
+1. [Practice Final Exam](content/STAT2593 - Practice Final Exam.pdf){target="_BLANK"}
+1. [Extra Practice - Combinatorics](content/STAT2593 - Extra Practice (Combinations and Permutations).pdf){target="_BLANK"}
+
+## Lecture Videos, Slides, Notes, and Code
+:::{.grid}
+::::{.g-col-6 .g-col-md-3}
+1. [Lesson 001](https://youtu.be/zLwsMZilqAY?si=UjtkLLCJSPe9RxS3){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20001%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20001%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 002](https://youtu.be/eM1hL-RFHcM?si=O55mq6c2lB34sSHe){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20002%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20002%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 003](https://youtu.be/bimLELbJcK0?si=ZoD_wjthpkn_YtHX){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20003%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20003%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 004](https://youtu.be/fPIlrc7rA_I?si=g5Z65DAdYuxCoQE4){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20004%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20004%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 005](https://youtu.be/1CBpD9enuNM?si=QflGeUVDsN31LlxM){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20005%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20005%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 006](https://youtu.be/sBstApuaw4Q?si=sX9dnsyjijrAkVvW){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20006%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20006%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 007](https://youtu.be/QPH8qWSvv2U?si=3v-MrFtulJ8cwjRg){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20007%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20007%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 008](https://youtu.be/OGBN-Xv1sPw?si=gzsSJyewvkM_Zztl){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20008%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20008%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 009](https://youtu.be/OGBN-Xv1sPw?si=bQzbW6pwYuGHKyQE){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20009%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20009--010%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 010](https://youtu.be/0n3-uiNCNMs?si=oET1ZFra1aOCxNIf){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20010%20-%20Slides.pdf){target="_BLANK"}
+::::
+
+::::{.g-col-6 .g-col-md-3}
+11. [Lesson 011](https://youtu.be/G1n_z3CFbeQ?si=3uoPckMmS6wKJHyJ){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20011%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20011%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 012](https://youtu.be/zaMlRF96q7w?si=vMFLOduyYbh7sPG0){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20012%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20012%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 013](https://youtu.be/dSyzEHwOOrY?si=7heP12q0n24OOtPS){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20013%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20013--015%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 014](https://youtu.be/EQY4RVon1gc?si=u_mfjUk-3FrD8-dk){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20014%20-%20Slides.pdf){target="_BLANK"}
+1. [Lesson 015](https://youtu.be/CYx8OMOdKK4?si=WI2vSJp4Ptggqxbz){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20015%20-%20Slides.pdf){target="_BLANK"}
+1. [Lesson 016](https://youtu.be/eY2lxKuXTfo?si=vBOKUKj1dXdoNyJM){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20016%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20016--017%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 017](https://youtu.be/ORim5Xcr8qk?si=mp7sM-97dxvfiov1){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20017%20-%20Slides.pdf){target="_BLANK"}
+1. [Lesson 018](https://youtu.be/QDwR0ehVShU?si=sYt4AkFYiZrigUyd){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20018%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20018%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 019](https://youtu.be/goan4oSpiA4?si=2mF5hGr9hOlfbHe3){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20019%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20019%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 020](https://youtu.be/hVS2InlPAds?si=Pdzv-9aGt5QOOJq7){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20020%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20020%20-%20In%20Class.pdf){target="_BLANK"}
+::::
+
+
+::::{.g-col-6 .g-col-md-3}
+21. [Lesson 021](https://youtu.be/_am2DMxx-Yo?si=kzXPTRaKwqt5FzUT){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20021%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20021--022%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 022](https://youtu.be/rZ_8yoYdb-E?si=gknDbKB9_i6T6ex3){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20022%20-%20Slides.pdf){target="_BLANK"}
+1. [Lesson 023](https://youtu.be/ZYEo66zFTNA?si=n4_lOPuzks3ZJ7ra){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20023%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20023%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 024](https://youtu.be/fWHxbUDCy34?si=SSP9jR16NJc7gUcq){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20024%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20024%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 025](https://youtu.be/zbDSLWUrDLM?si=PWsBAA2bRouueRVX){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20025%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20025%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 026](https://youtu.be/wBomIRyZ3d0?si=H033ySvcUgrUANOv){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20026%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20026--028%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 027](https://youtu.be/QE5QVPBKfUI?si=KP_Dc7pEY8MPCKWp){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20027%20-%20Slides.pdf){target="_BLANK"}
+1. [Lesson 028](https://youtu.be/5_8JYofhdwQ?si=3xI94GjDaVEHIWwz){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20028%20-%20Slides.pdf){target="_BLANK"}
+1. [Lesson 029](https://youtu.be/h0MakhP0ecM?si=tzaFlJOOSFvkr7RK){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20029%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20029%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 030](https://youtu.be/o7akQyHChQk?si=PJ8i1-j3HPHCWyeR){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20030%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20030--032%20-%20In%20Class.pdf){target="_BLANK"}
+::::
+
+::::{.g-col-6 .g-col-md-3}
+31. [Lesson 031](https://youtu.be/EWbw4MA3mug?si=yKWctWyWgCbU06dI){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20031%20-%20Slides.pdf){target="_BLANK"}
+1. [Lesson 032](https://youtu.be/FGgY9jaWWBI?si=_7WKT2dd0NHKA16l){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20032%20-%20Slides.pdf){target="_BLANK"}
+1. [Lesson 033](https://youtu.be/Gmo-uWj2Vgw?si=wvsPNr8QujkpwkkC){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20033%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20033%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 034](https://youtu.be/gKD3UzKQ6zw?si=vk_JvOWA4S5f0EHh){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20034%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20034%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 035](https://youtu.be/9lTaQXOdRlc?si=HsWnTlMJFJLfLu_y){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20035%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20035--036%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 036](https://youtu.be/9BT4UvOTNY0?si=5rOQ7uQUcL084dFe){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20036%20-%20Slides.pdf){target="_BLANK"}
+1. [Lesson 037](https://youtu.be/kjgBSrd7dE8?si=pI9ycthMzbUObJmK){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20037%20-%20Slides.pdf){target="_BLANK"}
+    * [In Class Slides](content/Lesson%20037%20-%20In%20Class.pdf){target="_BLANK"}
+1. [Lesson 038](https://youtu.be/OhJdzdy8v30?si=x_iISStynrT4l86e){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20038%20-%20Slides.pdf){target="_BLANK"}
+1. [Lesson 039](https://youtu.be/qLgNrlKz6xg?si=bheox2NTyaeN5wGk){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20039%20-%20Slides.pdf){target="_BLANK"}
+1. [Lesson 040](https://youtu.be/0hoPmDamJQw?si=3J7L3Vcq3pKx21MY){target="_BLANK"}
+    * [Lecture Slides](content/Lesson%20040%20-%20Slides.pdf){target="_BLANK"}
+::::
+:::
+
+
+
+## Problem Solving Videos
+While the lecture videos were supplemented by in class examples and further discussion, the following videos were created to help supplement hypothesis testing. 
+
+1. [Hypothesis Testing - Example 1](https://youtu.be/4OLdwqKqexQ?si=vxrvdrduehHcuDQK){target="_BLANK"}
+1. [Hypothesis Testing - Example 2](https://youtu.be/nKyVOBoWyJM?si=1PKpYrWeNUsFspu5){target="_BLANK"}
+1. [Hypothesis Testing - Example 3](https://youtu.be/5T1LOvlp99Q?si=2JcGjChdwzR9v7Yu){target="_BLANK"}
+1. [Hypothesis Testing - Example 4](https://youtu.be/94-FOjttUhM?si=bVEwcdToUGCyej8z){target="_BLANK"}
+1. [Hypothesis Testing - Example 5](https://youtu.be/9el07FoLWF0?si=14ihCxeXaLZ85I-P){target="_BLANK"}

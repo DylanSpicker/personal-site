@@ -91,5 +91,59 @@
   },
   "work_items/undergrad_math.qmd": {
     "undergrad_math.html": "598a53a7"
+  },
+  "work_items/canssi_crm.qmd": {
+    "canssi_crm.html": "bd29925c"
+  },
+  "work_items/mcgill_talk.qmd": {
+    "mcgill_talk.html": "d74b590c"
+  },
+  "work_items/nbif_trf.qmd": {
+    "nbif_trf.html": "b43bccd0"
+  },
+  "work_items/out_to_innovate.qmd": {
+    "out_to_innovate.html": "20e96c45"
+  },
+  "work_items/ssc_2022.qmd": {
+    "ssc_2022.html": "83b2015f"
+  },
+  "work_items/ssc_2023.qmd": {
+    "ssc_2023.html": "4e4b4202"
+  },
+  "applets/george_dantzig/CONTRIBUTING.md": {
+    "CONTRIBUTING.html": "db369707"
+  },
+  "applets/george_dantzig/examples/markdown.md": {
+    "markdown.html": "a8b037f0"
+  },
+  "applets/george_dantzig/test/simple.md": {
+    "simple.html": "7aedfb86"
+  },
+  "work_items/accromath.qmd": {
+    "accromath.html": "f03fd4ed"
+  },
+  "work_items/cmstat2023.qmd": {
+    "cmstat2023.html": "d8ba000a"
+  },
+  "work_items/nutrition_ai.qmd": {
+    "nutrition_ai.html": "3e856dbf"
+  },
+  "work_items/optimal_dtr_na.qmd": {
+    "optimal_dtr_na.html": "02beb670"
+  },
+  "work_items/private_ptr.qmd": {
+    "private_ptr.html": "5948dfe1"
+  },
+  "work_items/prowl.qmd": {
+    "prowl.html": "80d61023"
+  },
+  "courses/STAT2593/course_index.qmd": {
+    "course_index.html": "32325c5f"
+  },
+  "work_items/ridsai.qmd": {
+    "ridsai.html": "ef656309"
+  },
+  "header.qmd": {
+    "header.html": "65b4aae9"
   }
 }

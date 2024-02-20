@@ -1,7 +1,6 @@
 ---
   title: "New Brunswick Innovation Fund - Talent Recruiment Fund"
   author: "**Dylan Spicker**"
-  image: "/img/icons/money.svg"
   categories: ["grant"]
   description: "NBIF TRF award for $55,000 over a two-year period."
   date: "2023-03-27"

@@ -1,33 +1,68 @@
 ---
-section-divs: false
-format:
-  html:
-      page-layout: custom
+title: "Dylan Spicker"
+image: img/Headshot_LG.png
+about:
+  template: trestles
+  id: hero-heading
+  links:
+    - text: Google Scholar
+      url: "https://scholar.google.com/citations?user=L9AenZ0AAAAJ&hl=en"
+      target: "_BLANK"
+    - text: YouTube
+      icon: youtube
+      url: "https://www.youtube.com/channel/UC_xQeFdhjymQzmW4WKYtlpQ/featured"
+      target: "_BLANK"
+    - text: LinkedIn
+      icon: linkedin
+      url: "https://www.linkedin.com/in/dylanspicker/"
+      target: "_BLANK"
+    - text: Bluesky
+      url: "https://bsky.app/profile/dylanspicker.bsky.social"
+      target: "_BLANK"
+    - text: GitHub
+      icon: github
+      url: "https://github.com/dylanspicker"
+      target: "_BLANK"
+    - text: Blog
+      url: "blog.qmd"
+    - text: CV
+      url: "pdf/CV.pdf"
+      target: "_BLANK"
+comments: false
 ---
 
-::: {.container .grid .px-4 .py-5 .border-bottom}
-::: {.grid .g-col-med-8 .g-start-med-3 .my-5 .g-col-12 .align-items-center .border-dark .border-1}
-::: {.g-col-12 .g-col-lg-6 .text-center .py-5}
-<p class="display-6">Hi. I'm Dylan. <small class='fw-light'>(They/Them)</small></p>
-<p class="fw-bold fs-4">I am an Assistant Professor at the University of New Brunswick (Saint John).</p class="fw-bold fs-4">
+:::{#hero-heading}
+# Hi. I'm Dylan. [(They/Them)]{.fw-light }
+I am an [Assistant Professor](https://www.unb.ca/faculty-staff/directory/science-ase-math/spicker-dylan.html){target="_BLANK"} at the University of New Brunswick (Saint John).
+
 I completed my PhD at the University of Waterloo in the summer of 2022 and my postdoc at McGill University in 2023.
 
-[About Me](/about.qmd){.btn .btn-info .my-2} [My Teaching](/teaching.qmd){.btn .btn-outline-success .my-2} [My Work](/work.qmd){.btn .btn-outline-primary .my-2}
-:::
-::: {.g-col-12 .g-col-lg-6}
-![](img/Headshot_LG.png){.img-thumbnail}
-:::
-::: 
-:::
 
-::: {.container .grid .mb-5}
-::: {.grid .g-col-lg-6 .g-start-lg-4 .g-col-12}
-::: {.g-col-lg-12 .g-col-12 .px-2}
-# Academic History
-- **McGill University** - Postdoctoral Fellowship (2022 - 2023) <small class='fw-light d-block my-2'>I completed my postdoc under the supervision of Dr Erica Moodie. My research focused on privacy in precision medicine.</small>
-- **University of Waterloo** - PhD in Statistics (2018 - 2022) <small class='fw-light d-block my-2'>I completed my PhD, under the supervision of Michael Wallace and Grace Yi, in statistics. My Doctoral work was titled ‘[Generalizations to Corrections of Measurement Error Effects for Dynamic Treatment Regimes.](https://uwspace.uwaterloo.ca/handle/10012/18581)’</small>
-- **University of Waterloo** - Masters of Mathematics in Statistics (2017 - 2018) <small class='fw-light d-block my-2'>I completed my Masters degree, under the supervision of Michael Wallace, in statistics. My Masters work was titled ‘Measurement error and personalized medicine: error-prone tailoring covariates in dynamic treatment regimes.’</small>
-- **Queen's University** - Bachelor of Commerce (2013 - 2017) <small class='fw-light d-block my-2'>I did (three years) of my undergraduate at Queen’s University, Kingston, where I studied Finance and Mathematics. My first year was at the University of Waterloo/Wilfrid Laurier University, in the BMath/BBA Double Degree Program.</small>
-:::
-:::
+## Bio
+My research focuses on areas of causal inference, and specifically methodologies related to dynamic treatment regimes. During my graduate studies, my research focused on measurement error and causal inference. Briefly, measurement error occurs whenever we are interested in measuring something and we do a bad job of it. This happens in almost every study that is run, and unfortunately means that the conclusions that we draw may not be accurate: statistical work on measurement error tries to correct this. Causal inference asks questions of the form “Does X cause Y?” [For instance “Does smoking cause lung cancer?” (yes, it does).] I have a keen interest in providing a theoretical basis for (comparatively) straightforward methods, which are easy to use for non-statisticians, while exhibiting provably good theoretical properties. 
+
+During my postdoc, I explored problems related to privacy and dynamic treatment regimes, where I sought to determine ways that individual's personal health data can be protected, while gleaning the useful insights that we seek. 
+
+Outside of causal inference and measurement error, I am interested in machine learning, and in particular in trying to establish a statistical basis for novel machine learning techniques (including questions related to inference, interpretability, and model selection).
+
+I previously did an undergraduate degree in Finance and Mathematics at Queen’s University (I transferred there after completing my first year at Waterloo/Laurier in the ‘Double Degree’ program), and a Master’s of Statistics at Waterloo.
+
+Outside of my research, I pay very close attention to sports, mostly hockey, (and how statistics is, or should be, applied there), play music (without any connection to statistics), and enjoy board/video games (with varying degrees of statistical relevance). I have a cat (Charles) who is wonderful.
+
+
+### Academic History
+- **McGill University** - Postdoctoral Fellowship (2022 - 2023) [I completed my postdoc under the supervision of Dr Erica Moodie. My research focused on privacy in precision medicine.]{.fw-light .d-block .my-2}
+- **University of Waterloo** - PhD in Statistics (2018 - 2022) [I completed my PhD, under the supervision of Michael Wallace and Grace Yi, in statistics. My Doctoral work was titled ‘[Generalizations to Corrections of Measurement Error Effects for Dynamic Treatment Regimes.](https://uwspace.uwaterloo.ca/handle/10012/18581)’]{.fw-light .d-block .my-2}
+- **University of Waterloo** - Masters of Mathematics in Statistics (2017 - 2018) [I completed my Masters degree, under the supervision of Michael Wallace, in statistics. My Masters work was titled ‘Measurement error and personalized medicine: error-prone tailoring covariates in dynamic treatment regimes.’]{.fw-light .d-block .my-2}
+- **Queen's University** - Bachelor of Commerce (2013 - 2017) [I did (three years) of my undergraduate at Queen’s University, Kingston, where I studied Finance and Mathematics. My first year was at the University of Waterloo/Wilfrid Laurier University, in the BMath/BBA Double Degree Program.]{.fw-light .d-block .my-2}
+
+### Teaching
+
+The following is a (reverse chronological) list of the courses that I have (or am) teaching. Materials related to many of these course offerings are available [on my website](./teaching.qmd).
+
+- **Currently (Winter 2024)** [I am teaching both [STAT 1793](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-1793.html){target="_blank"} and [STAT 4243](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-4243.html){target="_blank"} at the University of New Brunswick. These courses are offered in person.]{.fw-light .d-block .my-2}
+- Fall 2023 [I taught [STAT 2593](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-2593.html){target="_blank"} at the University of New Brunswick, in person.]{.fw-light .d-block .my-2}
+- Winter 2022 [I taught [STAT 437](https://ucalendar.uwaterloo.ca/2021/COURSE/course-STAT.html#STAT437){target="_blank"} at the University of Waterloo, online.]{.fw-light .d-block .my-2}
+- Winter 2021 [I co-taught [STAT 231](https://ucalendar.uwaterloo.ca/2021/COURSE/course-STAT.html#STAT231){target="_blank"} at the University of Waterloo, online.]{.fw-light .d-block .my-2}
+- Previous [I have served as a teaching assistant for 18 courses between my time at the University of Waterloo and Queen’s University. A full list is available in my [CV](/pdf/CV.pdf){target="_BLANK"}.]{.fw-light .d-block .my-2}
 :::

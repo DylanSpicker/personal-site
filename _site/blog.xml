@@ -9,51 +9,61 @@
 <link>https://dylanspicker.com/blog.html</link>
 <atom:link href="https://dylanspicker.com/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.1.168</generator>
-<lastBuildDate>Sun, 14 Nov 2021 05:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.549</generator>
+<lastBuildDate>Wed, 14 Dec 2022 04:00:00 GMT</lastBuildDate>
 <item>
-  <title>My Research Philosophy Statement (WIP)</title>
+  <title>My Research Philosophy Statement</title>
   <dc:creator>Dylan Spicker</dc:creator>
-  <link>https://dylanspicker.com/thoughts/research-philosophy-statement/index.html</link>
+  <link>https://dylanspicker.com/thoughts/research-philosophy-statement/</link>
   <description><![CDATA[ 
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+    <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+    <div class="callout-icon-container">
+    <i class="callout-icon no-icon"></i>
+    </div>
+    <div class="callout-title-container flex-fill">
+    <span class="fs-2">Opportunity for current undergraduate and masters students…</span>
+    </div>
+    <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+    </div>
+    <div id="callout-1" class="callout-1-contents callout-collapse collapse">
+    <div class="callout-body-container callout-body">
+    <p><span class="fs-3 fw-bolder">I am currently recruiting graduate students at both the Masters and PhD level.</span></p>
+    <p><span class="fs-3 fw-lighter">If you are interested in pursuing either a Masters or PhD in Statistics, and are interested in any of the research topics that I work on, please reach out. Even if you have a somewhat non-traditional background, but think that you would be a good fit, please get in touch with me.</span></p>
+    <p><span class="fs-3 fw-lighter">These are <strong>funded opportunities</strong> with a lot of flexibility for you to grow and learn as a Statistician. Do not hesitate to reach out!</span></p>
+    </div>
+    </div>
+</div>
 <a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
 
 
 
-<p><strong>Note:</strong> This is a work-in-progress, but I figured: “Why not work in the open?”. If you have any thoughts, or feedback, I would of course appreciate that!</p>
-<p>Throughout my PhD, I have been primarily concerned with methodological developments related to measurement error, as it pertains to causal inference generally, and dynamic treatment regimes more specifically. While my work has been predominantly focused on expanding methodology, I have a keen interest in providing a theoretical basis for (comparatively) straightforward methods, which are easy to use for non-statisticians, while exhibiting provably good theoretical properties.&nbsp;</p>
-<section id="dissertation-work" class="level2">
-<h2 class="anchored" data-anchor-id="dissertation-work">Dissertation Work</h2>
-<p>Broadly, my research has focused on the fields of causal inference (in particular, precision medicine) and measurement error, where we are conducting the (to our knowledge) first investigation of how the latter impacts the former. Briefly, precision medicine seeks to use &nbsp;an individuals observed covariates to determine the optimal treatment strategies. These are referred to as adaptive treatment strategies or dynamic treatment regimes (DTRs). That is, precision medicine answers the question “what is the optimal treatment for a patient, when treatment can be”tailored” based on patient-specific information?“. Measurement error refers to any situation where variables of interest are not accurately observed.&nbsp;</p>
-<p>My dissertation work focused primarily on two, related questions:&nbsp;</p>
-<ol type="1">
-<li>How does the presence of measurement error impact the estimation of optimal adaptive treatment strategies, and can these impacts be remedied?</li>
-<li>How can existing, commonly used measurement error correction techniques be expanded, to have broader utility for applied researchers?</li>
-</ol>
-<p>The core question of my dissertation came out of the work I completed during my Masters (at the University of Waterloo, under the supervision of Michael Wallace) where we showed that measurement error in tailoring covariates has a substantial impact on the efficacy of estimation of optimal treatment regimes, and correspondingly called into question the use of DTRs estimated with error-prone data for the purpose of future treatment prescription. My PhD work (at the University of Waterloo, supervised by Michael Wallace and Grace Yi) continued on this thread, working on methods to remedy the effects of error in DTRs. We showed that a comparatively simple procedure, regression calibration, can be used to largely overcome the issues introduced with simple covariate measurement error, under fairly mild assumptions (Spicker and Wallace, 2020).&nbsp;</p>
-<p>Doing this required an expansion of the regression calibration technique, in order for it to be applicable to the data on hand. This prompted the secondary question of concern for my dissertation: how can we adapat techniques which are in common use, maintaining their appeal while broadening the scenarios in which they are theoretically defensible? Our first investigation of this line of questioning took as inspiration the generalizations needed for regression calibration in DTRs. In particular, we looked at a class of measurement error correction techniques which rely on “replicate measurements” (that is, independent and identically distributed remeasurements of the quantity of interest) to correct for the effects of measurement error (regression calibration is one such technique).&nbsp;</p>
-<p>We demonstrated how, with a slight modification to the estimation procedure, these techniques could be applied with any set of independent measurements, whether or not they are identically distributed (Spicker, Wallace, and Yi, 2021). Relaxing this assumption serves as an important contribution as observed data often dramatically contradict the assumption of identically distributed replicates, and these techniques are among the most applied error correction procedures.&nbsp;</p>
-<p>We continued to expand extant methodologies, through an extension to simulation extrapolation, another frequently used procedure in measurement error correction. Simulation extrapolation relies on a bootstrap-esque, “remeasurement” procedure, and assumes normality of errors for its theoretical results. We demonstrated how this technique can be made nonparametric, removing the need for any assumptions on the error distribution, by “remeasuring” from an empirical distribution instead (Spicker, Wallace, and Yi, 2021). This contribution is particularly valuable, since the assumption of normality is pervasive in the measurement error literature, but there is strong evidence that it is frequently violated in observed data.</p>
-<p>The final project specifically associated with my dissertation involves questions regarding adherence to treatment regimes. While my work has predominantly looked at errors in continuous variates, it is also an important question to consider what happens when the assigned treatment (typically a binary indicator) may not be accurately observed: that is, some patients do not adhere to the treatment they were assigned. This misclassification problem is of particular importance in the causal inference literature as ignoring it leads to parameter estimates with no substantive, causal interpretation. Presently, my ongoing work is considering ways to recover valid, causal estimators, by modifying DTR estimation techniques rooted in the estimating equation literature.&nbsp;</p>
+
+<p>Questions of causality sit at the heart of scientific inquiry and progress. While historically causality has been inferred through the use of randomised trials and experiments, the rate of growth of modern observational data and the corresponding complexity necessitates the development of novel causal techniques in order to ensure continued scientific progress. I am a causal inference researcher with an interest in developing novel methods to accommodate the growing complexity of modern data. I focus on developing techniques which are rigorously justified while remaining widely accessible. I am strongly committed to interdisciplinary research, which helps to ensure that my independent research remains grounded and readily applicable. I have a record of productive, impactful research, capable of attracting competitive funding. My interests are in burgeoning areas, tackling modern statistical issues, with diverse applied utility, and strongly integrated interdisciplinary partnerships. This provides access to a wide variety of funding sources, and serves as a strong foundation for a publishable, fundable, independent research program.</p>
+<section id="past-research" class="level2">
+<h2 class="anchored" data-anchor-id="past-research">Past Research</h2>
+<p>My past work focused on developing methods which account for the effects of measurement error and misclassification in the context of causal inference with dynamic treatment regimes (DTRs). DTRs provide a framework for capturing causal inference in a longitudinal setting, often applied for precision medicine, where we estimate the optimal sequence of treatments for individual patients. Measurement error is a pervasive issue, particularly in biostatistics, occurring whenever a variate of interest cannot be accurately observed. I provided the first account of the impacts of measurement error on optimal DTR estimation, and developed the first set of estimators to correct for these issues [1]. Additionally, I highlighted the shortcomings of ignoring patient nonadherence in optimal DTR estimation, and provided a locally efficient, computationally feasible estimation technique for the valid estimation of causal effects in these settings [2]. This work has resulted in a manuscript published in <em>Statistics in Medicine</em>, a top-tier Biostatistics journal, with a secondary article under consideration, has received competitive NSERC grant funding, and has since spawned additional contributions in the field [3, 4]. Beyond my work in modern causal inference, I have developed general measurement error corrections, leveraging both nonparametric [5] and robust [6] statistics, producing two additional manuscripts which are currently under review.</p>
 </section>
-<section id="non-dissertation-research-work" class="level2">
-<h2 class="anchored" data-anchor-id="non-dissertation-research-work">Non-Dissertation Research Work</h2>
-<p>Outside of the work completed for my dissertation, I have also been involved in several intradisciplinary research teams. At the University of Waterloo, I am involved in a group with members from the School of Public Health, and Systems Design Engineering investigating the use of novel machine learning techniques applied to the study of dietary patterns and their implications for health. Dietary data is notoriously error-prone, and machine learning techniques are typically opaque in terms of interpretability. As a result, the simple application of these techniques to these data is unjustified, without a thorough investigation of the ways in which error can be handled, and without substantial improvements to the interpretability and explainability of the machine learning. While the core aim of the group is to work on the applied questions related to health outcomes and health equity, this investigation has branched into several interesting methodological questions which are of interest to pursue.&nbsp;</p>
-<p>Prior to my masters degree, I was involved in another intradiscplinary research team at The Smith School of Business (Queen’s University). The research team involved researchers from Queen’s, in addition to members from the United States, Poland, and Italy. In this team, I provided guidance on the application of machine learning principles to questions of management science. In particular, the group was interested in determining how executives made decisions, whether based predominantly on intuition or analsis. This work was published in a book and has since been expanded into articles (Liebowitz, et al., 2018). While the work itself predates my involvement with statsistics research entirely, the formative experience of intradisciplinary research, with a diverse team, has instilled in me the importance of working diversely to approach interesting and important questions. Moreover, seeing the inner workings of an applied team, demonstrated the utility in ensuring that methodological developments are both theoretically sound, as well as accessible to practitioners, a lesson that I have continued throughout my research to date.&nbsp;</p>
+<section id="current-research" class="level2">
+<h2 class="anchored" data-anchor-id="current-research">Current Research</h2>
+<p>I am continuing to expand methods for optimal DTR estimation with complex data, where I have begun work related to patient privacy in DTR estimation. Differential privacy is a standard which ensures that reported estimates do not reveal too much information regarding any individual in a study, and preserving this privacy is critically important for statistical analyses in precision medicine. I am also working on techniques for sample size and power calculations within the DTR framework, an important area missing from the current literature. Outside of work on DTRs, my postdoctoral research focuses on the analysis of data from respondent-driven sampling (RDS). RDS combines benefits from probability based sampling and snowball sampling, providing an effective technique for researchers studying hard-to-reach populations. It has correspondingly seen wide uptake by applied researchers. Despite its frequent application, existing techniques for RDS analysis focus primarily on mean and proportion estimation, in a cross-sectional setting. I am developing a set of causal estimators using data arising from RDS, techniques which are essential for answering scientific questions with RDS data. Additionally, I am extending both the causal estimators and the existing mean estimators to a longitudinal RDS setting. This work is currently funded with a competitive postdoctoral grant, issued by CANSSI, and is motivated through a partnership with the Engage study. Engage is an ongoing, multicenter RDS, operating out of Montreal, Toronto, and Vancouver, aiming to “inform HIV and STBBI prevention techniques in the population of gay, bi, and queer men, including trans men, and other men who have sex with men.”</p>
 </section>
-<section id="present-and-future-considerations" class="level2">
-<h2 class="anchored" data-anchor-id="present-and-future-considerations">Present and Future Considerations</h2>
-<p>In the future, I hope to expand the specific areas of research consideration, while maintaining the core underlying principles: developing methodology which is useful for practitioners, theoretically grounded, and tied to interesting questions. Moreover, I hope to continue to expand my multidisciplinary involvement, both as a means of motivating methodological questions and also to ensure that sound statistical theory is applied in the literature.</p>
-<p>While there are several avenues to continue investigating measurement error in the context of DTRs (including a more thorough investigation of optimal estimation in the presence of error, for instance), precision medicine presents many interesting and understudied areas of investigation which are of direct interest to me. Some possible lines of inquiry include:</p>
-<ul>
-<li>Considering other forms of noisy data (for instance, missing or censored data), and their impact on optimal DTR estimation;</li>
-<li>Considering relaxations to assumptions that lay at the heart of causal inference (for instance, how can we accommodate unmeasured confounding);</li>
-<li>Considering utility-based outcomes, that take into account patient-preferences and alternative outcomes, in place optimizing a single, numerical variable;</li>
-<li>Considering problems related to the so-called “non-traditional inference”, that arises due to non-differentiability in the estimation procedures;</li>
-<li>Considering the application of these methods to problems outside of the domain of medicine (for instance, for the purposes of personalized education or in the domain of marketing).</li>
-</ul>
-<p>These problems range from very applied to very theoretical, and could serve as the basis for a research program focused around precision medicine. I fully expect that as the adaptive treatment literature continues to move forward, additional theoretical challenges will arise, providing further ground for investigation.&nbsp;</p>
-<p>Outside of a focus on precision medicine, I also have a particular interest in the statistical development of machine learning techniques, for the purposes of inference rather than prediction. My intradisciplinary work has suggested that, outside of statistics, there is a strong interest in applying state-of-the-art deeplearning techniques in a wide variety of domains. From my perspective, a key limitation in the ability to do this successfully stems from the lack of interpretability, explainability, and statistical basis for these models. To this end, I am also interested in fairly simple questions regarding the statistical basis for these methods (for instance, variable selection techniques, significance testing, model comparisons and tests, and parameter interpretation), with the goal of providing insight into how the methods truly function. The long-term goal with this type of investigation would be to not only ground these novel computational techniques in statistical theory, but to do so to provide a mechanism for using these methods in areas (such as causal inference) which require deeper insight.</p>
+<section id="future-research" class="level2">
+<h2 class="anchored" data-anchor-id="future-research">Future Research</h2>
+<p>Going forward, I will continue to develop novel methods in causal inference for modern issues in real-world data. In the short-term I will study complex outcomes in the context of DTRs. In the DTR literature, it is common to assume that there is a single outcome to be optimised for all individuals. In practice there are often multiple, competing outcomes. A medical treatment may be thought to increase life expectancy, but this needs to be balanced against potential negative side effects. Existing work on competing outcomes in DTRs ignores the multivariate nature of the problem, opting instead for simplified combinations using utility functions. This assumes that utility is estimable or else can be constructed, and that future patients will balance their priorities similarly. My proposed strategy will provide more flexibility for combinations of competing outcomes, compared with univariate utility functions. DTRs are typically studied under the assumption that there is a known, finite number of decisions to make. There is some work considering infinite time horizon DTRs through the use of Markovian assumptions. While these assumptions are mathematically convenient, they can be oversimplified in real-world scenarios, particularly in medical settings where delayed treatment effects are common. I will consider a joint modelling approach, treating the number of decisions as a random quantity in addition to the outcomes of interest. This joint modelling approach will borrow from standard longitudinal and survival analysis, and will provide a more realistic set of assumptions for real-world decision making. In the longer term, I will develop tools for causal inference on complex, modern data types. For instance, I will develop causal methodologies for both network and functional data. Both network and functional data are becoming more prominent, and each represents an important form of “big data”. Alongside the associational techniques used to study these large data sets, causal methods will be required to answer scientific questions which arise. This is particularly important as observational, rather than experimental, data are driving the increase in the availability of network and functional data. Causal network analysis has received some attention in the literature, but has remained relatively simple both in terms of associational structures and causal estimands (methods tend to assume only local interference patterns on networks in a way which often is not realistic). Functional data, on the other hand, have received comparatively little causal attention, despite the potential applied utility (for instance, with fMRI data).</p>
+</section>
+<section id="existing-and-planned-collaborative-research" class="level2">
+<h2 class="anchored" data-anchor-id="existing-and-planned-collaborative-research">Existing and Planned Collaborative Research</h2>
+<p>Beyond my impactful methodological developments, I have a strong focus on conducting interdisciplinary research. The purpose of this is two-fold: first, working with applied researchers helps to discern important methodological needs, ensuring that my independent research remains relevant. Second, the primary purpose of statistical methodology is for the advancement of scientific knowledge. Working on interdisciplinary research facilitates the theoretically valid application of cutting-edge statistical techniques, enhancing the pursuit of scientific knowledge. An example of this can be seen during my doctoral studies, where I established an ongoing research project with nutritional scientists, computer scientists, and statisticians. Our research aims to study the impacts of diet on health outcomes, while taking into account the complexities of dietary patterns (including combination effects which are historically ignored), using deep learning techniques. This ongoing project involves statistical methodology, algorithmic development, and nutritional science. In addition, during my postdoctoral studies, my work on RDS is directly informed by a close working relationship with medical and public health researchers from the aforementioned Engage study. This partnership ensures that the methodological developments are necessary, and will see applied use. Moving forward, I intend to continue initiating and participating in relevant interdisciplinary work, particularly in the health sciences. This provides exciting avenues for collaboration, a wider array of funding sources, and helps to ensure uptake of methodological developments. Several of my short-term projects provide opportunities for interdisciplinary research in personalised medicine, public health, and medical imaging. In addition to health applications, the possibility of industry collaboration exists, particularly related to functional and network data. Functional data is commonly observed in finance and speech recognition settings, while network data naturally arises in social networks and logistics tasks.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>[1] <strong>Spicker, Dylan</strong>, and Wallace, Michael P. Measurement error and precision medicine: Error-prone tailoring covariates in dynamic treatment regimes. Statistics in Medicine. 2020; 39: 3732– 3755. https://doi.org/10.1002/sim.8690</p>
+<p>[2] <strong>Spicker , Dylan</strong>. Generalizations to Corrections of Measurement Error Effects for Dynamic Treatment Regimes. UWSpace. 2022. http://hdl.handle.net/10012/18581.</p>
+<p>[3] Wallace, Michael. P. Measurement error and precision medicine. In T. Cai, B. Chakraborty, E. Laber, E. Moodie, and M. van der Laan, editors, Handbook of Statistical Methods for Precision Medicine [Accepted], Handbooks of Modern Statistical Methods. Chapman and Hall/CRC, Boca Raton Florida. 2022</p>
+<p>[4] Liu, Dan. Regression-based Methods for Dynamic Treatment Regimes with Mismeasured Covariates or Misclassified Response. 2022.</p>
+<p>[5] <strong>Spicker, Dylan</strong>, Wallace, Michael P., and Yi, Grace Y. Nonparametric Simulation Extrapolation for Measurement Error Models. arXiv preprint arXiv:2111.02863. 2021.</p>
+<p>[6] <strong>Spicker, Dylan</strong>, Wallace, Michael P., and Yi, Grace Y. Generalizations to Corrections for the Effects of Measurement Error in Approximately Consistent Methodologies. arXiv preprint arXiv:2106.07401. 2021.</p>
 
 
 </section>
@@ -63,29 +73,47 @@
   <category>teaching</category>
   <category>research</category>
   <category>job search</category>
-  <guid>https://dylanspicker.com/thoughts/research-philosophy-statement/index.html</guid>
-  <pubDate>Sun, 14 Nov 2021 05:00:00 GMT</pubDate>
+  <guid>https://dylanspicker.com/thoughts/research-philosophy-statement/</guid>
+  <pubDate>Wed, 14 Dec 2022 04:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/research-philosophy-statement/research.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
-  <title>My Teaching Philosophy Statement (WIP)</title>
+  <title>My Teaching Philosophy Statement</title>
   <dc:creator>Dylan Spicker</dc:creator>
-  <link>https://dylanspicker.com/thoughts/teaching-philosophy-statement/index.html</link>
+  <link>https://dylanspicker.com/thoughts/teaching-philosophy-statement/</link>
   <description><![CDATA[ 
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+    <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+    <div class="callout-icon-container">
+    <i class="callout-icon no-icon"></i>
+    </div>
+    <div class="callout-title-container flex-fill">
+    <span class="fs-2">Opportunity for current undergraduate and masters students…</span>
+    </div>
+    <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+    </div>
+    <div id="callout-1" class="callout-1-contents callout-collapse collapse">
+    <div class="callout-body-container callout-body">
+    <p><span class="fs-3 fw-bolder">I am currently recruiting graduate students at both the Masters and PhD level.</span></p>
+    <p><span class="fs-3 fw-lighter">If you are interested in pursuing either a Masters or PhD in Statistics, and are interested in any of the research topics that I work on, please reach out. Even if you have a somewhat non-traditional background, but think that you would be a good fit, please get in touch with me.</span></p>
+    <p><span class="fs-3 fw-lighter">These are <strong>funded opportunities</strong> with a lot of flexibility for you to grow and learn as a Statistician. Do not hesitate to reach out!</span></p>
+    </div>
+    </div>
+</div>
 <a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
 
 
 
-<p><strong>Note:</strong> This is a work-in-progress, but I figured: “Why not work in the open?”. If you have any thoughts, or feedback, I would of course appreciate that!</p>
-<p>It is my belief that learning occurs not through the actions of a teacher, but through the actions of students. My role as an instructor is not to impart facts to students. Rather, my job is to facilitate and guide the students through a process of active learning. Practically, this requires capturing and directing students’ attention, aligning their personal objectives with the corresponding course objectives, and creating an environment which is supportive for all learners. In addition to these pillars, I believe in personalizing education for each student, and that feedback and iteration are essential to effective instruction. Although I have had a fair amount of teaching experience in traditional and non-traditional settings, I recognize that I am still in the nascence of my teaching career. Accordingly, I have tried to ground my philosophy not only in what my teaching experience has taught me, but also in the experiences that I have had watching teachers that I admire, and in a voracious consumption of pedagogical research. While this philosophy has served me well so far, this statement also serves as an aspirational standard, and is subject to change as I continue to learn as an instructor.</p>
-<p>My initial experience in teaching to a diverse group of students began in a non-traditional setting: YouTube videos teaching programming. While the online medium is certainly distinct from a classroom setting, the experience provided me with several important lessons. First, in the online video format, attention and entertainment is key. You have to attract and keep students, which requires selecting interesting topics, framing them in interesting and applicable ways, and doing so with an effective presentation style. For my online teaching, this meant selecting useful and employable topics with insufficient existing coverage online, and then grounding these lessons in real-world, full-scale projects. The idea was to teach the important concepts by building functional applications, keeping the students interested and engaged, and allowing them to build useful portfolio items for themselves. Many individuals showed me projects that had started as a lesson in a video, which they expanded beyond the presented scope, using what they learned for their own purposes. This project-grounded content only became truly successful when I began to polish my presentation skills. Early commenters noted that, while my explanations were clear, I lacked enthusiasm. I worked on the “soft” skills, which shifted the feedback to commending both my presentation and my clarity.</p>
-<p>While in a traditional classroom we do not need to attract attention in the same way, I believe that entertaining content encourages students to partake in active learning. If we tell compelling narratives through the course content, students will enthusiastically engage which fosters learning. In statistics there are plenty of ways to catch and hold the attention of our students. During lessons, I try to use topical, relevant examples. For instance, I used COVID-19 vaccine trials to teach statistical research frameworks in the Winter of 2021, to great success. During office hours I deeply connected with some students who had an interest in sports by showcasing methods on data from the National Hockey League (NHL).</p>
-<p>I have applied the same philosophy to creating assessments. At Queen’s University, I worked with two professors to design and implement a cross-discipline course. In the course, groups of business and computing majors worked to build an app-based business. The students demoed and pitched their completed apps to real-world entrepreneurs. This unified all the course concepts in a fun and applicable project. In an upcoming, fourth-year, statistics course I am giving freedom on the “standard”, problem-set assignments. For the advanced material, students can opt to take a theoretical or applied view, depending on their ultimate goals. These techniques have generated considerable, excited feedback from students, who are eager to engage with the topics.</p>
-<p>After attracting a student’s attention with the goal of directing it, the natural question is “at what”? I believe that it is important to have clear learning objectives, both at a macro (course) level, and at a micro (lesson or assignment) level. These objectives should be comprehensibly presented to students, and consistently aligned with all aspects of the course. For instance, when introducing marginal linear models, my lesson begins by looking at the structure of the data that we wish to analyze. This states a clear objective: analyze these data. Then, I ask the students to consider why we need new methods to analyze these data. I ask them to think about why the knowledge that they currently have (linear regression) is insufficient for this task. This leads to them considering the ways that they need to expand their knowledge to achieve the outlined goal. Here, discovery and the synthesis of new concepts with existing knowledge form the center of the lesson. I try to use this approach wherever possible. Based on student feedback, this framing has been effective at getting ideas to stick. However, course objectives are not the only relevant objectives for my teaching.</p>
-<p>For better or worse, each student enters the classroom with objectives of their own. For most students, learning the course material is a means to an end. Their true interest is in, for instance, obtaining a specific job or getting into graduate school. These goals are not the primary consideration for us as instructors, but we must recognize that they are the primary consideration for our students. Doing so allows us to leverage an important resource: intrinsic motivation. Students are more likely to put in the deliberate effort required for learning, if it is in service of their goals. For instance, many of the students in my cross-discipline course expressed interest in start-up work. The project served as an important portfolio item for those students, providing direct experience in the field. Further, it introduced the students to industry contacts, building their network. This led the students to invest significant time and effort into their projects, and benefit from the learning that took place alongside it. Additionally, the students expressed satisfaction with the course and with our assessment format. I intend to take a similar approach with the final project in my upcoming longitudinal data analysis course. The cumulative project will give students a chance to apply the course concepts, producing work that can range from a data science portfolio piece through to an academic research poster. My hope is that the students will use the work they are doing in the course to advance their aspirations in a way which is more useful than a simple, numeric grade. In doing so, their intrinsic motivation should help carry their efforts, and promote deeper understanding.</p>
-<p>This strategy of marrying course objectives and student objectives comes with two additional benefits. First, it provides the opportunity for personalization. I have tried to do this through personal surveys, soliciting interests of students, to use in tutorial lessons or lectures. The choice afforded to students in their projects and assignments also serves to tailor the experience. Enhanced personalization remains a focus of mine moving forward. Second, there is ample evidence that extrinsic motivators (such as grades) are not conducive to learning. Providing assessments that have value beyond their contribution to a final mark minimizes the importance of grades. This has benefits in the ability to keep a student interested and motivated. Additionally, it assists in creating a healthy learning environment, the third pillar of my teaching philosophy.</p>
-<p>The environment created in a course sets the tone for a student’s willingness to engage, which in my view, is a key factor in their ability to learn. To me, the learning environment needs to be welcoming and safe for all individuals, with specific attention paid to mental well-being. The environment should also be relaxed and feel low-stakes, and encourage mistakes. Some of this can be achieved, passively and by example. For instance, I include my pronouns of “they/them” on the course syllabus, and in my signature when emailing students. This is a simple practice which garners grateful messages, particularly from students in marginalized groups. In my YouTube teaching, I keep mistakes (with a discussion of the correction) in the final videos. This teaches the skill of debugging, but also lessens the sting a student feels when making a mistake. Doing this has led to substantially more discussion of the students’ mistakes than was present before I started including mine. Other techniques for creating a positive environment require more deliberate action. For instance, in an introductory statistics course we provided the students with a flexible grading scheme, dropping their worst marks from their final grade. This helped alleviate the stress of any individual assessment. Additionally, we provided a mock exam, alongside a video lesson of me solving the exam, and discussing my thought process throughout. Students indicated that this reduced their exam anxiety. This has positive benefits for learning, despite the fact that the mock exam had little bearing on the true final exam. In my fourth year longitudinal data course, I allow students to re-submit corrected assignments alongside explanations of what their mistakes were, for partial credit. This policy reinforces the idea that mistakes are an integral part of learning, and will not be punished. Participation is an effective technique to have students actively learning. However, “random call” and “forced participation” both create high-stress settings for many students. Anonymous participation methods allow for a similar level of direct engagement, without the high-stress drawbacks. I have had success using “iClickers” and “TopHat” when teaching in person, and “Kahoot!” when teaching online. Students have been almost universally thankful for the accommodations I provide them and for the environment I create. While these principles have served me well in my teaching thus far there is room for growth in my abilities as a teacher. My non-traditional start to teaching provided one additional lesson: feedback is key. Hundreds of thousands of individuals have seen my videos, and thousands have left feedback on them. This feedback has ranged from comments regarding my presentation, to suggestions about ways of clarifying particular topics. It has included positive feedback about the framing devices used, the narratives I create, and the projects I present. This feedback improved my videos over the course of my online teaching, and it has made clear to me how important feedback is to effective teaching. Going forward, I intend to make generous use of feedback from students, both through anonymous surveys during the term and official teaching assessments, as well as from my colleagues.</p>
-<p>I have enjoyed success as an instructor. I have made meaningful connections with my students, received plenty of praise, and have been recognized for this with several opportunities to continue teaching. However, the core component of my teaching philosophy is that I can always improve. And I look forward to continuing to learn, grow, and practice my skills as an instructor.</p>
+
+<p>Somewhere between weighing the 600th and 700th snack-sized bag of chips I thought to myself “why?” Having seen the difficulty that students have understanding sampling variability, population distributions, and sampling distributions, I formed the most visual, memorable example lesson I could: randomly select bags of chips from a box and weigh them. Then repeat this process 15 times to estimate the mean and further repeat this mean estimation 50 times for the sampling distribution. Judging by student results, and the messages from students I get to this day, the resulting <a href="https://www.youtube.com/watch?v=_euR1kVMQ5A" target="_BLANK">tutorial</a> was both effective and memorable.</p>
+<p>So why weigh 750 bags of chips for a 20 minute tutorial? Because I care deeply. I care about statistics education, which I view as critical to fostering an informed citizenry. I care about my students as learners and individuals, and I care about their diversity of background and experience (where they exhibit far more variability than those bags of chips). The following pillars demonstrate how I translate this care into an actionable plan for effective teaching, (beyond relying on sampling snack-sized bags of chips).</p>
+<ol type="1">
+<li><strong>Autonomous, Personalised Learning and Differentiated Instruction:</strong> Students enter a course with diverse goals and interests, and, as a result, tailoring course materials increases student engagement and improves outcomes. I differentiate content and instructional strategies by using personal surveys to determine student interests and preferred learning styles, and use this information to cater my lectures accordingly (e.g., using both sports data and COVID-19 trial data for example problems). I strive to ensure that there is a path for every student in the class, that the students with insufficient background knowledge are not left behind and the thriving students are properly challenged. Additionally, I give my students as much choice as possible on assessments, allowing them to select between proof-based or application-based questions on assignments, and between formats and topics for final projects.</li>
+<li><strong>Safe and Welcoming Learning Environment:</strong> I create an environment that ensures students are able to be fully present, absent additional burden. I build my courses so as to remove stressors whenever possible, for instance, using flexible grading schemes. I have deep personal experience with modern issues related to inclusivity and diversity, and I proactively highlight the importance of these issues in my course materials and interactions with students. This fosters an environment of mutual respect and allows all students to be fully present as themselves. I encourage frequent communication, course related or not, and I am available to students before and after lectures, for in-person or virtual office hours, through email, instant messaging, course forums, and with anonymous surveys.</li>
+<li><strong>Universal Accessibility by Design:</strong> My goal is to remove any possible disadvantages for students which could arise based on the design of the course. I use a wide array of accessible content types in my courses, including closed-captioned lecture videos, lecture notes, internal and external supplementary material, annotated and unannotated lecture slides, and example code. Doing so ensures that every learner has easy-to-access, suitable content for their abilities and learning styles.</li>
+<li><strong>Mistakes Matter:</strong> Mistakes, when carefully considered by students, are a crucial part of the learning process. Students are generally, and understandably, hesitant to make mistakes on important assessments, and this view is often carried over to lower-stakes settings. I encourage students to view mistakes as opportunities to reflect and learn, and I reinforce this with course policies. For instance, when feasible, I allow my students to earn back partial credit by re-submitting their assignments after correcting their mistakes, with a small explanation of what their fundamental misunderstanding was.</li>
+<li><strong>Organisation of All Course Aspects:</strong> Particularly with my focus on personalised learning, the administration, content, and expectations of a course must be organised and cohesive, clearly defining what is necessary for success. For instance, I divide my lecture videos not weekly, but based on topic. For each topic, I release a conceptual video, followed by videos on the theory and application of the concepts, allowing for easy revisiting and learning without mode switching. I provide a suggested viewing schedule and clearly state which videos are necessary for success on each assignment.</li>
+</ol>
 
 
 
@@ -94,16 +122,35 @@
   <category>teaching</category>
   <category>research</category>
   <category>job search</category>
-  <guid>https://dylanspicker.com/thoughts/teaching-philosophy-statement/index.html</guid>
-  <pubDate>Sun, 14 Nov 2021 05:00:00 GMT</pubDate>
+  <guid>https://dylanspicker.com/thoughts/teaching-philosophy-statement/</guid>
+  <pubDate>Wed, 14 Dec 2022 04:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/teaching-philosophy-statement/teaching.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Notes on ‘von Mises Calculus for Statistical Functionals’</title>
   <dc:creator>Dylan Spicker</dc:creator>
-  <link>https://dylanspicker.com/thoughts/2021-04-27-von-mises-calculus-notes-I/index.html</link>
+  <link>https://dylanspicker.com/thoughts/2021-04-27-von-mises-calculus-notes-I/</link>
   <description><![CDATA[ 
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+    <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+    <div class="callout-icon-container">
+    <i class="callout-icon no-icon"></i>
+    </div>
+    <div class="callout-title-container flex-fill">
+    <span class="fs-2">Opportunity for current undergraduate and masters students…</span>
+    </div>
+    <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+    </div>
+    <div id="callout-1" class="callout-1-contents callout-collapse collapse">
+    <div class="callout-body-container callout-body">
+    <p><span class="fs-3 fw-bolder">I am currently recruiting graduate students at both the Masters and PhD level.</span></p>
+    <p><span class="fs-3 fw-lighter">If you are interested in pursuing either a Masters or PhD in Statistics, and are interested in any of the research topics that I work on, please reach out. Even if you have a somewhat non-traditional background, but think that you would be a good fit, please get in touch with me.</span></p>
+    <p><span class="fs-3 fw-lighter">These are <strong>funded opportunities</strong> with a lot of flexibility for you to grow and learn as a Statistician. Do not hesitate to reach out!</span></p>
+    </div>
+    </div>
+</div>
 <a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
 
 
 
@@ -165,7 +212,7 @@
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-VMCFSF" class="csl-entry">
 Fernholz, Luisa Turrin. 1983. <em>Von Mises Calculus for Statistical Functionals</em>. Springer New York. <a href="https://doi.org/10.1007/978-1-4612-5604-5">https://doi.org/10.1007/978-1-4612-5604-5</a>.
 </div>
@@ -176,16 +223,35 @@ Huber, Peter J. 1987. <em>Robust Statistical Procedures (CBMS-NSF Regional Confe
   <category>statistics</category>
   <category>teaching</category>
   <category>research</category>
-  <guid>https://dylanspicker.com/thoughts/2021-04-27-von-mises-calculus-notes-I/index.html</guid>
-  <pubDate>Tue, 27 Apr 2021 04:00:00 GMT</pubDate>
+  <guid>https://dylanspicker.com/thoughts/2021-04-27-von-mises-calculus-notes-I/</guid>
+  <pubDate>Tue, 27 Apr 2021 03:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/2021-04-27-von-mises-calculus-notes-I/cover.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>The (lack of a) Relationship between Mean, Median, and Skewness</title>
   <dc:creator>Dylan Spicker</dc:creator>
-  <link>https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index.html</link>
+  <link>https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/</link>
   <description><![CDATA[ 
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+    <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+    <div class="callout-icon-container">
+    <i class="callout-icon no-icon"></i>
+    </div>
+    <div class="callout-title-container flex-fill">
+    <span class="fs-2">Opportunity for current undergraduate and masters students…</span>
+    </div>
+    <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+    </div>
+    <div id="callout-1" class="callout-1-contents callout-collapse collapse">
+    <div class="callout-body-container callout-body">
+    <p><span class="fs-3 fw-bolder">I am currently recruiting graduate students at both the Masters and PhD level.</span></p>
+    <p><span class="fs-3 fw-lighter">If you are interested in pursuing either a Masters or PhD in Statistics, and are interested in any of the research topics that I work on, please reach out. Even if you have a somewhat non-traditional background, but think that you would be a good fit, please get in touch with me.</span></p>
+    <p><span class="fs-3 fw-lighter">These are <strong>funded opportunities</strong> with a lot of flexibility for you to grow and learn as a Statistician. Do not hesitate to reach out!</span></p>
+    </div>
+    </div>
+</div>
 <a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
 
 
 
@@ -203,7 +269,11 @@ If the mean is less than the median the data exhibit a left (negative) skew. If 
 <p>Consider responses to the question ``How many adults (18+) live in this house?’’ for residents across Canada. We can imagine asking 1000 households for this response and it seems plausible that we would have data which look something like:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Based on these data, we can see fairly clearly that the median is going to be 2 and that the data exhibit a positive skewness. The mean, however, is given by 1.79 which evidently violates the supposed rule of thumb.</p>
@@ -213,58 +283,66 @@ If the mean is less than the median the data exhibit a left (negative) skew. If 
 <p>Consider a quiz that is given to students in an introductory statistics class that is marked out of 5. If we assume that 500 students are enrolled in the course, and they all write the quiz, then the following grade distribution seems plausible:</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Based on these data, we can see fairly clearly that the median is going to be 4 and that the data exhibit a negative skewness. The mean, however, is given by 4.1 which evidently violates the supposed rule of thumb.</p>
 </section>
 <section id="positive-skew-mean-median-1" class="level2">
 <h2 class="anchored" data-anchor-id="positive-skew-mean-median-1">Positive Skew; Mean = Median</h2>
-<div class="cell">
-
-</div>
 <p>Dropping the pretense of real data we can, as may be obvious now, begin to generate arbitrary examples that violate the remaining configuartions of the rules. The following data are selected so that the skew is positive (0.6491939), while the mean (0) and the median (0) are exactly equal.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Perhaps the interested reader could come up with an example situation for these data.</p>
 </section>
 <section id="negative-skew-mean-median" class="level2">
 <h2 class="anchored" data-anchor-id="negative-skew-mean-median">Negative Skew; Mean = Median</h2>
-<div class="cell">
-
-</div>
 <p>The previous example can of course be mirrored exactly so as to produce a negative sample skewness (-0.6491939), while the mean (1) and the median (1) are exactly equal.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Perhaps the interested reader could come up with an (alternative) example situation for these data.</p>
 </section>
 <section id="no-skew-mean-median-mode" class="level2">
 <h2 class="anchored" data-anchor-id="no-skew-mean-median-mode">No Skew; Mean &lt; Median (&lt; Mode)</h2>
-<div class="cell">
-
-</div>
 <p>The remaining scenarios to deconstruct involve distributions which have no skew, but which have a mean and median which are not equal. These are fairly straightforward to construct as well. In this example we can see that the skewness (0) is 0, while the mean (4.5) and the median (5) differ.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="no-skew-mode-median-mean" class="level2">
 <h2 class="anchored" data-anchor-id="no-skew-mode-median-mean">No Skew; (Mode &lt;) Median &lt; Mean</h2>
-<div class="cell">
-
-</div>
 <p>Once again, other alternatives are possible, by why reinvent the wheel when we can simply mirror our previous situation? In this example we can see that the skewness (0) is 0, while the mean (5.5) and the median (5) still differ, but differently than last time.</p>
 <div class="cell">
 <div class="cell-output-display">
-<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure">
+<p><img src="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
@@ -281,7 +359,7 @@ If the mean is less than the median the data exhibit a left (negative) skew. If 
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-article1" class="csl-entry">
 Hippel, Paul T von. 2005. <span>“Mean, Median, and Skew: Correcting a Textbook Rule.”</span> <em>Journal of Statistics Education</em> 13 (2). <a href="https://doi.org/10.1080/10691898.2005.11910556">https://doi.org/10.1080/10691898.2005.11910556</a>.
 </div>
@@ -292,16 +370,35 @@ MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewnes
   <category>statistics</category>
   <category>teaching</category>
   <category>misconceptions</category>
-  <guid>https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/index.html</guid>
-  <pubDate>Tue, 20 Apr 2021 04:00:00 GMT</pubDate>
+  <guid>https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/</guid>
+  <pubDate>Tue, 20 Apr 2021 03:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/2021-04-20-the-mean-median-and-skewness/Relationship_between_mean_and_median_under_different_skewness.png" medium="image" type="image/png" height="54" width="144"/>
 </item>
 <item>
   <title>On the Linearity of Q-Functions</title>
   <dc:creator>Dylan Spicker</dc:creator>
-  <link>https://dylanspicker.com/thoughts/linearity-of-q-functions/index.html</link>
+  <link>https://dylanspicker.com/thoughts/linearity-of-q-functions/</link>
   <description><![CDATA[ 
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+    <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+    <div class="callout-icon-container">
+    <i class="callout-icon no-icon"></i>
+    </div>
+    <div class="callout-title-container flex-fill">
+    <span class="fs-2">Opportunity for current undergraduate and masters students…</span>
+    </div>
+    <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+    </div>
+    <div id="callout-1" class="callout-1-contents callout-collapse collapse">
+    <div class="callout-body-container callout-body">
+    <p><span class="fs-3 fw-bolder">I am currently recruiting graduate students at both the Masters and PhD level.</span></p>
+    <p><span class="fs-3 fw-lighter">If you are interested in pursuing either a Masters or PhD in Statistics, and are interested in any of the research topics that I work on, please reach out. Even if you have a somewhat non-traditional background, but think that you would be a good fit, please get in touch with me.</span></p>
+    <p><span class="fs-3 fw-lighter">These are <strong>funded opportunities</strong> with a lot of flexibility for you to grow and learn as a Statistician. Do not hesitate to reach out!</span></p>
+    </div>
+    </div>
+</div>
 <a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
 
 
 
@@ -318,16 +415,35 @@ MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewnes
  ]]></description>
   <category>statistics</category>
   <category>research</category>
-  <guid>https://dylanspicker.com/thoughts/linearity-of-q-functions/index.html</guid>
-  <pubDate>Fri, 15 Nov 2019 05:00:00 GMT</pubDate>
+  <guid>https://dylanspicker.com/thoughts/linearity-of-q-functions/</guid>
+  <pubDate>Fri, 15 Nov 2019 04:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/linearity-of-q-functions/Q.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Null Preservation</title>
   <dc:creator>Dylan Spicker</dc:creator>
-  <link>https://dylanspicker.com/thoughts/null-preservation/index.html</link>
+  <link>https://dylanspicker.com/thoughts/null-preservation/</link>
   <description><![CDATA[ 
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+    <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+    <div class="callout-icon-container">
+    <i class="callout-icon no-icon"></i>
+    </div>
+    <div class="callout-title-container flex-fill">
+    <span class="fs-2">Opportunity for current undergraduate and masters students…</span>
+    </div>
+    <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+    </div>
+    <div id="callout-1" class="callout-1-contents callout-collapse collapse">
+    <div class="callout-body-container callout-body">
+    <p><span class="fs-3 fw-bolder">I am currently recruiting graduate students at both the Masters and PhD level.</span></p>
+    <p><span class="fs-3 fw-lighter">If you are interested in pursuing either a Masters or PhD in Statistics, and are interested in any of the research topics that I work on, please reach out. Even if you have a somewhat non-traditional background, but think that you would be a good fit, please get in touch with me.</span></p>
+    <p><span class="fs-3 fw-lighter">These are <strong>funded opportunities</strong> with a lot of flexibility for you to grow and learn as a Statistician. Do not hesitate to reach out!</span></p>
+    </div>
+    </div>
+</div>
 <a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
 
 
 
@@ -341,16 +457,35 @@ MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewnes
   <category>statistics</category>
   <category>teaching</category>
   <category>research</category>
-  <guid>https://dylanspicker.com/thoughts/null-preservation/index.html</guid>
-  <pubDate>Tue, 16 Jul 2019 04:00:00 GMT</pubDate>
+  <guid>https://dylanspicker.com/thoughts/null-preservation/</guid>
+  <pubDate>Tue, 16 Jul 2019 03:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/null-preservation/preserve.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>When Should We Control For Factors?</title>
   <dc:creator>Dylan Spicker</dc:creator>
-  <link>https://dylanspicker.com/thoughts/controlling-for-factors/index.html</link>
+  <link>https://dylanspicker.com/thoughts/controlling-for-factors/</link>
   <description><![CDATA[ 
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+    <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+    <div class="callout-icon-container">
+    <i class="callout-icon no-icon"></i>
+    </div>
+    <div class="callout-title-container flex-fill">
+    <span class="fs-2">Opportunity for current undergraduate and masters students…</span>
+    </div>
+    <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+    </div>
+    <div id="callout-1" class="callout-1-contents callout-collapse collapse">
+    <div class="callout-body-container callout-body">
+    <p><span class="fs-3 fw-bolder">I am currently recruiting graduate students at both the Masters and PhD level.</span></p>
+    <p><span class="fs-3 fw-lighter">If you are interested in pursuing either a Masters or PhD in Statistics, and are interested in any of the research topics that I work on, please reach out. Even if you have a somewhat non-traditional background, but think that you would be a good fit, please get in touch with me.</span></p>
+    <p><span class="fs-3 fw-lighter">These are <strong>funded opportunities</strong> with a lot of flexibility for you to grow and learn as a Statistician. Do not hesitate to reach out!</span></p>
+    </div>
+    </div>
+</div>
 <a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
 
 
 
@@ -378,22 +513,41 @@ MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewnes
   <category>statistics</category>
   <category>teaching</category>
   <category>research</category>
-  <guid>https://dylanspicker.com/thoughts/controlling-for-factors/index.html</guid>
-  <pubDate>Mon, 01 Jul 2019 04:00:00 GMT</pubDate>
+  <guid>https://dylanspicker.com/thoughts/controlling-for-factors/</guid>
+  <pubDate>Mon, 01 Jul 2019 03:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/controlling-for-factors/control.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>PSA: Causation without Correlation</title>
   <dc:creator>Dylan Spicker</dc:creator>
-  <link>https://dylanspicker.com/thoughts/PSA-causation-without-correlation/index.html</link>
+  <link>https://dylanspicker.com/thoughts/PSA-causation-without-correlation/</link>
   <description><![CDATA[ 
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+    <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+    <div class="callout-icon-container">
+    <i class="callout-icon no-icon"></i>
+    </div>
+    <div class="callout-title-container flex-fill">
+    <span class="fs-2">Opportunity for current undergraduate and masters students…</span>
+    </div>
+    <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+    </div>
+    <div id="callout-1" class="callout-1-contents callout-collapse collapse">
+    <div class="callout-body-container callout-body">
+    <p><span class="fs-3 fw-bolder">I am currently recruiting graduate students at both the Masters and PhD level.</span></p>
+    <p><span class="fs-3 fw-lighter">If you are interested in pursuing either a Masters or PhD in Statistics, and are interested in any of the research topics that I work on, please reach out. Even if you have a somewhat non-traditional background, but think that you would be a good fit, please get in touch with me.</span></p>
+    <p><span class="fs-3 fw-lighter">These are <strong>funded opportunities</strong> with a lot of flexibility for you to grow and learn as a Statistician. Do not hesitate to reach out!</span></p>
+    </div>
+    </div>
+</div>
 <a href="../../blog.html" class="btn btn-outline-success mb-2">Back to 'My Thoughts'</a>
+
 
 
 
 <section id="correlation-causation-and-useless-platitudes" class="level1">
 <h1>Correlation, Causation, and Useless Platitudes</h1>
-<p>Any student who has taken <em>Statistics 101</em> can tell you (and will tell you) that “Correlation does not imply causation.” This student is correct - correlation does not imply causation. You need only look at the wonderful <a href="https://www.tylervigen.com/spurious-correlations">Spurious Correlations</a> to see the truth of such a statement. Unfortunately, this platitude is incorrectly interpretted as “a correlation means that there is no causation” far too often. Relevant XKCD: <img src="https://dylanspicker.com/thoughts/PSA-causation-without-correlation/https:/www.explainxkcd.com/wiki/images/9/9c/correlation.png" class="img-fluid" alt="XKCD 552: Correlation"></p>
+<p>Any student who has taken <em>Statistics 101</em> can tell you (and will tell you) that “Correlation does not imply causation.” This student is correct - correlation does not imply causation. You need only look at the wonderful <a href="https://www.tylervigen.com/spurious-correlations">Spurious Correlations</a> to see the truth of such a statement. Unfortunately, this platitude is incorrectly interpretted as “a correlation means that there is no causation” far too often. Relevant XKCD: <img src="https://www.explainxkcd.com/wiki/images/9/9c/correlation.png" class="img-fluid" alt="XKCD 552: Correlation"></p>
 <p>“Correlation doesn’t imply causation, but it does waggle its eyebrows suggestively and gesture furtively while mouthing ‘look over there’.”</p>
 <section id="correlation-can-imply-causation" class="level2">
 <h2 class="anchored" data-anchor-id="correlation-can-imply-causation">Correlation <em>can</em> Imply Causation</h2>
@@ -406,8 +560,8 @@ MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewnes
 <p>This is counter-intuitive (but true). The reason here has to do with the definition of correlation. When people say <em>correlation</em>, they almost certainly mean <em>Pearson’s Correlation</em>, as this is the most commonly used measure of correlation. Pearson’s Correlation is a measure of the <strong>linear relationship</strong> between two quantities. This is very useful in many settings, but it only takes a moment thought to recognize that non-linear relationships exist. In fact, the following plot would exhibit a correlation of 0.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://dylanspicker.com/thoughts/PSA-causation-without-correlation/https:/3.bp.blogspot.com/-wg7eovEn0GA/VEXW-DPhGuI/AAAAAAAAD4Y/hDWD4TZKRWU/s1600/quadratic_data.png" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Lucid Mesh: Non-linear Data</figcaption><p></p>
+<p><img src="https://3.bp.blogspot.com/-wg7eovEn0GA/VEXW-DPhGuI/AAAAAAAAD4Y/hDWD4TZKRWU/s1600/quadratic_data.png" class="img-fluid figure-img"></p>
+<figcaption>Lucid Mesh: Non-linear Data</figcaption>
 </figure>
 </div>
 <p>Now the two quantities pictured have a very clear relationship, it just happens to be non-linear. As such the correlation is 0. Is the relationship between these two quantities causal? Who knows! But the point is that the observation that correlation equals 0 is a point which gives literally no information as to whether or not a causal relationship exists [I mean, technically it does tell you that it is not possible for it to be a strictly, unmediated linear relationship, but that’s so little information as to basically be no information].</p>
@@ -452,8 +606,8 @@ MacGillivray, H. L. 1981. <span>“The Mean, Median, Mode Inequality and Skewnes
   <category>statistics</category>
   <category>teaching</category>
   <category>research</category>
-  <guid>https://dylanspicker.com/thoughts/PSA-causation-without-correlation/index.html</guid>
-  <pubDate>Sun, 26 May 2019 04:00:00 GMT</pubDate>
+  <guid>https://dylanspicker.com/thoughts/PSA-causation-without-correlation/</guid>
+  <pubDate>Sun, 26 May 2019 03:00:00 GMT</pubDate>
   <media:content url="https://dylanspicker.com/thoughts/PSA-causation-without-correlation/cause.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>

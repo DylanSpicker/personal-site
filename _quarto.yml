@@ -3,7 +3,8 @@ project:
   preview:
     port: 4200
     browser: false
-
+  # post-render:
+  #     - "xcopy /s /e /h applets _site"
 website:
   title: "Dylan Spicker"
   site-url: "https://dylanspicker.com/"
@@ -11,8 +12,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: "About Me"
     right:
       - href: work.qmd
         text: "My Work"
@@ -22,10 +21,11 @@ website:
         text: "My Thoughts"
 format:
   html:
-      theme: simplex
+      theme: cosmo
       css: styles.css
       toc: false
       page-layout: full
+      include-before-body: header.html
 
 
 

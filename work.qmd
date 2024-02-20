@@ -1,14 +1,15 @@
 ---
-title: "Research Work, Presentations, and Grants"
+title: "Research Work, Presentations, Grants, and Awards"
 listing:
   contents: "work_items/*.qmd"
-  fields: ['title', 'author', 'image', 'description', 'date']
+  fields: ['title', 'author', 'description', 'date']
   sort: "date desc"
   id: "work_items_holder"
-  image-height: "100px"
   date-format: "long"
   categories: true
 ---
+
+On this page is a (sometimes updated) list of my talks, publications, grants, awards, and so forth. These are sortable and filterable, and may be more pleasant to scroll through than my CV. 
 
 :::{#work_items_holder}
 :::

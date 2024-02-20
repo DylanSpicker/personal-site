@@ -1,0 +1,1055 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>The Harms of Historical Hyperbole</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/simple.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+		<style>
+			.container{
+				display: flex;
+			}
+			.col{
+				flex: 1;
+			}
+			.strikeout {
+				display: inline-block;
+				line-height: 1em;
+				position: relative;
+			}
+			.strikeout::after {
+				border-bottom: 7px solid rgba(255,0,0,0.7);
+				content: "";
+				left: 0;
+				margin-top: 4px;
+				position: absolute;
+				right: 0;
+				top: 50%;
+			}
+			.bubble {
+				border: 2px solid #000;
+				padding: 25px;
+				border-radius: 10px;
+				position: relative;
+				margin-right: 33%;
+				margin-left: auto;
+				margin-bottom: -20px;
+				max-width: 51%;
+				display: block;
+			}
+			.bubble::after {
+				content: " ";
+				position: absolute;
+				bottom: -26px;
+				right: 110px;
+				width: 0;
+				height: 0;
+				border-left: 20px solid transparent;
+				border-right: 20px solid transparent;
+				border-top: 25px solid #000;
+			}
+			.timeline-holder {
+				display: flex;
+			}
+			.timeline-date {
+				padding-left: 5px;
+				padding-right: 5px;
+				border-right: 1px solid #000;
+				vertical-align: middle;
+				font-size: 45px;
+				padding-top: 25px;
+				padding-bottom: 25px;
+				position: relative;
+			}
+			.timeline-date.selected::after {
+				content: " ";
+				height: 0;
+				width: 0;
+				border-top: 20px solid #000;
+				border-left: 20px solid transparent;
+				border-right: 20px solid transparent;
+				top: -10px;
+				left: 50%;
+				margin-left: -10px;
+				position: absolute;
+			}
+			.timeline-date.b-selected::after {
+				content: " ";
+				height: 0;
+				width: 0;
+				border-bottom: 20px solid #000;
+				border-left: 20px solid transparent;
+				border-right: 20px solid transparent;
+				bottom: -10px;
+				left: 50%;
+				margin-left: -10px;
+				position: absolute;
+			}
+			.timeline-date .event,
+			.timeline-date .event {    
+				position: absolute;
+				width: 190%;
+				border: 1px solid #000;
+				border-radius: 5px;
+				height: 230px;
+				font-size: 32px;
+				left: -45%;
+				padding: 20px;
+				box-sizing: border-box;
+			}
+			.timeline-date.selected .event { 
+				top: -240px;
+			}
+			.timeline-date.b-selected .event { 
+				bottom: -240px;
+			}
+			.timeline-date.last {
+				border-right: 0px;
+			}
+			.timeline-date.highlighted {
+				color:rgb(211, 20, 138);
+			}
+			.timeline-date.selected.highlighted::after { border-top-color:rgb(211, 20, 138); }
+			.timeline-date.b-selected.highlighted::after { border-bottom-color:rgb(211, 20, 138); }
+			.timeline-date.highlighted .event {
+				border:2px solid rgb(211, 20, 138);
+				color: #000;
+			}
+			span.highlight{
+				color: rgb(211, 20, 138);
+			}
+
+			/* Tryu to Visualize Math */
+			.math-pic {
+				width: 100%;
+				position: relative;
+				background: #000;
+				padding: 50px;
+				box-sizing: border-box;
+				min-height: 350px;
+			}
+			.sample-space {
+				background:rgb(211, 20, 138); 
+				width: 320px; 
+				color: #FFF; 
+				font-size: 50px; 
+				text-align: right; 
+				padding-right: 50px;
+				height: 100px; 
+				line-height: 100px; 
+				padding-top: 100px; 
+				padding-bottom: 100px; 
+				border-radius: 10px;
+				position: absolute;
+				left: 25px;
+				top: 25px;
+			}
+			.rejection-region {
+				border: 5px solid rgba(0, 150, 150, 1);
+				background:rgba(0, 150, 150, 0.75);
+				 width: 100px; 
+				 color: #FFF; 
+				 font-size: 50px; 
+				 text-align: center; 
+				 height: 50px; 
+				 line-height: 50px; 
+				 padding-top: 25px; 
+				 padding-bottom: 25px; 
+				 border-radius: 50%;
+				 position: absolute;
+				 top: 215px;
+				 left: 120px;
+			}
+			.hypersphere {
+				border: 5px solid rgb(251, 255, 8);
+				background:rgba(251, 255, 8, 0.5);
+				width: 200px; 
+				color: #FFF; 
+				font-size: 50px; 
+				text-align: center; 
+				height: 100px; 
+				line-height: 100px; 
+				padding-top: 50px; 
+				padding-bottom: 50px; 
+				border-radius: 50%;
+				position: absolute;
+				left: 30px;
+				top: 60px;
+			}
+			.intersection {
+				position: absolute; 
+				top: 210px;
+				left: 145px;
+				font-size: 35px;
+			}
+			.text-holder {
+				text-align: right;
+				color: #FFF;
+				font-size: 32px;
+				line-height: 32px;
+				width: 60%;
+				margin-left: 40%;
+			}
+			.definition-box h2 {
+				font-size: 40px;
+				text-align: left;
+				/* display: inline; */
+				text-decoration: underline;
+				font-variant: small-caps;
+			}
+			.definition-box {
+				border: 2px solid #000;
+				margin-top: 5px;
+				padding: 20px;
+				box-sizing: border-box;
+				border-radius: 5px;
+				position: absolute;
+				top: 0px;
+			}
+			.definition-box .definition {
+				text-align: left;
+				font-size: 30px;
+				width: 60%;
+			}
+			.definition-box .definition.fullwidth {
+				text-align: left;
+				font-size: 30px;
+				width: 100%;
+			}
+			.definition-box .example {
+				position: absolute;
+				top: -21px;
+				right: -1px;
+				bottom: -21px;
+				background: rgba(0,0,0,0.2);
+				width: 40%;
+				border-radius: 0px 5px 5px 0px;
+			}
+			.definition-box .example img {
+				max-width: 100%;
+				max-height: 85%;
+			}
+			.results {
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2 class="r-fit-text">The Harms of</h2>
+					<h2 class="r-fit-text">Historical Hyperbole</h2>
+					<hr>
+					<h2 class="r-fit-text">Dylan Spicker, PhD Candidate (Presented on June 30th 2021)</h2>
+					<aside class="notes">
+						Thank you everyone who decided to come to this somewhat peculiar sounding talk. I hope that my abstract was able to pique your interest and that you stick around. Before I begin, I want to make a few broad points. First, this talk is definitely not about my research -- I am not a mathematical historian, and so I apologize if there are any mistakes in the stories that I tell. Second, there actually will be some math in this talk, a little later on; the details are, I think, interesting but also not particularly important. I am going to try to thread the needle of keeping those of you who like to see math in presentations entertained throughout that component, while not boring the rest of you. Third, I want to make clear from the outset that at no point of this presentation is it my goal to discredit George Dantzig the person nor any of the work that he did. He was a very accomplished individual, and I have a tremendous amount of respect for what he did. My focus is not on him, but rather on the myths that have spread with him at the center, and the impact that these stories can have on others. <br><br>
+						
+						This bring me to my final piece of preamble, I'd like to say that while a lot of this is tongue-in-cheek, I do think that there are some important components to what I am going to say. I assume that the majority of people in this presentation are graduate students, or if not, are people who work directly with graduate students. Being a graduate student can be a very taxing role, and I think that we generally need to be better at having frank conversations regarding that. This is, in some small part, my contribution to opening that conversation up. Please feel free to ask questions, make comments, or reach out to me at any point - now or after this talk!<br><br>
+
+						With those points out of the way, let's begin to discuss my beef with the idea of George Dantzig!
+					</aside>
+				</section>
+
+				<section data-state="dantzig-no">
+					<img src="assets/Dantzig.jpg" class="r-stretch" alt="George Dantzig Portrait">
+					<h2 class="r-fit-text">Who was George Dantzig?</h2>
+					<p class="r-fit-text">An American Mathematician/Statistician who created the simplex algorithm for linear programming.</p>
+					<aside class="notes">
+						For those of you who are unfamiliar, George Dantzig was a fairly famous mathematician and statistician. Of note, he invented the simplex algorithm for solving linear programming tasks. This is quite a fascinating challenge -- it allows for the optimization of some linear objective function, subject to linear constraints. 
+					</aside>
+				</section>
+				<section data-state="dantzig-anim" data-background-color="rgb(189, 232, 255)">
+					<canvas id="myCanvas" style="position: absolute; top: 0; left: 0;"></canvas>
+					<div style="position: absolute; top: 250px; width: 40%; left: -20px; min-height: 20vh; font-family: monospace; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<span style="color: rgba(0, 150, 150, 1);">Operations Researchers:</span> "Oh no. We can't check 70! combinations. That will take longer than the heat death of the universe. Aweh shucks."
+						<br />
+						<br />
+						<span style="color: rgb(211, 20, 138); font-style: italic;">The Simplex Algorithm</span> ENTER STAGE RIGHT
+						<br />
+						<br />
+						<span style="color: rgb(211, 20, 138);">The Simplex Algorithm:</span> "I can do that, fast and effectively! Even on computers from the 1940s!" 
+						<br />
+						<br />
+						<span style="color: rgba(0, 150, 150, 1);">Operations Researchers:</span> "Yay! Now we can solve all of these allocation problems effectively."
+					</div>
+					<aside class="notes">
+						If you have 70 people, and 70 jobs for them to do, with the idea of maximizing their output, with each person having a different capacity for each job, how can you determine the best arrangment? <br><br>
+						
+						If you were to test all possible permutations, the number of possibilities exceeds the number of particles in the observable universe, to use a cliched comparison. The simplex method, proposed in 1946, efficiently solves this in moments! Dantzig created the simplex algorithm while working in the air force during World War 2, and it is hard to overstate the impact. This advancement in solving linear systems is still in frequent use today and it is frankly a marvel. 
+					</aside>
+				</section>
+				<section data-background-image="assets/Good Will Hunting.gif">
+					<div style="background: rgba(255,255,255,0.5); position: absolute; left: 0; width: 28%; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<h2 style="color: white;">Good <span class="strikeout">George Dantzig</span> Will Hunting</h2>
+						<hr>
+						<p>Some liberties were taken...</p>
+					</div>
+					<aside class="notes">
+						Now, if you've not had occasion to use linear programming yourself, you may still have heard of Dantzig -- knowingly or not. If you've seen the movie Good Will Hunting then you've seen some events that are loosely -- very loosely -- based on Dantzig. Will Hunting, the movie's titular character, who solves math problems on chalkboards that are supposed to be challenging, is based on George Dantzig. <br><br>
+
+						In actual fact, the character is more inspired by Dantzig than actually based on him. I do not want to suggest that the movie centers on the events of his life, as it most certainly does not, but Matt Damon solving the two nearly unsolvable math problems, well that is roughly based on Dantzig; that is also going to be the central part of my discussion today.
+					</aside>
+				</section>
+				<section data-background-image="assets/Youtube_Video.png">
+					<div style="background: rgba(255,255,255,0.5); position: absolute; left: 0; width: 100%; text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; ">
+						<h1 style="color: white">This incredible clickbait ACTUALLY EXISTS! You won't believe the view count!</h1>
+					</div>
+					<aside class="notes">
+						If you've not seen the movie, perhaps you've still heard the widespread story of Dantzig's unsolvable stats problems. I am going to recount the events of the story the way that they are commonly told, without much care for historical accuracy. To give you a sense of how widespread this story is, my main source for this version of the story is a set of YouTube videos which collectively have around 8 million views! That's quite something when we consider the fact that we are talking about a story of some mathematician's PhD!
+					</aside>
+				</section>
+				<section>
+					<h1 class="r-fit-text">The Unsolved Homework Problems</h1>
+					<div class="r-hstack">
+						<img src="assets/S1_late.jpg" alt="Person running late." class="fragment fade-in-then-semi-out" data-fragment-index="0" />
+						<img src="assets/S2_chalkboard_problems.jpg" alt="Math written on chalkboard." class="fragment fade-in-then-semi-out"/>
+						<img src="assets/S3_hardwork.jpg" alt="Person working hard, writing." class="fragment fade-in-then-semi-out"/>
+						<img src="assets/S4_messy_desk.jpg" alt="Incredibly messy desk." class="fragment fade-in-then-semi-out"/>
+					</div>
+					<div class="r-hstack">
+						<img src="assets/Door_Knocking.webp" alt="Knocking on a door." class="fragment fade-in-then-semi-out"/>
+						<img style="height: 270px;" src="assets/You_Did_It.gif" alt="Person asking 'Do you have any idea what you have done?'." class="fragment fade-in-then-semi-out"/>
+						<img style="height: 270px;" src="assets/Binders.webp" alt="Person saying 'Come on, we are going binder shopping.'." class="fragment fade-in-then-semi-out"/>
+					</div>
+					<aside class="notes">
+						So what is the story of George Dantzig's unsolved homework? <BR><BR>
+						
+						[NEXT]<br><br>
+
+
+						As the story goes, George Dantzig was late for a statistics lecture during the first semester of his PhD. <br><br>
+						
+						[NEXT]<br><br>
+						
+						Upon entering the lecture hall, he saw two problems on the board which he had assumed were homework questions, so he scribbled them down and didn't think too much about them. <br><br>
+						
+						[NEXT]<br><br>
+
+						That week, as he tried to solve the questions, he felt that they were harder than usual, but worked away to get them done.<br><br>
+						
+						[NEXT]<br><br>
+
+						Upon returning the solutions to his professor, he apologized for the delay in getting them done. The Professor asked George to leave the work on his desk -- among a pile of many other papers -- and told George that he'd take a look at it later.<br><br>
+
+						[NEXT]<br><br>
+
+						Many weeks later George was awoken in his campus residence one morning by the Professor knocking on the door, excitedly. He informed George that he had written an introduction for the first paper. George was confused, and so the Professor explained.<br><br>
+
+						[NEXT]<br><br>
+
+						Supposedly, the questions that George had correctly solved were actually two famous unsolved problems in statistics! These problems had supposedly boggled the brightest statistics minds of the day, and George had cracked them open! The Professor was eager to have George publish them, and much praised was given to the young George Dantzig for doing this.<br><br>
+
+						[NEXT]<br><br>
+
+						Later on in his PhD, when unsure of what to write his thesis on, he was instructed by his professor to simply "take the two problems from before, put them in a binder, and call that your thesis." And such is the story, as it is told, of George Dantzig.<br><br>
+
+						This story has everything we could hope for, at least as far as stories about mathematicians are concerned. A student who was late to class unknowingly answered two famous, unsolved statistics problems, which had evaded professional statisticians for sometime. He was then able to finish up his PhD simply because of that work he did in a week! 
+					</aside>
+				</section>
+
+				
+				<section>
+					<h2 class="r-fit-text">What lessons are learned from this?</h2>
+					<div class="r-hstack">
+						<img  data-fragment-index="1" style="max-height: 200px;" src="assets/Good Will Hunting.gif" alt="Good Will Hunting" class="fragment">
+						<img  data-fragment-index="2" style="max-height: 200px;" src="assets/Youtube_Video.png" alt="Youtube Video on George Dantzig" class="fragment">
+						<img  data-fragment-index="3" style="max-height: 200px;" src="assets/Me.png" alt="Picture of Me" class="fragment">
+					</div>
+					<ol>
+						<li class="fragment" data-fragment-index="1"><span style="color: rgb(211, 20, 138);">George Dantzig</span> was a genius.</li>
+						<li class="fragment" data-fragment-index="2"><span style="color: rgb(211, 20, 138);">Positive thinking</span> makes you into a genius.</li>
+						<li class="fragment" data-fragment-index="3">Geniuses <span style="color: rgb(211, 20, 138);">finish their disserations</span> in a week.</li>
+					</ol>
+					<aside class="notes">
+						Now this story is often used as a parable of sorts. In fact, I learned while researching this talk that the story began spreading, at least in part, due to actual religious sermons. Apparently these sermons did a wonderful job of embellishing the truth. One such version claimed that "even Einstein couldn't even solve these problems", which is funny to me on a number of levels. Still, in hearing the story, whether in a religious context or not, I think there is a tendency to try to teach one lesson or another. <br><br>
+						
+						[NEXT]<br><br>
+
+						1. Some people use it to showcase the power of individual genius: George Dantzig was an incredible mind and his inate abilities were unparalled and incredibly special. This seems to be lesson projected onto Good Will Hunting.<br><br>
+
+						[NEXT]<br><br>
+
+						2. Others use it to display the power of "positive thinking". The only reason that Dantzig succeeded, while other statisticians failed, was because he did not know that these were famous unsolved problems. He figured he could do them, as they were assigned homework problems in his mind, and as a result of this positive thinking, he manifested his destiny -- or something. This was the through line of the video with millions of views referenced before.<br><br>
+
+						[NEXT]<br><br>
+
+						3. Some people, grad students in particular -- and to be clear, when I say grad students, I mean me -- like to use Dantzig as this theoretical ideal of how to finish a dissertation, fast. He was able to write two short papers, put them in a binder, and call it a day -- if only I could do the same! 
+					</aside>
+				</section>
+
+				<section data-background-image="assets/cake.jpg">
+					<div style="position: absolute; top: 250px; width: 40%; left: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						<span style="font-size: 50px;">Therein lies my <span style="color: rgb(211, 20, 138);">beef</span>.</span>
+						<br>
+						<br>
+						<span style="font-size: 55px;">Those <span style="color: rgba(0, 150, 150, 1);">lessons</span> are lies*.</span>
+						<br>
+						<br>
+						<br>
+						<small style="font-size: 20px;">* or at least not justified by the storied event.</small>
+					</div>
+					<aside class="notes">
+						I'm sure that there are other lessons you could draw from this story as well: even if it is just as simple as being amazed at the impressive feat. Now, before you let your imagination run wild, or you take this to heart, I have to rain on the parade: this story, at least the interesting parts of it, are almost entirely a fabrication. The facts are more or less in line with reality, but the commentary and the context are not. And this is fundamentally my issue with the *idea* of George Dantzig.<br><br>
+
+						Now, to be clear, I do not have any issue with the above lessons -- at least not the first two. Dantzig was an incredibly smart person, and that was shown off while he was in grad school, but also throughout the remainder of his career. I also think that there are strong benefits to positive thinking: believing that you can, and will, accomplish what you set out to is something that holds a lot of power. I do not think that positive thinking is sufficient for success, nor do I think it is necessary, but I do believe that it helps get you there! <br><br>
+						
+						So, my issues are not with the lessons themsleves, but with how we get to these lessons from the story. The way that I've told the story has enough hyperbole to distort the overall impressions, and I take issue with this. Before I get into those details, I want to back-up slightly and give some context as to why this matters so much to me. Why have I dedicated so much of my mental energy to feeling annoyed at a story of a Mathematician that I've never met?
+					</aside>
+				</section>
+
+				<section>
+					<img src="assets/Me_Old.png" alt="Old picture of me and my siblings." class="r-stretch">
+					<div style="position: absolute; bottom: 75px; right: 250px; color: #FFF; font-size: 50px; transform: rotate(-13deg);">
+						May 13, 2005
+					</div>
+					<div style="position: absolute; top: 50px; right: 250px; color: #FFF; font-size: 150px; transform: rotate(13deg);">
+						🥳
+					</div>
+					<aside class="notes">
+						This lovely old-timey picture is me, and my siblings, on my tenth birthday: May 13th, 2005. For the record, I'm the silly looking one with moose antlers on -- bonus points to anyone who can identify who that Pokemon is. I can hear you all asking: "Dylan, why are you showing us a picture from your tenth birthday? Why are you wearing moose antlers? How is this relevant to a statistics talk?"
+					</aside>
+				</section>
+				<section>
+					<img src="assets/obituary.png" alt="Washington post obituary of George Dantzig." class="r-stretch">
+					<div style="position: absolute; bottom: 75px; left: 250px; color: #FFF; background: rgba(0,0,0,0.7); font-size: 50px; transform: rotate(8deg);">
+						May 13, 2005
+					</div>
+					<aside class="notes">Well, sadly, May 13th 2005, also happens to correspond to the day when George Dantzig passed away -- at the age of 90.</aside>
+				</section>
+				<section data-background-iframe="https://en.wikipedia.org/wiki/May_13" data-background-interactive="true">
+					<div style="position: absolute; top: 50px; width: 20%; right: -50px; font-family: monospace; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+						Look at all the famous people.
+					</div>
+					<aside class="notes">
+						Now, as a kid I was fairly nerdy, and also fairly insufferable. As a result this meant that I spent a great deal of time on the May 13th Wikipedia page, looking for all of the trivia on my birthday. <br><br>
+						
+						[1986] For the Twilight fans in the audience, I happen to share a birthday with Robert Pattinson. <br><br>
+						
+						[1950] By way of musicians I shared May 13th with Ritchie Valens, Stevie Wonder, and Darius Rucker. <br><br>
+						
+						[1922] My Golden Girls obsession can likely be traced to Bea Arthur.<br><br> 
+						
+						Still, none of these people quite grabbed my attention like George Dantzig, american mathematician and academic, who passed on my 10th birthday.
+					</aside>
+				</section>
+				<section >
+					<h1 class="r-fit-text">Plot Twist</h1>
+					<h5 class="r-fit-text">I used to kind of love Dantzig.</h5>
+					<aside class="notes">
+						This lone piece of trivia may be more responsible than most other external factors for me pursuing math in the way that I have: even as a child I was enthralled with learning what I could about George Dantzig. And this story of his time in graduate school took center stage, even then.<br><br>
+						
+						Given the formative nature of this story, and Dantzig more broadly, I hope you'll forgive my over investment in some events that took place in Berkley in the fall of 1939. The obvious question to ask is: why give this presentation now? If I've been obsessing over the events of this story since before I was in high school, why have I not done something with it until now? <br><br>
+
+						Well, the first plot twist of the presentation today is that, for a long time, I did not have any animosity towards the recounting of the story! I was happy to recite the story, to stand in awe of the miraculous efforts that must have gone into it, and to dream about maybe one day being just like Dantzig.
+					</aside>
+				</section>
+				<section data-background-color="rgb(120, 232, 255)">
+					<h5 style="line-height: 1.5em;">We need to make sure we always take care of ourselves. It is important to do what is right for us, always, regardless of any extrinsic forces. You matter.</h5>
+					<h3 style="margin-top: 35px; margin-bottom: 35px;">Please, if you ever need to chat, email me or reach out. <a style="color:#000; font-weight: bold;" href="mailto:dylan.spicker@gmail.com">dylan.spicker@uwaterloo.ca</a></h3>
+					<h5 style="line-height: 1.5em;">We need to do a better job at recognizing the impact of the environments that we create have on others. My talk is tongue-in-cheek and meant to be entertaining, but that is simply a tool at cutting through our inability to discuss these issues frankly. I promise I will get back to less serious slides next, but please take this to heart. If it is helpful, remember that other people feel like you do and want to be there to support you.</h5>
+					<aside class="notes">
+						And then I became exposed to the world of academia. Now, to be clear, I really have loved doing my PhD, personally. I also think that the academic world is filled with interesting, kind, and considerate individuals. My enjoyment of the degree, however, really does not minimize how tough it can be to be in the shoes of a graduate student. Throughout the pandemic I think that there has been a lot of time for reflection regarding where we are at, and where we want to be. And from this reflection I have had the opportunity to have conversations with many graduate students -- both Masters students and PhDs -- from several universities. And it became quite clear from these conversations that many people are struggling. The pressures that are put on graduate students can be quite overwhelming, and that the standards that are held up can be unrealistic and damaging. <br><br>
+
+						Some of this no doubt is based on selection bias: the types of people likely to be in graduate school are the types of people who have likely held academic standards as important throughout their lives. But the pressure does not shrink upon making it here. The standards are amplified, intentionally or not. And in this light the mythology of George Dantzig's unsolved homework problems is something that frustrates me to no end. It is not only the fact that pushing these types of lessons leads to harm, but also that the pieces of the story that make it so often repeated are factually incorrect in many ways. <br><br>
+
+						Not only do I think that the way that we recount the story is harmful, in light of the broader academic environment, but I think that there is a way of telling Dantzig's story which is both more correct and also potentially helpful for current graduate students. Instead of contributing to unrealistic standards of professional attainment, the story can be flipped as a celebration, and I think it's a shame that this has not been done.
+					</aside>
+				</section>
+				<section >
+					<h1 class="r-fit-text">So What is My Take?</h1>
+					<h5 class="r-fit-text">George Dantzig did what most graduate students do...</h5>
+					<h5 class="r-fit-text">... and that is something we should celebrate.</h5>
+					<aside class="notes">
+						When you strip away the factual inaccuracies you are left with the story of a graduate student, who is doing something remarkable, but not out of the ordinary for graduate students. That is to say: all graduate students are doing remarkable work, that comes with the job. And telling Dantzig's story the way we do has this all twisted. In the current telling we set Dantzig up as something to aspire to, something that we will never quite measure up to because how could we? In reality, Dantzig's story should serve as an illustration of how incredible the achievements of students are, across the board.<br><br>
+
+						So, let's begin to deconstruct this myth. 
+					</aside>
+				</section>
+				<section data-background-color="rgb(0, 0, 0)" data-text-color="rgb(255,255,255)">
+					<h1 class="r-fit-text">Myth #1</h1>
+					<h1 class="r-fit-text">These were very famous problems...</h1>
+					<aside class="notes">First up, is the claim that these were very famous problems. </aside>
+				</section>
+
+				<section data-background-image="assets/Later.jpg">
+					<aside class="notes">
+						This was the first block to crumble for me, and so I thought it was suiting for it to be the first block to crumble for you as well. To totally debunk this claim, we can take a look at the two papers that were published as the results of the homework.<br><br>
+
+						First, while the first paper was submitted almost immediately following the solution, the second was not. It took nearly 12 years from when the problem was solved, and 5 years following the completion of his dissertation, in order for it to be published. If this was a very famous unsolved problem, and the Professor was very excited about its resolution, why were they both not rushed towards publication?
+					</aside>
+				</section>
+
+				<section>
+					<span class="fragment bubble" data-fragment-index="3">How about we co-author this one?</span>
+					<div class="r-stack">
+						<div class="r-hstack" data-fragment-index="1" >
+							<img src="assets/Dantzig.jpg" style="height: 350px; margin: 50px;" alt="George Dantzig portrait.">
+							<img src="assets/waldd.jpg"  style="height: 350px; margin: 50px;"alt="Abraham Wald portrait.">
+						</div>
+						<img src="assets/endnote.png" data-fragment-index="2" alt="George Dantzig portrait." style="border: 2px solid #000; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); " class="fragment fade-in-then-out">
+					</div>
+					<aside class="notes">
+						Not only was it not rushed towards publication, but it required something of a coincidence to get published ever. In particular, the paper is said to be co-authored by Abraham Wald, and there is an interesting footnote which states<br><br>
+
+						[NEXT]<br><br>
+
+						> "The main results of this paper were obtained by the authors independently of each other using entirely different methods."<br><br>
+
+						[NEXT]<br><br>
+
+						In digging into this history, there is more to the story. In particular, Dantzig received a letter from Wald stating that he had a paper accepted for publication that addressed this second problem, before realizing that Dantzig had already solved it. They compromised by listing themselves as co-authors on the publication. So, without Wald, and without the coincidence of happening to have heard that Dantzig may have approached the same problem, and without Wald wishing to push the publication forward, it is possible that Dantzig's work never sees the light of day.<br><br> 
+						
+						This really does not sound like the actions of individuals who have solved a "very famous problem".
+					</aside>
+				</section>
+				<section>
+					<div class="r-stack">
+						<div class="r-hstack">
+							<img src="assets/Citations_1.png" alt="7 Citations on Dantzig's First Paper">
+							<img src="assets/Citations_2.png" alt="5 Citations on Dantzig's Second Paper">
+						</div>
+						<img src="assets/All_You_Can_Cite.gif" alt="Simpsons Gif: Do these sound like the citation counts of a paper that is a 'very famous problem'?" style="height: 500px; border: 2px solid #000;" class="fragment zoom-in">
+					</div>
+					<aside class="notes">
+						Now, if this delay and publication setup does not convince you that this is not a famous problem we can take a look at the number of citations each has received. A very famous problem ought to have been cited at least a decent number of times.<br><br>
+
+						The Wald and Dantzig paper is credited with being cited 7 whole times. Of these 7, 3 of them are historical papers. That is to say that this very famous problem has been used 4 times since publication. The other paper has even fewer: a total of 5 citations, with the same 3 historical references. <br><br>
+
+						[NEXT]<br><br>
+
+						Now, we are faced with a few possibilities. Maybe these were very famous problems, but all of the people who cared about them existed in the past and are unfortunately not around any longer. Perhaps when people refer to them as "very famous", they are using a different definition than I would use personally -- if 2 or 4 citations are "very famous" then I have good news for a lot of researchers! Or, and this is my take, these were problems which are not in any sense of the word "very famous".<br><br>
+
+						I think it's important to interject here: most problems are not very famous. We all know this from experience: in any given research talk, even to people in our field, we spend a great deal of time outlining the problem we are trying to solve because typically even that is unfamiliar territory. The detail of the problems being "very famous" is not particularly important for the factual outline of the story, but it does a lot to make us feel worse: if Dantzig could solve very famous problems, maybe I should too!
+					</aside>
+				</section>
+				<section data-background-color="rgb(0, 0, 0)" data-text-color="rgb(255,255,255)">
+					<h1 class="r-fit-text">Myth #2</h1>
+					<h1 class="r-fit-text">These problems were unsolved...</h1>
+					<aside class="notes">
+						Myth number two: these problems were "unsolved". 
+					</aside>
+				</section>
+				<section data-background-image="assets/Stupid_Q.png">
+					<div style="position: absolute; top: 50px; width: 25%; left: -150px; font-family: monospace; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 45px; text-align: left;">
+						<span style="color:rgb(211, 20, 138);">Unsolved</span> is a pretty useless adjective here.
+					</div>
+					<aside class="notes">
+						To be clear, as far as I know, Dantzig was genuinely the first to solve these problems -- so this is not factually incorrect. However, I do believe that the focus here is misleading. <br><br>
+						
+						Why? <br><br>
+						
+						Well, effectively every problem that a researcher considers was unsolved before they publish a paper on the matter. As graduate students in this department, we are expected to tackle unsolved problems in our research -- a PhD dissertation will typically approach three, distinct, unsolved problems.<br><br>
+
+						This moves back towards my frustration with how we celebrate Dantzig, not as a particularly clever graduate student, but as something substantially more remarkable than that. "Unsolved" is not an adjective that sets Dantzig apart from other students, but it is used as though it does. Combining this with the first myth stands to remove much of the hyperbole that is used when recanting his story.<br><br>
+
+						If we shift from talking about Dantzig solving "two very famous, unsolved statistics problems" to suggesting that Dantzig published two separate research problems in statistics, we remove some of the shine and demonstrate that the core component of the story is something that, at least for those of us in this presentation, is recognizable. Statistics research involves working on and publishing the solutions to problems in statistics. That is not a particularly ground-breaking assessment of the situation, but it is a far more accurate way of characterizing what has happened.
+					</aside>
+				</section>
+				<section data-background-color="rgb(0, 0, 0)" data-text-color="rgb(255,255,255)">
+					<h1 class="r-fit-text">Myth #3</h1>
+					<h1 class="r-fit-text">Many statisticians tried and failed to solve these...</h1>
+					<aside class="notes">The third myth states that the solutions to these problems eluded the minds of the great statisticians of the time.</aside>
+				</section>
+				<section>
+					<div class="r-hstack">
+						<img src="assets/All_You_Can_Cite.gif" alt="Repeat: Simpsons Gif, all you can cite." style="margin: 2px; height: 400px;">
+						<img src="assets/YTho.webp" alt="Kid asking 'why would you ask that?'." style="margin: 2px; height: 400px;">
+						<img src="assets/Stupid_Q.png" alt="Stupid Questions 'Why are they called unsolved mysteries'?" style="margin: 2px; height: 400px;">
+					</div>
+					<aside class="notes">
+						Now, this is where my lack of credentials as a mathematical historian may limit my confidence in debunking this point. Though, I think there are good reasons to be incredulous at the suggestion. <br><br> 
+
+						First, we have seen the limited impact of the problems generally. I think that alone suggests that it is unlikely that many statisticians cared to look at these problems in detail. This is the case with much research: it's not that the problems are so difficult that no one else could have possibly solved them, it's more that no one else is asking the questions or trying to. And there's no shame in that.<br><br>
+
+						If I look inwards for a moment at my own research: it's hardly ground breaking. But there are very few other people who have decided to ask "what happens when we have measurement error in precision medicine?" and so that gives me fertile ground to work within. In order for the claim that "the problem evaded the minds of great statisticians" to hold water, other statisticians needed to have been working on the problem! Otherwise it is a meaningless add-on that could, once again, be recycled for all research that is done ever.<br><br> 
+
+						If our definition of a problem evading others is that others have not solved it, then we are simply using this as a long-winded way of saying that the problem is "unsolved", and we can see myth #2 for why that is a meaningless sentiment. The suggestion that it evaded the minds of other statisticians implies with it that others tried, and failed, to answer the question: not that they never bothered to ask it. <br><br>
+						
+						It is of course possible that some statisticians -- possibly even well respected, successful ones -- did not crack the problem after working on it. I do not doubt that possibility. But when the story is told as if Dantzig was the only one who could possibly have solved it, I find that to be fairly disingenuous.
+					</aside>
+				</section>
+				<section>
+					<div class="r-stack">
+						<img src="assets/here_comes_the_math.png" alt="Movie Poster: Here Comes the Math." class="r-stretch">
+						<img src="assets/whats_the_deal_with.gif" alt="Jerry Seinfeld: What's the deal with proofs in presentations?" style="width: 50%;" class="r-stretch fragment">
+					</div>
+					<aside class="notes">
+						Now, beyond the fact that there's little evidence that many statisitcians were working on the problems, we can also consider whether there is anything in the problems or the proof that suggests that it *should* have evaded the minds of the statisticians of the time.<br><br>
+
+						So, this is the part of the talk where we going to discuss some mathematics. Forgive me for that! For the purpose of the talk, I am going to present the problem that was published in 1939. My reason for this is two-fold. First, presenting two proofs in an hour long talk would be a little bit much. Second, I actually do not have access to Dantzig's proof of the other problem. It is published in his dissertation, which is theoretically available, though I did not find a digitized copy. The paper that was co-authored with Wald contains Wald's proof, which is supposed to be entirely different than Dantzig's, and so for those reasons let's focus on just the first! <br><br>
+						
+						For those who do not care about the details, the short-version is: This is an interesting problem that involves a clever argument. However, I think that given enough time, and with the relevant background, most STAT 850 students could find a solution to this. The time and effort required would certainly be nontrivial, but with some hardwork, I think it could be done. That's not to take away from Dantzig's approach, but rather to suggest that finding this argument is not suggestive itself of an unmatched genius. Moreover, it leaves me no reason to believe that these problems were unsolved due to difficulty; I think a far liklier rationale for them remaining unsolved was a lack of interest. <br><br>
+						
+						[NEXT]<br><br>
+
+						Now, I want to take a moment here to make a metapoint about the use of mathematical arguments in presentations. If you are like me, following proofs on slides is a challenge in the best of times. For myself, it is often not until I've sat with a problem, quietly, with some time to think it through that I can really appreciate what is going on. And I think that this is a point that is often overlooked in presentations. I am going to walk through the details of the proof over the next few minutes here, because I find them to be interesting and somewhat relevant to the story that I am telling.  I have also stated that I think anyone in the department could make this same argument. That's not say that I think I am going to present it clearly enough to follow fully this morning. In order for me to understand this argument, and reconstruct it in my own words, I had to relearn a lot of stuff. Like, I have to google each time I need to use integration by parts, let alone trying to remember what a Jacobian is or how it relates to polar coordinates and hyperspheres. <br><br>
+
+						This is all to say: any confusion in the presentation of this proof falls on me not clearly communicating the ideas in this presentation. I'll pass some of this blame along to the short time frame I am trying to use, some of it for the medium -- now is when I'd really love a chalkboard -- and some of it because I am not the person to teach high dimensional geometry. I do not want this math to feel overwhelming as, trust me, if you get the chance to unpack the symbols and jargon, it really is not. However, I appreciate that it may feel that way during a presentation.<br><br>
+						 
+						In order to make this more bearable for those of you who are like me, who do not derive pleasure from hearing mathematical arguments early on a Wednesday morning, or who do not want to try to parse cryptic proofs presented poorly on Teams, I've included videos of cats filling the right-hand side of my slides to keep you entertained during this diversion. 
+					</aside>
+				</section>
+				<section>
+					<div style="width: 70%; float: left;">
+						<h4 style="text-align: left;">Fun Math</h4>
+						<div class="r-stack">
+							<div class="fragment fade-out" data-fragment-index="0">
+								<!-- PART 1-->
+								<p><span class="highlight">Assume</span> that $X_1, \dots, X_n$ are all i.i.d. $N(\mu, \sigma^2)$.</p>
+								<p>We <span class="highlight">wish to test</span> $H_0: \mu = \mu_0$, versus the alternative, $H_1: \mu \neq \mu_0$.</p>
+								<p><span class="highlight">Recall</span> that the statistical power of a test is:\[\begin{aligned}
+									\text{Power} &= \beta(\mu, \sigma) = P(\text{Reject }H_0; \mu, \sigma)
+									\end{aligned} \]</p>
+								<strong style="font-size: 1.5em;">Can you devise a test with power that is independent of $\sigma$?</strong>
+							</div>
+							<div class="fragment"  data-fragment-index="0">
+								<div class="r-stack" style="height: 500px; position: relative;">
+									<div class="definition-box fragment current-visible" data-fragment-index="0">
+										<h2>Generalized Polar Coordinate Transformation:</h2>
+										<p class="definition fullwidth">
+											We can transform $\mathbb{R}^{n}$ to a space with $(r, \theta_2, \theta_3, \dots, \theta_n)$. The Jacobian of the transformation is given by $|\Delta_r| = r^{n-1}T(\mathbf{\theta})$.
+										</p>
+									</div>
+									<div class="definition-box fragment current-visible">
+										<h2>Surface Area of a Hypersphere:</h2>
+										<p class="definition">
+											The surface area of $W_r$ is given by $\int\cdots\int_{W_r}|\Delta|d\theta_1\cdots d\theta_n = r^{n-1}K$, where $K$ is functionally independent of $r$.
+										</p>
+										<p class="example">
+											<img src="assets/hypersphere.png" alt="a 3D Hypersphere">
+										</p>
+									</div>
+									<div class="definition-box fragment current-visible">
+										<h2>Similar Region:</h2>
+										<p class="definition">
+											Given a parametric family of distributions, parameterized by $\theta \in \Theta$, $w$ is called similar to $W$ <strong>with size $\alpha$</strong> if $P(\mathbf{x} \in w; \theta) = \alpha$ for all $\theta \in \Theta$.
+										</p>
+										<p class="example">
+											<img src="assets/example_t.png" alt="T-distribution with t < 0 highlighted.">
+										</p>
+									</div>
+									<div class="definition-box fragment current-visible">
+										<h2>Theorem 1 (Neyman-Pearson, 1933):</h2>
+										<p class="definition">
+											If $\mathbf{x}$ is normally distributed, then $w$ is similar to $W$ with size $\alpha$ if and only if, for all $r \geq 0$ we have $P(\mathbf{x} \in w_r | \mathbf{x} \in W_r) = \alpha$.
+										</p>
+										<p class="example">
+											<img src="assets/Ugly_Figure.png" alt="Figure 9 from Neyman-Pearson (1933).">
+										</p>
+									</div>
+									<div class="definition-box fragment current-visible">
+										<h2>Step 1 (Assume that the region exists):</h2>
+										<p class="definition fullwidth"><strong>Suppose</strong> $w$ exists with $P(\mathbf{x} \in w; \mu_0) = \alpha$ and $P(\mathbf{x} \in w; \mu_1) = \beta$ for all $\sigma$. That is, $w$ is similar with size $\alpha$ similar with size $\beta$, to normal distributions parameterized by $\sigma$.</p>
+									</div>
+									<div class="definition-box fragment current-visible">
+										<h2>Step 2 (Invoke the Neyman-Pearson Theorem):</h2>
+										<p class="definition fullwidth">
+											Define $W_r$, $W_p$, $w_r$, $w_p$. Then by <strong>Theorem 1</strong> $P(\mathbf{x} \in w_r\mid\mathbf{x}\in W_r) = \alpha$ and $P(\mathbf{x} \in w_p\mid\mathbf{x}\in W_p) = \beta$.
+										</p>
+									</div>
+									<div class="definition-box fragment current-visible">
+										<h2>Step 3 (Use some clever geometry):</h2>
+										<p class="definition fullwidth">
+											Note that normal distributions are constant on hyperspheres around their means. <br><br> 
+											
+											By (S2) we know that $w_r$ (and $w_p$) must be a constant proportion of the area of $W_r$ (and $W_p$). Therefore $\int\cdots\int_{w_r}|\Delta|d\theta_1\cdots d\theta_n = \alpha r^{n-1}K$ and $\int\cdots\int_{w_p}|\Delta_p|d\theta_1\cdots d\theta_n = \beta p^{n-1}K$.
+										</p>
+									</div>
+									<div class="definition-box fragment current-visible">
+										<h2>Step 4 (Invoke Triangle Inequality)</h2>
+										<p class="definition fullwidth">
+											The distance from $\mathbf{\mu_0}$ to $\mathbf{x}$ is $r$, from $\mathbf{\mu_1}$ to $\mathbf{x}$ is $p$, and from $\mathbf{\mu_0}$ to $\mathbf{\mu_1}$ is $L = \sqrt{n}|\mu_0 - \mu_1|$. By the triangle inequality we get $r \leq L + p$ and $p \leq r + L$.<br><br> If $g(t)$ is taken to be an arbitrary monotone function, then the inequality is preserved*.<br><br>
+											* or flipped, if $g(t)$ is monotonically decreasing.
+										</p>
+									</div>
+									<div class="definition-box fragment current-visible">
+										<h2>Step 5 (Integrate over our region):</h2>
+										<p class="definition fullwidth">
+											Define $I_r(g) = \int_{w} g(r)dx_1\cdots dx_n$ which is transformed to $I_r(g) = \int_w g(r)|\Delta|drd\theta_2\cdots d\theta_n$. We can compute \[I_r(g) = \alpha K \int_{0}^\infty r^{n-1}g(r)dr.\] Also: $I_p(g) = \beta K \int_{0}^\infty p^{n-1}g(p)dp$ and $I_{p+L}(g) = \beta K \int_{0}^\infty g(p+L)p^{n-1}dp$.
+										</p>
+									</div>
+									<div class="definition-box fragment current-visible">
+										<h2>Step 6 (Fix the monotone function):</h2>
+										<p class="definition fullwidth">
+											Take $g(t) = \exp(-ct)$ for $c \geq 0$.<br><br>
+											
+											Then $g(r) \geq g(p + L) = g(p)g(L)$. <br><br> 
+											
+											Integrating gives $I_r = \alpha K \frac{\Gamma(n)}{c^n}$, $I_p = \beta K \frac{\Gamma(n)}{c^n}$ and $I_{p+L} = \beta K e^{-cL} \frac{\Gamma(n)}{c^n}$.
+										</p>
+									</div>
+									<div class="definition-box fragment">
+										<h2>Step 7 (Simplify and Arrive at Contradiction):</h2>
+										<p class="definition fullwidth">
+											Simplifying (since $K > 0$) we get: $\alpha \geq \beta e^{-cL}$ and by symmetry $\beta \geq \alpha e^{-cL}$. Therefore, $\alpha = \beta$.
+										</p>
+									</div>								
+								</div>
+								<div class="math-pic">
+									<div class="sample-space">$W$</div>
+									<div class="rejection-region" >$w$</div>
+									<div class="hypersphere">$W_r$</div>
+									<div class="intersection">$w_r$</div>
+									<div class="text-holder">
+										$W$ is the <span class="highlight">sample space</span>. <br><br>
+										$\mathbf{x} = (x_1, \dots, x_n)$ is a <span class="highlight">sample point</span>. <br><br>
+										$w$ is the <span class="highlight">rejection region</span>. <br><br>
+										$W_r$ is an $n$-dimensional <span class="highlight">hypersphere</span> (i.e. $\sum_{i=1}^n (x_i - \mu_0)^2 = r^2$).<br><br>
+										$w_r$ is the <span class="highlight">intersection</span> $W_r \bigcap w$.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div style="width: 30%; float: left;">
+						<h4 style="text-align: right;">Cute Cats</h4>
+						<video data-autoplay src="assets/videos/CatVideo.mp4" style="max-height: 1020px;" loop></video>
+					</div>
+
+					<aside class="notes">
+						[MOVE CURSOR TO MAIN SLIDES. VIDEO REPLAYS] <br><br> 
+
+						To begin, let's try to state the problem that was solved. We are interested in the standard setup for a t-test of means. That is we wish to test whether mu is equal to mu-0, for some specified mu-0, against a two-sided alternative. We will assume that our sample is drawn from a normal distribution with mean mu, and constant standard deviation sigma, which is unknown.<br><br>
+
+						Recall that the power of a test is given by the probability that we reject the null hypothesis.<br><br>
+
+						It is well known, now and in 1939, that the power of the standard t-test depends on both the true underlying mean and the true underlying standard deviation. This is unfortunate as it is not common that the true standard deviation is known, and so if we wish to be able to detect differences of a certain size, at a particular level of certainty, we have to estimate plausible values of sigma in order to ensure that we are powering the test sufficiently.<br><br>
+
+						Dantzig's first question to answer was whether there exists a test of the null hypothesis that mu equals mu0, which has a power function independent of the value of sigma.<br><br>
+
+						It's actually quite a neat problem. Now, lucky for Dantzig, the lecture he was in was being taught by Jerzy Neyman, who happened to have written the book -- almost literally -- on hypothesis testing a few years earlier. And so, in order to approach this question the way that Dantzig likely would have thought to, I want to run through some quick background. <br><br>
+
+						[NEXT] <BR><BR>
+						
+						First, I'll introduce some notation. We take W to be our sample space, indicated in the image by the pink rounded rectangle. We will consider the sample size to be fixed at "n", and so W is an n-dimmensional space of the real numbers, and we also know that the distribution of our random sample is given by an n-dimmensional, joint normal distribution. We denote an observed value in our sample space by "x", which is n-dimensional. We will consider hypothesis tests that can be expressed as a region. We can define some region given by lower-case "w" -- and shown as the blueish circle -- such that if "x" is in "w" we reject the null hypothesis. This is a fairly common way of representing hypothesis tests.<br><br>
+						
+						We will also introduce a hypersphere into consideration, denoted Wr, and represented by the yellow circle. Hyperspheres, for the uninitiated, are the n-dimensional abstraction of a sphere. That is, it is the set of all n-dimensional points that fall a certain distance away from the central point. In this case, Wr is a hypersphere with radius r ceneted at mu0, so it is all points "x" such that the distance between x and mu0 is "r". If it helps, just picture a circle with radius r centered at mu0 -- that intuition will get you all the way there.<br><br>
+
+						The final region indicated in this diagram, small wr, falls at the intersection of the hypersphere and our rejection region "w". Now, this setup was standard at the time, and I am quite sure that this background would have been presented directly in lecture. <br><br>
+
+						A few other quick notes before we actually prove the result: first, we can use a transformation from the n-D cartesian plane to a generalized polar coordinate system; this is quite common when dealing with hyperspheres, and it makes the calculus nicer. This transformation is based on the radius "r", and "n-1" angle parameters, which we denote by theta 2 through theta n. The Jacobian of this transformation is given by r to the power of n-1 times by a function, say T, of the angles. This function does not depend on r.<br><br>
+						
+						[NEXT] <BR><BR>
+
+						For those of you who are very familiar with high dimensional geometry, I apologize for the review, but for the rest of us: the surface area of a given hypersphere is expressible as an integral of the Jacobian over the angles, when parameterized this way. We can evaluate this to be an integral constant "K" times by r to the n minus 1, where "K" does not depend on the radius, "r". These are all still previously established results, that you could -- and that I did -- confirm on Wikipedia! <br><br>
+
+						[NEXT] <BR><BR>
+
+						Now, a region "w" in our sample space is said to be "similar to the sample space, with size alpha", if the probability that x is in w is constantly equal to alpha, regardless of the parameters of the distributions. As an example, for the family of t-distributions,the region given by the x less than or equal to zero is going to be a similar region. It will have size 0.5, since no matter the number of degrees of freedom, the probability of observing x less than or equal to zero is constant. In our case, we are considering the family of normal distributions.<br><br>
+						
+						[NEXT] <BR><BR>
+
+						This concept of similarity was investigated in detail in a 1933 paper by Neyman and Pearson, and they proved several results. For the sake of this discussion, they showed a key result that gave necessary and sufficient conditions for identifying a region as similar. In the case of normality, the set "w" is similar with size alpha if and only if, for all "r", the probability that "x" is in little-w r GIVEN "x" in the hypersphere is equal to alpha.<br><br>
+						
+						This is something of a strange result, so I want to recap it quickly. We have this concept of "similarity" which occurs when, regardless of the parameters of the distribution, the probability of observing outcomes in a particular region is constant. Neyman and Pearson showed that, when dealing with normal distributions, this concept of similarity can be checked by considering n-dimmensional spheres of arbitrary size. In particular, in order for a region, w, to be similar, we must have that the conditional probability of observing an event in the intersection of our region w with the hypersphere GIVEN that the observation is in the hypersphere is equal to alpha.<br><br>
+						
+						This result does most of the heavy lifting in the proof, but, if you're anything like me, it can take a little bit to wrap your mind around this setup. Especially if this is the first presentation of the ideas, things might be moving fast here, so my apologies for that. The takeaway so far is that this is the background that would have been necessary to come up with the following argument. A lot of it is based on Neyman's work, and given that he was teaching the class, I assume that this was all covered in the lectures. We can now jump into the proof itself, which is actually rather short. <br><br>
+						
+						For those of you who are uninterested in the mathematical details, I hope that the cat videos have been sufficiently entertaining. I promise I am almost through this!<br><br>
+						
+						[NEXT] <BR><BR>
+
+						In order to try to devise a test with a power function independent of "sigma", we can express this based on the probability that "x" is in our region "w". In particular, we need this probability to be independent of sigma. To give away the punchline, we are going to show that, if such a region exists, then the corresponding probability must also be independent of the true value of the mean, which renders the test useless: it will have an equal probability of rejecting the null hypothesis, whether the null hypothesis is true or not!<br><br>
+						
+						Let's suppose that there exists a region "w" such that the probability that "x" is in "w" when the mean is given by mu0 is equal to alpha for all values of sigma. Further suppose that when the mean is given by mu1, the probability of observing a value in "w" is given by beta, again for all values of sigma. Here, both "alpha" and "beta" are taken to be constants, and "mu0" is assumed to be different than "mu1". This test would be a candidate for one which has a power function independent of sigma, and all such tests would have this property.<br><br>
+
+						We can think of these probabilities as expressing the power function of the test that we want to construct, evaluated at either mu0 or mu1. So we are saying that the power function evaluates to alpha at mu0, regardless of sigma, and that it evaluates to beta at mu1, regardless of sigma. To understand where we want to go with this proof, consider what it would mean if we showed that alpha and beta had to be the same value. We have selected two different mean values arbitrarily, so if alpha were equal to beta, this would mean that the corresponding probabilities were equal for all possible values of mu. That is to say the power function that would come from such a region would be not only independent of sigma, but it would also be independent of mu! If we were happy with a test that rejected the null hypothesis independently of mu, I could simply flip a coin, and if it comes up heads reject the null hypothesis. That would certainly save us a lot of time analyzing! <br><br>
+						
+						So, with the idea of discovering if there is some relationship between alpha and beta, let's exploit the framing of this region as being similar to our sample space. We can describe this region "w" as similar to the sample space at level alpha, when we consider normal distributions with mean mu0, and as similar to the sample space with level beta, when we consider normal distributions with mean mu1. Here we are considering families of normal distributions with fixed mean, and allowing sigma to be our parameter of interest.<br><br> 
+
+						[NEXT] <BR><BR>							
+
+						We can use the Theorem of Neyman and Pearson to characterize this similarity. Applying the results of their theorem tells us that the probability of observing an event in wr, given we are in the first hypersphere is constant at alpha, regardless of "sigma". Applying this to the second hypersphere, we get that the probability of observing an event in wp given we observe one in the second hypersphere must be beta. <br><br>
+
+						The fact that these two probabilities need to be constant at alpha and beta will ultimately give us the result we need. The next natural step to take is to try to find a way to express these probabilities, and for that, Dantzig used a bit of clever geometry. <br><br>
+
+						[NEXT] <BR><BR>
+
+						Now, there is an important point to note about the normal distribution on hyperspheres -- notably, the density is constant on the surface of the hypersphere. We know this in 1 dimmension -- a normal density has the same value "r" units above its mean and "r" units below its mean. This also applies in n-dimmensions. <br><br>
+						
+						What does this mean in practice? Well, if we want to know the probability of falling in wr, given us being in the hypersphere, we can take the ratio of the size of "wr" to the size of the hypersphere. If we have conditioned on being in a set with constant density, and we want to know the probability of falling in a region, we need to know how much of the set our region takes up, and that proportion gives the probability we care about! It's basically a dart board problem: the probability of hitting the bullseye at random, assuming that we hit the dartboard, is given by the ratio of the area of the bullseye to the area of the dartboard as a whole. I hope that makes sense, and I'm sorry if it doesn't.<br><br>
+						
+						Now, talking about the "size" of these regions is somewhat strange, but we can use the generalization of surface area. Taking the surface area of the hypersphere that we previously specified, then this gross looking integral -- which represents the surface area of the region wr -- must be equal to alpha times K times r to the power of n minus 1. We can apply the exact same logic to say that the surface area of wp is beta times k times p to the n minus 1. <br><br>
+
+						While I would expect that this may be somewhat confusing to follow in real-time, on a Wednesday morning, in a presentation, when you can distract yourself with cats, I do promise that the calculus and probability arguments here are not too bad to work through. If you're interested, I'd advise you to sit down and play with the details for yourself. It is actually somewhat illuminating. <br><br> 
+						
+						The next component is the part of the proof that I assume took significant thought to devise. Let me try to describe what I imagine the thought process would be. <br><br>
+						
+						We are considering two probability expressions that we know need to evaluate to be alpha and beta. In order for the test to exist meaningfully, we need alpha and beta to be distinct values. If we want to show that two values, which we have numerous ways of expressing, are equal, the common trick to is to build up inequalities: if we can show that alpha is less than or equal to beta, and beta is less than or equal to alpha, they must be equivalent. <br><br>
+						
+						Like many similar proofs, our process ultimately is to use a cleverly selected inequality.<br><br>
+
+						[NEXT] <BR><BR>
+						
+						Up until now we have already been discussing two distances, "r" and "p". These represent the distance from our sample point to mu0, and from our sample point to mu1, respectively. Consider the sample point, mu0, and mu1 as three points in the space, this leaves just the distance from "mu0" to "mu1". This is given by the expression square root of n times by the absolute value of mu0 minus mu1, which is just some constant, which I will call "L".<br><br>
+						
+						Now we have three points, and we are trying to prove something, we should turn to the oldest trick in the book: the triangle inequality! Invoking the triangle inequality tells us that r must be less than or equal to p plus L, and that symmetrically, p must be less than or equal to r plus L. So, now what? We need some way of linking this inequality to the integrals we have been working with relating to surface areas. Now, if you had spent as much time as I have over the past little while considering n-dimensional integrals over polar coordinates, there's actually a somewhat obvious way of doing this.<br><br>
+						
+						Let's take "g(t)" to be a monotone function. We take it to be monotone as we would like to preserve inequalities with g, but we can specify it after a little bit of math! <br><br>
+
+						[NEXT] <BR><BR>
+
+						Let's define the integral I(g) to be the integral of g(r) over the region "w". Using some calculus knowledge, or a computer, we can evaluate this integral as shown. <br><br>
+						
+						We can do the same thing integrating g-of-p, where we make the transformation with respect to p, and get beta times K times by a similar integral. We can also integrate say, g of p plus L. This takes the exact same form, where the final integral has the term g of p plus L in it. <br><br>
+						
+						Now, let's consider the three quantities we have just described. We had assumed that g was monotone such that we could preserve the inequalities, and seeing the results we have suggests that g should also be decreasing so that the integrals are all well-defined. If we look at the form of the integral, and put on our mathematical statistics hats, then we might see that the integral is essentially the gamma function, which is nice.<br><br>
+						
+						So, what if we took g of t to be e to the negative c times t, for c greater than zero. This is a monotonically decreasing function, and all of the integrals become well-defined. <br><br>
+
+						[NEXT] <BR><BR>
+
+						Filling this in we get that the integral with respect to r is given by alpha times K times the gamma function at n, scaled by a constant, with a similar expression for the integral over p. Now, interestingly, when we look at the integral with "p plus L", we see that we can actually pull out a multiplicative constant of e to the negative c times by L. This leaves beta times K times by e to the negative c L, multipled by the gamma function. <br><br>
+						
+						Re-considering our triangle inequalities, since g is decreasing we flip them, giving g of r being larger than or equal to g of p plus L, and similar with g of p being larger than or equal to g of r plus L. We can extend this inequality to the integral expressions listed here, which when we do we conclude that<br><br>
+						
+						[NEXT] <BR><BR>
+
+						alpha is larger than beta times by e to the negative c times L, for all c positive. And that beta is larger than alpha times by e to the negative c times L, for all c positive. The only way that these inequalities can simultaneously hold is if alpha and beta are the same, which proves the claim!
+					</aside>
+				</section>
+				<section>
+					<div class="r-stack">
+						<h1 class="r-fit-text">Q.E.D.</h1>
+						<img src="assets/HardProof.gif" alt="Gladiator Gif: 'Are you not skeptical that this proof evaded everyone?'" class="fragment zoom-in" style="width: 75%; margin-top: 230px; display: block;">
+					</div>
+					<aside class="notes">
+						So: that was the proof Dantzig gave that showed that all tests of the hypothesis of a mean of a normal sample will have a power function which depends on the standard deviation, at least if those tests are meaningful.<br><br>
+
+						For all of you who tuned out the math: I promise we are now through it, and you can join us back for stories -- hopefully the cat videos kept you sufficiently entertained. If you're interested in working through the details of the proof in your own time, let me know -- I have some material that explains this much better than I just did. For those who did try to follow the math: first, I can't believe you ignored cat videos, but second, I hope that was at least a mildly interesting or enlightening excursion. I'd encourage everyone to check-out the paper itself, or try to make the argument yourself. It is genuinely quite fun.<br><br>
+						
+						Now, the proof was quite beautiful, a very nice contradiction of sorts. It is a very impressive result to have proved. However, it was not all that novel. It took the framing of a test that had been investigated before, and that was likely presented to Dantzig in Neyman's course. It framed the problems in terms of geometry that, once again, was characteristic of the way Neyman had presented these ideas in his paper. So then the key step of Dantzig proving this result was coming up with an inequality which showed that the two sizes must be equal, if the similar regions exist.<br><br>
+											
+						[NEXT] <BR><BR>
+
+						This was a lovely solution, one which would take effort. I do think it's fair to say that nothing here is outside of the toolkit of a working statistician, especially if that statistician is familiar with the surrounding literature. I think that, for someone steeped in the literature, it is clear that this is an approachable problem. And seeing that the proof was mostly a synthesis of existing ideas, rather than requiring novel techniques, it seems unlikely to me that this had evaded many statisticians.<br><br>
+						
+						Again, I do not want to discredit the proof: it required thought, creativity, and effort, for sure. However, I do doubt that it would have stood up to a serious, coordinated attempt to solve it.
+					</aside>
+				</section>
+				<section data-background-color="rgb(0, 0, 0)" data-text-color="rgb(255,255,255)">
+					<h1 class="r-fit-text">Myth #4</h1>
+					<h1 class="r-fit-text">The Six Week PhD...</h1>
+					<aside class="notes">Myth #4, this event lead immediately to Dantzig's Ph.D. 
+					</aside>
+				</section>
+				<section>
+					
+					<div class="timeline-holder">
+						<div class="timeline-date">1938</div>
+						<div class="timeline-date selected">1939 <div class="event">Solved the homework problems.</div></div>
+						<div class="timeline-date b-selected">1940 <div class="event">Published the solution to the first problem.</div></div>
+						<div class="timeline-date selected">1941 <div class="event">Enlisted in the airforce for WWII.</div></div>
+						<div class="timeline-date">1942</div>
+						<div class="timeline-date">1943</div>
+						<div class="timeline-date">1944</div>
+						<div class="timeline-date">1945</div>
+						<div class="timeline-date selected">1946 <div class="event">Completed his doctoral dissertation.</div></div>
+						<div class="timeline-date">1947</div>
+						<div class="timeline-date">1948</div>
+						<div class="timeline-date">1949</div>
+						<div class="timeline-date">1950</div>
+						<div class="timeline-date b-selected last">1951 <div class="event">Published the solution to the second problem.</div></div>
+					</div>
+
+					<aside class="notes">
+						One of the pieces of the story that has grown more and more relevant to me, as a PhD student, is that in some sense Dantzig finished his thesis in a matter of a couple of weeks. As the story goes, he finished these questions as a homework assignment fairy quickly, and then was told to just "put them in a binder" as his thesis. Imagine that!<br><br>
+
+						Well, as with most of the hard-to-believe claims made throughout this story this one too is a half-truth at best. For starters, Dantzig finished these problems in 1939. His dissertation was published in 1946 - a full 7 years later. Now, counting that full 7 year time period is certainly not a fair assessment: in 1941 Dantzig joined the US army, in the air force, to help fight in world war two. It was in this capacity that he developed the simplex algorithm and began his contributions to operations research. <br><br>
+
+						As a result, he was enrolled in his PhD program for about three years. This is obviously very fast, but is something of a far cry from the mere weeks that are normally implied. It is true that his dissertation is simply the solution to the two problems outlined -- under twenty pages of journal articles, and 57 pages for the dissertation itself. So in some sense the work was done in a very short period of time, that is if we narrowly define what it means to do the work.
+					</aside>
+				</section>
+				<section data-background-color="rgb(247, 247, 247)">
+					<img src="assets/PhD_pi.png" alt="Pi Chart with time spent on various 'research' activities.">
+					<aside class="notes">
+						But this once again chips away at how interesting this aspect of the story actually is. It is my experience that in research most of your time is spent trying to figure out how to ask a particular question. You have to become very familiar with the relevant literature, you have to understand the subject matter deeply, and you have to play with the ideas that are relevant. Then, after a substantial enough period of time you will figure out what question you are really trying to answer, and the answer tends to follow quickly from there. <br><br>
+
+						I think that a great many research problems would be such that, upon the question being well-formed enough to go on a chalkboard in a lecture hall, the answer would come forward rapidly. I think that there are a large number of PhD students who, if you were to just count the time between asking the particular question and developing the idea to answer it, ignoring the time to writeup manuscripts, or become familiar with the literature, or program simulations -- something which was missing in the 1940s -- I believe that this time would be similar for many, many students. <br><br>
+
+						Even though Dantzig had his solutions during his first term, it took a few years to turn that into an actual dissertation.
+					</aside>
+				</section>
+				<section>
+					<h1 class="r-fit-text">The True Story</h1>
+					<h1 class="r-fit-text">of Dantzig's Homework</h1>
+					<aside class="notes">
+						So, to recap: the homework problems that Dantzig solved were not very famous, and calling them unsolved gives the wrong idea. Moreover, the problems almost certainly did not give contemporary statisticians a great deal of trouble, and I would certainly not hold them as out-of-reach of graduate students in this department. Even though Dantzig did turn these two problems into a thesis, it still took multiple years to do this, rather than the few weeks that are commonly implied.<br><br>
+
+						Where does that leave us? What is the story of George Dantzig? <br><br> 
+						
+						Well, from my perspective, the honest story of Dantzig is still incredibly impressive. Dantzig was a clever graduate student who, through some fortunate coincidences, was presented with well formulated problems for his research. He solved these questions, not knowing that what he was doing was research, and humorously turned them in to a Professor who had never even assigned them. He went on to get his PhD on the basis of this work, and proceeded to have a wonderful career, attesting to his quality as a researcher. <br><br>
+
+						The thing that I would point out with this story is that, beyond the particular coincidence of not knowing the problems had been not really been assigned, it was fairly ordinary. Replace showing up late to a lecture with having a meeting with a supervisor, and I think you're now telling the story of many graduate students who have not had major motion pictures based on them. It is, of course, worth mentioning that Dantzig may have never put in the effort had he known that these were research problems rather than homework, or maybe he still would have if the questions seemed interesting. It is also worth noting that of course it is impressive to have done what he did, but I guess my overarching point is that to me, it does not read as substantially more impressive than the work of a graduate student always is. When you strip away the mythology and the hyperbole, you are left with the impressive feats of a young researcher who is worth celebrating. The myths and hyperbole are simply not required! 
+					</aside>
+				</section>
+				<section data-background-image="assets/Contributed_Talks.png">
+					<div style="width: 40%; background: rgba(0,0,0,0.80); color: #FFF; margin: 0px auto; text-align: center; font-size: 55px; padding: 20px;">
+						We are too hard on ourselves. Our stories are not so different.
+					</div>
+					<aside class="notes">
+						And so this leads to recapping my frustration with the "idea" of George Dantzig. It is not easy to be a graduate student, and it is often thankless. There are very few people in the world who can understand what it is that we are doing day-to-day, and even fewer who care to. We dedicate ourselves to advancing the collective knowledge of humankind, in whatever small way we can, and we do so for very little pay, very little recognition, and in a climate that is deeply competitive and judgmental. We tell stories of the lone genius with the sheer capacity to think circles around those in their vicinity. We use academic performance as a benchmark of worth, never acknowledging the selection bias inherent in comparing ourselves to our peers. We worry about getting published in high-tier journals, having others care about and maybe even cite our work, and about making a difference. And, in my experience, we rarely stop and think about how impressive it is to have gotten here in the first place, and to do what it is that we do. <br><br>
+
+						Then, we bring in the mythologies of historical figures and use these to indicate the ways in which we fall short. We use these to justify to ourselves the fact that we will never sit at the center of these narratives. And we accept this because how could that be us? The incredibly frustrating thing about looking into this story is that it *could* be us, each one of us. <br><br>
+						
+						The true parts of the story could be told about any one of you listening to this right now. You might have to switch out the details: perhaps it was a long, arduous problem to solve that you never gave up on, or perhaps it was a question that no one had ever even thought to have asked. Regardless, the material details of the story of Geroge Dantzig are familiar to us all, and since coming to this realization, and appreciating the ways in which this type of story telling reinforces the negative talking points that so many students that I speak to have internalized, I have decided that I have beef with the idea of George Dantzig. And I hope that I've perhaps convinced some of you to join me in that. <br><br>
+						
+						If you take something positive away from the myth, if it motivates or inspires you, or if it is the catalyst for a useful change -- by all means. I have a particular fondness for the myth of sisyphus and would never take the historical implausibility of the story as a reason to not tell it. But I do think that it's incredibly important to recognize that it is just that: a myth, a story we tell, and comparing ourselves to fiction is not typically a productive way to spend time.
+					</aside>
+				</section>
+				<section>
+					<h1 class="r-fit-text">Thank You.</h1>
+					<h1 class="r-fit-text">dylan.spicker@uwaterloo.ca</h1>
+					<aside class="notes">
+						So with that, I will leave my presentation there. I hope that it was somewhat entertaining, or informative, or a good excuse to push off some work on a wednesday morning. I'll happily take questions or comments now, if there are any, and I'd remind you all: please do feel like you can reach out to me, if need be. Even if we've never talked before -- this whole pandemic has been quite isolating, and I'm happy to be a person for you to chat with, if need be. Thanks for listening!
+					</aside>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			var timer = null;
+			Reveal.initialize({
+				math: {
+					mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					// pass other options into `MathJax.Hub.Config()`
+					TeX: { Macros: { RR: "{\\bf R}" } }
+				},
+				autoAnimateEasing: 'ease-out',
+				autoAnimateDuration: 0.8,
+				autoAnimateUnmatched: false,
+				width: 1480,
+				height: 1080,
+				hash: true,
+				navigationMode: 'linear',
+				backgroundTransition: 'zoom',
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath, RevealZoom]
+			});
+
+			Reveal.addEventListener('dantzig-anim', function(){
+				var c = document.getElementById("myCanvas");
+				var offset = 1;
+				var sw = 100;
+				var space = 10;
+				var text_size = 28;
+				var emoji_size = 50;
+				var ts = text_size/2 + 1;
+				var rows = 7;
+				var cols = 10;
+				var animTime = 1000;
+				var startTime = 500;
+				var numFrames = 100;
+				var textSpotSize = 400;
+								
+				var people = [
+				'😀', '😄', '😅', '🙂', '🙃', '😉', '😇',
+				'🥰', '🤩', '😋', '😜', '🤑', '🤭', '🤫',
+				'🤔', '🤐', '😐', '😶', '😑', '🤗', '😒',
+				'😏', '🙄', '😪', '😴', '😷', '🤒', '🤧',
+				'🥵', '🥶', '🥴', '😵', '🤯', '🤠', '🥳',
+				'😎', '🤓', '🧐', '😟', '😮', '😲', '😳',
+				'🥺', '😦', '😨', '😣', '😞', '😡', '🥱',
+				'😤', '👿', '🤡', '👺', '👹', '😭', '👽',
+				'👾', '🤖', '😺', '😱', '😲', '🤕', '🤢',
+				'😆', '🤩', '😘', '🤪', '😝', '🤨', '😬'
+				];
+
+				c.width  = cols*sw + (cols - 1)*space + 2*offset + textSpotSize;
+				c.height = rows*sw + (rows - 1)*space + 2*offset; 
+				
+				
+				var vp_style = window.getComputedStyle(Reveal.getViewportElement()),
+					// cs_style = window.getComputedStyle(Reveal.getCurrentSlide()),
+					vp_width = parseInt(vp_style.getPropertyValue("--slide-width").slice(0,-2), 10),
+					vp_height = parseInt(vp_style.getPropertyValue("--slide-height").slice(0,-2), 10),
+					// cs_top = parseInt(cs_style.getPropertyValue("top").slice(0,-2), 10),
+					scale_width = vp_width/c.width,
+					scale_height = vp_height/c.height,
+					factor = Math.min(scale_width, scale_height, 1	);
+				
+				// console.log(cs_top);
+				// c.style.position = "relative";
+				// c.style.top = "-" + Math.floor(cs_top/2) + "px";
+
+				var ctx = c.getContext("2d");
+				ctx.scale(factor,factor);
+
+
+				ctx.textAlign="center"; 
+				ctx.textBaseline = "middle";
+
+				function initGrid(ctx, tried, outcome){
+				var jobNum = 0;
+				ctx.font = text_size+"px Arial";
+				for(ii = 0; ii < rows; ii++){
+					for(jj = 0; jj < cols; jj++){
+						jobNum += 1;
+						var rX = offset + jj*sw + jj*space;
+						var rY = offset + ii*sw + ii*space;
+						ctx.beginPath
+						ctx.rect(rX, rY, sw, sw);
+						ctx.stroke();
+						ctx.fillText("Job " + jobNum, rX+(sw/2), rY+ts);
+					}
+				}
+
+				ctx.font = (text_size+5)+"px Arial";
+				ctx.fillText("Iteration: " + tried +" out of 70!", c.width - textSpotSize/2, c.height/2 - 2*ts);
+				ctx.fillText("Value: " + outcome.toLocaleString('en-US', {minimumFractionDigits: 2}), c.width - textSpotSize/2, c.height/2 + 2*ts);
+
+
+				}
+
+				function drawPeople(ctx, people){
+					var jobNum = 0;
+					ctx.font = emoji_size+"px Arial";
+					for(ii = 0; ii < rows; ii++){
+						for(jj = 0; jj < cols; jj++){
+						var rX = offset + jj*sw + jj*space;
+						var rY = offset + ii*sw + ii*space;
+						ctx.fillText(people[jobNum],rX+(sw/2),rY+(sw/2)+ts);
+						jobNum += 1;
+						}
+					}
+				}
+
+				function update(ctx, people, idx) {
+					var current_slide = Reveal.getCurrentSlide();
+					if (current_slide.getAttribute("data-state") == "dantzig-anim"){
+						people = people.map((a) => ({sort: Math.random(), value: a})).sort((a, b) => a.sort - b.sort).map((a) => a.value);
+						ctx.save();
+						ctx.clearRect(0, 0, c.width, c.height);
+						initGrid(ctx, numFrames-idx+1, (Math.random().toFixed(8)*(1000000000-1000000) + 1000000));
+						drawPeople(ctx, people);
+						
+						if (idx > 1){
+							setTimeout(function(){
+								update(ctx, people, idx - 1);    
+							}, animTime); 
+						}
+					}
+				}
+
+				setTimeout(function () {
+					update(ctx, people, numFrames);
+				}, startTime);
+			});
+		</script>
+	</body>
+</html>

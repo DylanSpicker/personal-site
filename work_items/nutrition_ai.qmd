@@ -1,0 +1,7 @@
+---
+  title: "Challenges for Predictive Modeling with Neural Network Techniques using Error-Prone Dietary Intake Data (Preprint)"
+  author: "**Dylan Spicker**, Amir Nazemi, Joy Hutchinson, Paul Fieguth, Sharon I Kirkpatrick, Michael Wallace, and Kevin W Dodd"
+  categories: ["paper", "under review"]
+  description: "Submitted for consideration (December 2023). ([Arxiv Preprint](https://arxiv.org/abs/2311.09338))"
+  date: "2021-05-25"
+---  

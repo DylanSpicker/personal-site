@@ -1,7 +1,6 @@
 ---
   title: "Generalizations to Corrections for the Effects of Measurement Error in Approximately Consistent Methodologies (Preprint)"
   author: "**Dylan Spicker**, Michael P. Wallace, and Grace Y. Yi"
-  image: "/img/icons/paper.svg"
   categories: ["paper", "under review"]
   description: "Submitted for consideration (September 2021). ([Arxiv Preprint](https://arxiv.org/abs/2106.07401))"
   date: "2021-05-25"
