@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -47,7 +47,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -56,6 +62,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -94,16 +101,43 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Dylan Spicker" href="blog.xml"></head>
+<link rel="alternate" type="application/rss+xml" title="Dylan Spicker" href="blog.xml" data-external="1"></head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Dylan Spicker</span>
     </a>
@@ -115,31 +149,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About Me</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./work.html" rel="" target="">
- <span class="menu-text">My Work</span></a>
+    <a class="nav-link" href="./work.html"> 
+<span class="menu-text">My Work</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html" rel="" target="">
- <span class="menu-text">My Teaching</span></a>
+    <a class="nav-link" href="./teaching.html"> 
+<span class="menu-text">My Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" rel="" target="" aria-current="page">
- <span class="menu-text">My Thoughts</span></a>
+    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+<span class="menu-text">My Thoughts</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -151,6 +181,24 @@ ul.task-list li input[type="checkbox"] {
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="job search">job search <span class="quarto-category-count">(2)</span></div><div class="category" data-category="misconceptions">misconceptions <span class="quarto-category-count">(1)</span></div><div class="category" data-category="research">research <span class="quarto-category-count">(7)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(8)</span></div><div class="category" data-category="teaching">teaching <span class="quarto-category-count">(7)</span></div></div></div>
 <!-- main -->
 <main class="content column-page-left" id="quarto-document-content">
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
+    <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+    <div class="callout-icon-container">
+    <i class="callout-icon no-icon"></i>
+    </div>
+    <div class="callout-title-container flex-fill">
+    <span class="fs-2">Opportunity for current undergraduate and masters students…</span>
+    </div>
+    <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+    </div>
+    <div id="callout-1" class="callout-1-contents callout-collapse collapse">
+    <div class="callout-body-container callout-body">
+    <p><span class="fs-3 fw-bolder">I am currently recruiting graduate students at both the Masters and PhD level.</span></p>
+    <p><span class="fs-3 fw-lighter">If you are interested in pursuing either a Masters or PhD in Statistics, and are interested in any of the research topics that I work on, please reach out. Even if you have a somewhat non-traditional background, but think that you would be a good fit, please get in touch with me.</span></p>
+    <p><span class="fs-3 fw-lighter">These are <strong>funded opportunities</strong> with a lot of flexibility for you to grow and learn as a Statistician. Do not hesitate to reach out!</span></p>
+    </div>
+    </div>
+</div>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -159,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -167,7 +215,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 
 
@@ -200,19 +250,19 @@ ul.task-list li input[type="checkbox"] {
     </div>
 </div>
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="statistics,teaching,research,job search" data-listing-date-sort="1670976000000" data-listing-file-modified-sort="1704833192918" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8">
+<div class="quarto-post image-right" data-index="0" data-categories="statistics,teaching,research,job search" data-listing-date-sort="1670976000000" data-listing-file-modified-sort="1708392555406" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1450">
 <div class="thumbnail">
-<p><a href="./thoughts/research-philosophy-statement/index.html"> <img src="./thoughts/research-philosophy-statement/research.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./thoughts/research-philosophy-statement/index.html" class="no-external"></a></p><a href="./thoughts/research-philosophy-statement/index.html" class="no-external">
+<p><img src="./thoughts/research-philosophy-statement/research.jpg" class="thumbnail-image"></p>
+</a><p><a href="./thoughts/research-philosophy-statement/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./thoughts/research-philosophy-statement/index.html">
 <h3 class="no-anchor listing-title">
-My Research Philosophy Statement
+<a href="./thoughts/research-philosophy-statement/index.html" class="no-external">My Research Philosophy Statement</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./thoughts/research-philosophy-statement/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
 statistics
@@ -227,14 +277,12 @@ research
 job search
 </div>
 </div>
-<a href="./thoughts/research-philosophy-statement/index.html">
 <div class="listing-description">
-<p>This document outlines my research experience, approach, and goals for the future.</p>
+<a href="./thoughts/research-philosophy-statement/index.html" class="no-external">This document outlines my research experience, approach, and goals for the future.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./thoughts/research-philosophy-statement/index.html">
+<a href="./thoughts/research-philosophy-statement/index.html" class="no-external">
 <div class="listing-date">
 Dec 14, 2022
 </div>
@@ -247,19 +295,19 @@ Dylan Spicker
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="statistics,teaching,research,job search" data-listing-date-sort="1670976000000" data-listing-file-modified-sort="1704833192922" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<div class="quarto-post image-right" data-index="1" data-categories="statistics,teaching,research,job search" data-listing-date-sort="1670976000000" data-listing-file-modified-sort="1708392555410" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="682">
 <div class="thumbnail">
-<p><a href="./thoughts/teaching-philosophy-statement/index.html"> <img src="./thoughts/teaching-philosophy-statement/teaching.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./thoughts/teaching-philosophy-statement/index.html" class="no-external"></a></p><a href="./thoughts/teaching-philosophy-statement/index.html" class="no-external">
+<p><img src="./thoughts/teaching-philosophy-statement/teaching.jpg" class="thumbnail-image"></p>
+</a><p><a href="./thoughts/teaching-philosophy-statement/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./thoughts/teaching-philosophy-statement/index.html">
 <h3 class="no-anchor listing-title">
-My Teaching Philosophy Statement
+<a href="./thoughts/teaching-philosophy-statement/index.html" class="no-external">My Teaching Philosophy Statement</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./thoughts/teaching-philosophy-statement/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
 statistics
@@ -274,14 +322,12 @@ research
 job search
 </div>
 </div>
-<a href="./thoughts/teaching-philosophy-statement/index.html">
 <div class="listing-description">
-<p>This document outlines my teaching experience, approach, and goals for the future.</p>
+<a href="./thoughts/teaching-philosophy-statement/index.html" class="no-external">This document outlines my teaching experience, approach, and goals for the future.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./thoughts/teaching-philosophy-statement/index.html">
+<a href="./thoughts/teaching-philosophy-statement/index.html" class="no-external">
 <div class="listing-date">
 Dec 14, 2022
 </div>
@@ -294,19 +340,19 @@ Dylan Spicker
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="statistics,teaching,research" data-listing-date-sort="1619481600000" data-listing-file-modified-sort="1704833192882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10">
+<div class="quarto-post image-right" data-index="2" data-categories="statistics,teaching,research" data-listing-date-sort="1619481600000" data-listing-file-modified-sort="1708392555374" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1812">
 <div class="thumbnail">
-<p><a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html"> <img src="./thoughts/2021-04-27-von-mises-calculus-notes-I/cover.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html" class="no-external"></a></p><a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html" class="no-external">
+<p><img src="./thoughts/2021-04-27-von-mises-calculus-notes-I/cover.jpg" class="thumbnail-image"></p>
+</a><p><a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html">
 <h3 class="no-anchor listing-title">
-Notes on ‘von Mises Calculus for Statistical Functionals’
+<a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html" class="no-external">Notes on ‘von Mises Calculus for Statistical Functionals’</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
 statistics
@@ -318,14 +364,12 @@ teaching
 research
 </div>
 </div>
-<a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html">
 <div class="listing-description">
-<p>I am attempting to work through Luisa Fernholz’s excellent ‘von Mises Calculus for Statistical Functionals’ – these are my notes, pulling in the required concepts from elsewhere..</p>
+<a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html" class="no-external">I am attempting to work through Luisa Fernholz’s excellent ‘von Mises Calculus for Statistical Functionals’ – these are my notes, pulling in the required concepts from elsewhere..</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html">
+<a href="./thoughts/2021-04-27-von-mises-calculus-notes-I/index.html" class="no-external">
 <div class="listing-date">
 Apr 27, 2021
 </div>
@@ -338,19 +382,19 @@ Dylan Spicker
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="statistics,teaching,research" data-listing-date-sort="1563235200000" data-listing-file-modified-sort="1704833192914" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="3" data-categories="statistics,teaching,research" data-listing-date-sort="1563235200000" data-listing-file-modified-sort="1708392555402" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
 <div class="thumbnail">
-<p><a href="./thoughts/null-preservation/index.html"> <img src="./thoughts/null-preservation/preserve.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./thoughts/null-preservation/index.html" class="no-external"></a></p><a href="./thoughts/null-preservation/index.html" class="no-external">
+<p><img src="./thoughts/null-preservation/preserve.jpg" class="thumbnail-image"></p>
+</a><p><a href="./thoughts/null-preservation/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./thoughts/null-preservation/index.html">
 <h3 class="no-anchor listing-title">
-Null Preservation
+<a href="./thoughts/null-preservation/index.html" class="no-external">Null Preservation</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./thoughts/null-preservation/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
 statistics
@@ -362,14 +406,12 @@ teaching
 research
 </div>
 </div>
-<a href="./thoughts/null-preservation/index.html">
 <div class="listing-description">
-<p>The idea of null preservation is an interesting, and under-discussed, concept.</p>
+<a href="./thoughts/null-preservation/index.html" class="no-external">The idea of null preservation is an interesting, and under-discussed, concept.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./thoughts/null-preservation/index.html">
+<a href="./thoughts/null-preservation/index.html" class="no-external">
 <div class="listing-date">
 Jul 16, 2019
 </div>
@@ -382,19 +424,19 @@ Dylan Spicker
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="statistics,research" data-listing-date-sort="1573776000000" data-listing-file-modified-sort="1704833192914" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<div class="quarto-post image-right" data-index="4" data-categories="statistics,research" data-listing-date-sort="1573776000000" data-listing-file-modified-sort="1708392555402" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="352">
 <div class="thumbnail">
-<p><a href="./thoughts/linearity-of-q-functions/index.html"> <img src="./thoughts/linearity-of-q-functions/Q.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./thoughts/linearity-of-q-functions/index.html" class="no-external"></a></p><a href="./thoughts/linearity-of-q-functions/index.html" class="no-external">
+<p><img src="./thoughts/linearity-of-q-functions/Q.jpg" class="thumbnail-image"></p>
+</a><p><a href="./thoughts/linearity-of-q-functions/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./thoughts/linearity-of-q-functions/index.html">
 <h3 class="no-anchor listing-title">
-On the Linearity of Q-Functions
+<a href="./thoughts/linearity-of-q-functions/index.html" class="no-external">On the Linearity of Q-Functions</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./thoughts/linearity-of-q-functions/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
 statistics
@@ -403,14 +445,12 @@ statistics
 research
 </div>
 </div>
-<a href="./thoughts/linearity-of-q-functions/index.html">
 <div class="listing-description">
-<p>This blog post explores when, if ever, the Q-functions (from DTRs) can be linear.</p>
+<a href="./thoughts/linearity-of-q-functions/index.html" class="no-external">This blog post explores when, if ever, the Q-functions (from DTRs) can be linear.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./thoughts/linearity-of-q-functions/index.html">
+<a href="./thoughts/linearity-of-q-functions/index.html" class="no-external">
 <div class="listing-date">
 Nov 15, 2019
 </div>
@@ -423,19 +463,19 @@ Dylan Spicker
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="statistics,teaching,research" data-listing-date-sort="1558828800000" data-listing-file-modified-sort="1704833192890" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6">
+<div class="quarto-post image-right" data-index="5" data-categories="statistics,teaching,research" data-listing-date-sort="1558828800000" data-listing-file-modified-sort="1708392555378" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1103">
 <div class="thumbnail">
-<p><a href="./thoughts/PSA-causation-without-correlation/index.html"> <img src="./thoughts/PSA-causation-without-correlation/cause.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./thoughts/PSA-causation-without-correlation/index.html" class="no-external"></a></p><a href="./thoughts/PSA-causation-without-correlation/index.html" class="no-external">
+<p><img src="./thoughts/PSA-causation-without-correlation/cause.jpg" class="thumbnail-image"></p>
+</a><p><a href="./thoughts/PSA-causation-without-correlation/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./thoughts/PSA-causation-without-correlation/index.html">
 <h3 class="no-anchor listing-title">
-PSA: Causation without Correlation
+<a href="./thoughts/PSA-causation-without-correlation/index.html" class="no-external">PSA: Causation without Correlation</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./thoughts/PSA-causation-without-correlation/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
 statistics
@@ -447,14 +487,12 @@ teaching
 research
 </div>
 </div>
-<a href="./thoughts/PSA-causation-without-correlation/index.html">
 <div class="listing-description">
-<p>This document investigates the all-too-familiar claim: ‘Correlation is not causation’.</p>
+<a href="./thoughts/PSA-causation-without-correlation/index.html" class="no-external">This document investigates the all-too-familiar claim: ‘Correlation is not causation’.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./thoughts/PSA-causation-without-correlation/index.html">
+<a href="./thoughts/PSA-causation-without-correlation/index.html" class="no-external">
 <div class="listing-date">
 May 26, 2019
 </div>
@@ -467,19 +505,19 @@ Dylan Spicker
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="statistics,teaching,misconceptions" data-listing-date-sort="1618876800000" data-listing-file-modified-sort="1704833192882" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9">
+<div class="quarto-post image-right" data-index="6" data-categories="statistics,teaching,misconceptions" data-listing-date-sort="1618876800000" data-listing-file-modified-sort="1708392555374" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1619">
 <div class="thumbnail">
-<p><a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html"> <img src="./thoughts/2021-04-20-the-mean-median-and-skewness/Relationship_between_mean_and_median_under_different_skewness.png" class="thumbnail-image"> </a></p>
+<p><a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html" class="no-external"></a></p><a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html" class="no-external">
+<p><img src="./thoughts/2021-04-20-the-mean-median-and-skewness/Relationship_between_mean_and_median_under_different_skewness.png" class="thumbnail-image"></p>
+</a><p><a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html">
 <h3 class="no-anchor listing-title">
-The (lack of a) Relationship between Mean, Median, and Skewness
+<a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html" class="no-external">The (lack of a) Relationship between Mean, Median, and Skewness</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
 statistics
@@ -491,14 +529,12 @@ teaching
 misconceptions
 </div>
 </div>
-<a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html">
 <div class="listing-description">
-<p>There is a commonly taught ‘rule-of-thumb’ that states that we can determine the skewness of a distribution based on the relative location of the mean and the median. This is not true.</p>
+<a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html" class="no-external">There is a commonly taught ‘rule-of-thumb’ that states that we can determine the skewness of a distribution based on the relative location of the mean and the median. This is not true.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html">
+<a href="./thoughts/2021-04-20-the-mean-median-and-skewness/index.html" class="no-external">
 <div class="listing-date">
 Apr 20, 2021
 </div>
@@ -511,19 +547,19 @@ Dylan Spicker
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="statistics,teaching,research" data-listing-date-sort="1561939200000" data-listing-file-modified-sort="1704833192890" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3">
+<div class="quarto-post image-right" data-index="7" data-categories="statistics,teaching,research" data-listing-date-sort="1561939200000" data-listing-file-modified-sort="1708392555382" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="551">
 <div class="thumbnail">
-<p><a href="./thoughts/controlling-for-factors/index.html"> <img src="./thoughts/controlling-for-factors/control.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./thoughts/controlling-for-factors/index.html" class="no-external"></a></p><a href="./thoughts/controlling-for-factors/index.html" class="no-external">
+<p><img src="./thoughts/controlling-for-factors/control.jpg" class="thumbnail-image"></p>
+</a><p><a href="./thoughts/controlling-for-factors/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./thoughts/controlling-for-factors/index.html">
 <h3 class="no-anchor listing-title">
-When Should We Control For Factors?
+<a href="./thoughts/controlling-for-factors/index.html" class="no-external">When Should We Control For Factors?</a>
 </h3>
 <div class="listing-subtitle">
-
+<a href="./thoughts/controlling-for-factors/index.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
 statistics
@@ -535,14 +571,12 @@ teaching
 research
 </div>
 </div>
-<a href="./thoughts/controlling-for-factors/index.html">
 <div class="listing-description">
-<p>We are often told to control for confounding factors, but when should we?</p>
+<a href="./thoughts/controlling-for-factors/index.html" class="no-external">We are often told to control for confounding factors, but when should we?</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./thoughts/controlling-for-factors/index.html">
+<a href="./thoughts/controlling-for-factors/index.html" class="no-external">
 <div class="listing-date">
 Jul 1, 2019
 </div>
@@ -639,10 +673,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -652,8 +685,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -666,6 +708,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -709,6 +870,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -734,6 +896,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -794,6 +982,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
