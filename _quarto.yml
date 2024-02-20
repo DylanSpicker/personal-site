@@ -3,8 +3,8 @@ project:
   preview:
     port: 4200
     browser: false
-  # post-render:
-  #     - "xcopy /s /e /h applets _site"
+  post-render:
+      - "xcopy /s /e /h applets _site"
 website:
   title: "Dylan Spicker"
   site-url: "https://dylanspicker.com/"
