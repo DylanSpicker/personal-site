@@ -47,7 +47,7 @@ Outside of causal inference and measurement error, I am interested in machine le
 
 I previously did an undergraduate degree in Finance and Mathematics at Queen’s University (I transferred there after completing my first year at Waterloo/Laurier in the ‘Double Degree’ program), and a Master’s of Statistics at Waterloo.
 
-Outside of my research, I pay very close attention to sports, mostly hockey, (and how statistics is, or should be, applied there), play music (without any connection to statistics), and enjoy board/video games (with varying degrees of statistical relevance). I have a cat (Charles) who is wonderful.
+Outside of my research, I pay very close attention to sports, mostly hockey, (and how statistics is, or should be, applied there), play music (without any connection to statistics), and enjoy board/video games (with varying degrees of statistical relevance). 
 
 
 ### Academic History
@@ -60,7 +60,9 @@ Outside of my research, I pay very close attention to sports, mostly hockey, (an
 
 The following is a (reverse chronological) list of the courses that I have (or am) teaching. Materials related to many of these course offerings are available [on my website](./teaching.qmd).
 
-- **Currently (Winter 2024)** [I am teaching both [STAT 1793](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-1793.html){target="_blank"} and [STAT 4243](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-4243.html){target="_blank"} at the University of New Brunswick. These courses are offered in person.]{.fw-light .d-block .my-2}
+- Winter 2025 [I am teaching both [STAT 1793](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-1793.html){target="_blank"} and [STAT 2793](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-2793.html){target="_blank"} at the University of New Brunswick. These courses are offered in person.]{.fw-light .d-block .my-2}
+- Fall 2024 [I taught both [STAT 2593](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-2593.html){target="_blank"} and [STAT 3703](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-3703.html){target="_blank"} at the University of New Brunswick, in person.]{.fw-light .d-block .my-2}
+- Winter 2024 [I am teaching both [STAT 1793](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-1793.html){target="_blank"} and [STAT 4243](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-4243.html){target="_blank"} at the University of New Brunswick. These courses are offered in person.]{.fw-light .d-block .my-2}
 - Fall 2023 [I taught [STAT 2593](https://www.unb.ca/academics/calendar/undergraduate/current/saint-john-courses/statistics/stat-2593.html){target="_blank"} at the University of New Brunswick, in person.]{.fw-light .d-block .my-2}
 - Winter 2022 [I taught [STAT 437](https://ucalendar.uwaterloo.ca/2021/COURSE/course-STAT.html#STAT437){target="_blank"} at the University of Waterloo, online.]{.fw-light .d-block .my-2}
 - Winter 2021 [I co-taught [STAT 231](https://ucalendar.uwaterloo.ca/2021/COURSE/course-STAT.html#STAT231){target="_blank"} at the University of Waterloo, online.]{.fw-light .d-block .my-2}
